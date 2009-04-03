@@ -1,0 +1,21 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="quintagroup.theme.sunrain">
+
+   <!-- File System Directory Views registration -->
+   <!-- -*- extra stuff goes here -*- -->
+
+   <cmf:registerDirectory
+       name="theme_sunrain_templates"/>
+
+
+   <cmf:registerDirectory
+       name="theme_sunrain_styles"/>
+
+
+   <cmf:registerDirectory
+       name="theme_sunrain_images"/>
+
+
+</configure>

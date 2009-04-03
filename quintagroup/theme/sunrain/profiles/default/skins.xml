@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<object name="portal_skins" allow_any="False" cookie_persistence="False"
+   default_skin="Sun and Rain Theme">
+
+
+   <!-- -*- extra stuff goes here -*- -->
+
+ <object name="theme_sunrain_templates"
+    meta_type="Filesystem Directory View"
+    directory="quintagroup.theme.sunrain:skins/theme_sunrain_templates"/>
+
+
+ <object name="theme_sunrain_styles"
+    meta_type="Filesystem Directory View"
+    directory="quintagroup.theme.sunrain:skins/theme_sunrain_styles"/>
+
+
+ <object name="theme_sunrain_images"
+    meta_type="Filesystem Directory View"
+    directory="quintagroup.theme.sunrain:skins/theme_sunrain_images"/>
+
+
+ <skin-path name="Sun and Rain Theme" based-on="Plone Default">
+  <!-- -*- extra layer stuff goes here -*- -->
+  <layer name="theme_sunrain_templates"
+     insert-after="custom"/>
+  <layer name="theme_sunrain_styles"
+     insert-after="custom"/>
+  <layer name="theme_sunrain_images"
+     insert-after="custom"/>
+
+ </skin-path>
+
+</object>

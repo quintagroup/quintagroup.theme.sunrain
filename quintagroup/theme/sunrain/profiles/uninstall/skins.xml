@@ -1,0 +1,5 @@
+<?xml version="1.0"?>
+<object name="portal_skins" default_skin="Plone Default">
+ <skin-path name="Sun and Rain Theme" remove="True">
+ </skin-path>
+</object>

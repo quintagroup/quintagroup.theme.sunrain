@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<import-steps>
+  <import-step id="quintagroup.theme.sunrain.uninstall"
+               version="20090403-02"
+               handler="quintagroup.theme.sunrain.setuphandlers.uninstallVarious"
+               title="Sun and Rain Theme: miscellaneous uninstall steps">
+    <dependency step="skins" />
+    Various uninstall steps that are not handled by GS import/export
+    handlers.
+  </import-step>
+ <!-- -*- extra stuff goes here -*- -->
+</import-steps>

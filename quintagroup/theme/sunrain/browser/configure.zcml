@@ -1,0 +1,24 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:browser="http://namespaces.zope.org/browser"
+    i18n_domain="quintagroup.theme.sunrain">
+
+    <!-- 'Sun and Rain Theme' Zope 3 browser layer -->
+    <interface
+        interface=".interfaces.IThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="Sun and Rain Theme"
+        />
+
+    <!-- Zope 3 browser resources -->
+
+    <!-- Resource directory for templates -->
+    <browser:resourceDirectory
+        name="quintagroup.theme.sunrain.templates"
+        directory="templates"
+        layer=".interfaces.IThemeSpecific"
+        />
+
+    <!-- -*- extra stuff goes here -*- -->
+
+</configure>

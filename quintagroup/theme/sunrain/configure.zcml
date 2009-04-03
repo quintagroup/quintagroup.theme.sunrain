@@ -1,0 +1,17 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:five="http://namespaces.zope.org/five"
+    xmlns:cmf="http://namespaces.zope.org/cmf"
+    i18n_domain="quintagroup.theme.sunrain">
+
+   <five:registerPackage package="." initialize=".initialize" />
+
+   <include package=".browser" />
+   <include package=".portlets" />
+
+   <include file="skins.zcml" />
+   <include file="profiles.zcml" />
+
+   <!-- -*- extra stuff goes here -*- -->
+
+</configure>
