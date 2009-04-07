@@ -18,6 +18,15 @@
 
     <!-- Zope 3 browser resources -->
 
+    <browser:viewlet
+        name="twirl.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".viewlets.GlobalSectionsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
+
     <!-- Resource directory for templates -->
     <browser:resourceDirectory
         name="quintagroup.theme.sunrain.templates"
