@@ -268,7 +268,9 @@ body.kssActive abbr.inlineEditable:hover {
   font-size:1.5em;
   }
 .documentContent h2 {
+  border-bottom:0;
   font-size:1.17em;
+  font-weight:bold;
   }
 .documentContent h3 {
   font-size:1em;
