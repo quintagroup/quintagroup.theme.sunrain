@@ -1,0 +1,282 @@
+/* <dtml-with base_properties> (do not remove this :) */
+/* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
+
+/*---------- GENERAL STYLE ----------*/
+body {
+  
+  }
+#visual-portal-wrapper {
+  }
+  
+/*---------- PORTAL TOP ----------*/
+#portal-top {
+  
+  }
+#portal-header {
+  
+  }
+  
+/*---------- PORTAL SITEACTIONS ----------*/
+#portal-siteactions {
+  
+  }
+#portal-siteactions li {
+  
+  }
+#portal-siteactions li a {
+  
+  }
+#portal-siteactions li a:hover {
+
+  }
+  
+/*---------- PORTAL SEARCHBOX ----------*/
+#portal-searchbox {
+  
+  }
+.LSBox {
+  clear:none;
+  float:none;
+  text-align:left;
+  padding-right:0;
+  }
+#searchGadget {
+  
+  }
+.portlet-search-gadget {
+  
+  }
+#portal-searchbox .searchButton,
+.portletSearch .searchButton {
+  
+  }
+#portal-searchbox .searchButton {
+  
+  }
+.portletSearch .searchButton {
+  
+  }
+.searchSection {
+  
+  }
+.searchSection input {
+  
+  }
+.searchSection label {
+  
+  }
+.searchSection label:hover {
+  
+  }
+.LSResult {
+  
+  }
+.livesearchContainer {
+  
+  }
+#livesearchLegend {
+  
+  }
+.LSTable {
+  
+  }
+
+/*---------- PORTLET SEARCH ----------*/
+.portletSearch .portletItem {
+  
+  }
+.portletSearch .LSResult {
+  
+  }
+.portletSearch .livesearchContainer {
+  
+  }
+.portletSearch li.LSRow a {
+  
+  }
+
+/*---------- PORTAL LOGO ----------*/
+#portal-logo {
+  
+  }
+#portal-logo img {
+  
+  }
+
+/*---------- GLOBAL NAVIGATION ----------*/
+#portal-globalnav {
+  
+  }
+#portal-globalnav li {
+  
+  }
+#portal-globalnav li.lastItem {
+  
+  }
+#portal-globalnav li a {
+  
+  }
+#portal-globalnav li a:hover {
+  
+  }
+#portal-globalnav li.selected a {
+  
+  }
+
+/*---------- PORTAL PERSONAL TOOLS ----------*/
+#portal-personaltools {
+  
+  }
+#portal-personaltools li a {
+  
+  }
+#portal-personaltools li a:hover {
+  
+  }
+  
+/*---------- PORTAL BREAD CRUMBS ----------*/
+#portal-breadcrumbs {
+  
+  }
+
+/*---------- PORTAL COLUMNS PROPERTIES ----------*/
+#portal-columns {
+  
+  }
+#portal-column-content #content-wrapper {
+  
+  }
+#portal-column-one .visualPadding {
+  
+  }
+#portal-column-two {
+  
+  }
+#portal-column-two .visualPadding {
+  
+  }
+.documentEditable {
+  
+  }
+.documentContent {
+  
+  }
+.documentEditable .documentContent {
+  
+  }
+
+/*---------- GENERAL PORTLETS PROPERTIES ----------*/
+.portlet {
+  
+  }
+.portletHeader {
+  
+  }
+.portletHeader a {
+  
+  }
+.portletItem {
+  
+  }
+.portletFooter {
+  
+  }
+.portletItem a:visited, .portletFooter a:visited {
+  
+  }
+
+/*---------- PORTLET NAVIGATION ----------*/
+.portletNavigationTree .portletItem {
+  
+  }
+.navTreeItem {
+  
+  } 
+.portletItem .navTreeItem a {
+  
+  }
+.navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
+  
+  }
+.navTreeCurrentItem {
+  
+  }
+/* Second Level */
+.portletItem .navTreeLevel1 .navTreeItem a  {
+  
+  }
+/* Third Level */
+.portletItem .navTreeLevel2 .navTreeItem a {
+  
+  }  
+/* Site Map */
+#portal-sitemap li {
+  list-style-image: none;
+  list-style-type: none;
+  }
+#portal-sitemap a {
+  
+  }
+#portal-sitemap a:hover {
+  
+  }
+  
+/*---------- PORTLET CALENDAR ----------*/
+.portletCalendar {
+  
+  }
+.portletCalendar dt {
+  
+  }
+
+/*---------- PORTAL FOOTER ----------*/
+#portal-footer {
+  
+  }
+#portal-footer p {
+  
+  }
+
+/*---------- PORTAL COLOPHON ----------*/
+#portal-colophon {
+  
+  }
+#portal-colophon ul {
+  
+  }
+  
+/*---------- PORTAL EDIT ----------*/
+body.kssActive h1.inlineEditable:hover {
+  padding-bottom:0;
+  }
+body.kssActive abbr.inlineEditable:hover {
+  padding:0 0 1px;
+  }
+.kupu-html body { 
+	text-align:left;
+	}
+
+/*---------- PORTAL CONTENT ----------*/
+#content a[href^="http:"] {
+  background: 0;
+  padding: 0;
+  }
+  
+/*----- Search -----*/
+form.searchPage {
+  text-align:left;
+  }
+input.searchPage {
+  font-size:150% !important;
+  }
+form.searchPage input.searchButton {
+  background:&dtml-globalBackgroundColor;;
+  border:0;
+  color:&dtml-globalFontColor;;
+  height:26px;
+  margin-bottom:0 !important;
+  padding:0;
+  text-transform:none;
+  }
+
+/* </dtml-with> */ 
