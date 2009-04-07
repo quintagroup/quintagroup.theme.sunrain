@@ -6,6 +6,9 @@ body {
   
   }
 #visual-portal-wrapper {
+  margin:0 auto;
+  /*overflow:hidden;*/
+  width:1000px;
   }
   
 /*---------- PORTAL TOP ----------*/
@@ -257,6 +260,18 @@ body.kssActive abbr.inlineEditable:hover {
 	}
 
 /*---------- PORTAL CONTENT ----------*/
+.documentContent {
+  font-size:100%;
+  }
+h1 {
+  font-size:1.5em;
+  }
+.documentContent h2 {
+  font-size:1.17em;
+  }
+.documentContent h3 {
+  font-size:1em;
+  }
 #content a[href^="http:"] {
   background: 0;
   padding: 0;
