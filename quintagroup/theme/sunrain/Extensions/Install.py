@@ -2,7 +2,7 @@ import transaction
 from Products.CMFCore.utils import getToolByName
 
 UNINSTALL_PROFILES = [
-    '${namespace_package}.${namespace_package2}.${package}:uninstall'
+    'quintagroup.theme.sunrain:uninstall'
 ]
 
 def uninstall(self):

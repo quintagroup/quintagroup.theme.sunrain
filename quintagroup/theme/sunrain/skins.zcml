@@ -17,5 +17,10 @@
    <cmf:registerDirectory
        name="theme_sunrain_images"/>
 
+   <cmf:registerDirectory
+       name="theme_sun"/>
+
+   <cmf:registerDirectory
+       name="theme_rain"/>
 
 </configure>

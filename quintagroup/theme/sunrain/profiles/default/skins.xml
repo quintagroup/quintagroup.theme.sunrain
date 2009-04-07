@@ -1,6 +1,6 @@
 <?xml version="1.0"?>
 <object name="portal_skins" allow_any="False" cookie_persistence="False"
-   default_skin="Sun and Rain Theme">
+   default_skin="qThemeRain">
 
 
    <!-- -*- extra stuff goes here -*- -->
@@ -19,16 +19,34 @@
     meta_type="Filesystem Directory View"
     directory="quintagroup.theme.sunrain:skins/theme_sunrain_images"/>
 
+ <object name="theme_sun"
+    meta_type="Filesystem Directory View"
+    directory="quintagroup.theme.sunrain:skins/theme_sun"/>
 
- <skin-path name="Sun and Rain Theme" based-on="Plone Default">
-  <!-- -*- extra layer stuff goes here -*- -->
+ <object name="theme_rain"
+    meta_type="Filesystem Directory View"
+    directory="quintagroup.theme.sunrain:skins/theme_rain"/>
+
+ <skin-path name="qThemeRain" based-on="Plone Default">
   <layer name="theme_sunrain_templates"
      insert-after="custom"/>
   <layer name="theme_sunrain_styles"
      insert-after="custom"/>
   <layer name="theme_sunrain_images"
      insert-after="custom"/>
+  <layer name="theme_rain"
+     insert-after="custom"/>
+ </skin-path>
 
+ <skin-path name="qThemeSun" based-on="Plone Default">
+  <layer name="theme_sunrain_templates"
+     insert-after="custom"/>
+  <layer name="theme_sunrain_styles"
+     insert-after="custom"/>
+  <layer name="theme_sunrain_images"
+     insert-after="custom"/>
+  <layer name="theme_sun"
+     insert-after="custom"/>
  </skin-path>
 
 </object>

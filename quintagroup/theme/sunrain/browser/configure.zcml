@@ -3,11 +3,17 @@
     xmlns:browser="http://namespaces.zope.org/browser"
     i18n_domain="quintagroup.theme.sunrain">
 
-    <!-- 'Sun and Rain Theme' Zope 3 browser layer -->
+    <!-- Sun and Rain Theme Zope 3 browser layers -->
     <interface
-        interface=".interfaces.IThemeSpecific"
+        interface=".interfaces.IRainThemeSpecific"
         type="zope.publisher.interfaces.browser.IBrowserSkinType"
-        name="Sun and Rain Theme"
+        name="qThemeRain"
+        />
+
+    <interface
+        interface=".interfaces.ISunThemeSpecific"
+        type="zope.publisher.interfaces.browser.IBrowserSkinType"
+        name="qThemeSun"
         />
 
     <!-- Zope 3 browser resources -->
