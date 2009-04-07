@@ -6,14 +6,14 @@ logoName:string=logo.jpg
 
 fontFamily:string=Tahoma, Geneva, sans-serif
 fontBaseSize:string=75%
-fontColor:string=Black
+fontColor:string=#332c34
 fontSmallSize:string=100%
 
 backgroundColor:string=#fff
 
-linkColor:string=#436976
+linkColor:string=#5981d2
 linkActiveColor:string=Red
-linkVisitedColor:string=Purple
+linkVisitedColor:string=#93a1bf
 
 borderWidth:string=1px
 borderStyle:string=solid
