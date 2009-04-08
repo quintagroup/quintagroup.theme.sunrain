@@ -17,6 +17,7 @@ body {
 #portal-header {
   background:url(&dtml-portal_url;/bg-header.jpg) no-repeat 0 0;
   height:&dtml-portalHeaderHeight;;
+  position:relative;
   }
   
 /*---------- PORTAL SITEACTIONS ----------*/
@@ -38,7 +39,11 @@ body {
   
 /*---------- PORTAL SEARCHBOX ----------*/
 #portal-searchbox {
-  
+  margin:0;
+  padding:0;
+  position:absolute;
+  right:0;
+  top:30px;
   }
 .LSBox {
   clear:none;
@@ -111,7 +116,7 @@ body {
 
 /*---------- GLOBAL NAVIGATION ----------*/
 #portal-globalnav {
-  background-color:&dtml-globalBackgroundColor;;
+  background-color:&dtml-bgColorGlobal;;
   border-top:3px solid &dtml-bgColorGlobalnavTabs;;
   clear:both;
   padding:0 0 11px 9px;
@@ -195,19 +200,25 @@ body {
 
 /*---------- GENERAL PORTLETS PROPERTIES ----------*/
 .portlet {
-  
+  border:0;
+  }
+.portlet a {
+  color:&dtml-fontColor;;
+  text-decoration:underline;
   }
 .portletHeader {
-  
+  border:0;
+  font-size:1.50em;
+  padding:3px 11px;
   }
 .portletHeader a {
-  
+  text-decoration:none;
   }
 .portletItem {
-  
+  border:0;
   }
 .portletFooter {
-  
+  border:0;
   }
 .portletItem a:visited, .portletFooter a:visited {
   
@@ -215,7 +226,7 @@ body {
 
 /*---------- PORTLET NAVIGATION ----------*/
 .portletNavigationTree .portletItem {
-  
+  background-color:&dtml-evenRowBackgroundColor;;
   }
 .navTreeItem {
   
@@ -257,9 +268,22 @@ body {
   
   }
 
+/*---------- PORTLET SEARCH ----------*/  
+.portletSearch {
+  background-color:&dtml-evenRowBackgroundColor;;
+  }
+
+/*---------- PORTLET WEB BLOG ----------*/
+.portletWeblogArchive {
+  background-color:&dtml-evenRowBackgroundColor;;
+  }
+.portletTagCloud {
+  background-color:&dtml-evenRowBackgroundColor;;
+  }
+
 /*---------- PORTAL FOOTER ----------*/
 #portal-footer {
-  background-color:&dtml-globalBackgroundColor;;
+  background-color:&dtml-bgColorGlobal;;
   }
 #portal-footer p {
   
@@ -286,7 +310,7 @@ body.kssActive abbr.inlineEditable:hover {
 
 /*---------- PORTAL CONTENT ----------*/
 .documentContent {
-  background-color:&dtml-globalBackgroundColor;;
+  background-color:&dtml-bgColorGlobal;;
   font-size:100%;
   }
 .documentContent h1 {

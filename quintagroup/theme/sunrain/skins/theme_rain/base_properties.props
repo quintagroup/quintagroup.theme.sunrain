@@ -20,7 +20,7 @@ borderStyle:string=solid
 borderStyleAnnotations:string=solid
 
 globalBorderColor:string=#8cacbb
-globalBackgroundColor:string=#f0f2f2
+globalBackgroundColor:string=#ccd0d6
 globalFontColor:string=#000
 
 headingFontFamily:string=Tahoma, Geneva, sans-serif
@@ -33,8 +33,8 @@ inputFontColor:string=Black
 
 textTransform:string=none
 
-evenRowBackgroundColor:string=#eef3f5 
-oddRowBackgroundColor:string=transparent
+evenRowBackgroundColor:string=#e5e7eb
+oddRowBackgroundColor:string=#e5e7eb 
 
 notifyBorderColor:string=#ffa500
 notifyBackgroundColor:string=#ffce7b
@@ -47,4 +47,5 @@ columnOneWidth:string=16em
 columnTwoWidth:string=16em
 
 portalHeaderHeight:string=104px
+bgColorGlobal:string=#f0f2f2
 bgColorGlobalnavTabs:string=#ff6046
