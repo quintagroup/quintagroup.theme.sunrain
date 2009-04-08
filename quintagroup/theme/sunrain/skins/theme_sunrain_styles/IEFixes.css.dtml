@@ -205,4 +205,13 @@ body.kupu-fulleditor-zoomed #portal-columns {
   overflow: visible;
   }
 
+/* Custom Sun and Rain Theme Fixes */
+* html body {
+  text-align /**/:center;
+  }
+* html #visual-portal-wrapper {
+  text-align /**/:left;
+  }
+
+
 /* </dtml-with> */
