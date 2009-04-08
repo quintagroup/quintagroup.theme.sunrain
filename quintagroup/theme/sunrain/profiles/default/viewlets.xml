@@ -4,10 +4,14 @@
   <viewlet name="plone.header"/>
   <viewlet name="plone.personal_bar"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
-  <viewlet name="twirl.global_sections"/>
+  <viewlet name="sunrain.global_sections"/>
   <viewlet name="plone.path_bar"/>
  </order>
  <hidden manager="plone.portalheader" skinname="qThemeRain">
   <viewlet name="plone.global_sections"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="qThemeRain">
+  <viewlet name="plone.colophon"/>
+  <viewlet name="plone.footer"/>
  </hidden>
 </object>

@@ -1,0 +1,9 @@
+<div id="portal-footer" metal:define-macro="portal_footer" i18n:domain="plone">
+	  <p>
+	    <a href="http://skins.quintagroup.com">Alternative Plone Skins and Themes</a>
+	    &copy; 2005-<span tal:define="now modules/DateTime/DateTime"
+	                       tal:content="now/year" />
+	    <a href="http://quintagroup.com">Quintagroup</a>.
+	    Powered by <a href="http://plone.org">Plone</a>. 
+	  </p>
+</div>

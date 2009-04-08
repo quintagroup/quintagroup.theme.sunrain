@@ -19,13 +19,19 @@
     <!-- Zope 3 browser resources -->
 
     <browser:viewlet
-        name="twirl.global_sections"
+        name="sunrain.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class=".viewlets.GlobalSectionsViewlet"
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
         />
-
+     <browser:viewlet
+        name="sunrain.footer"
+        manager="plone.app.layout.viewlets.interfaces.IPortalFooter"
+        template="templates/footer.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
 
     <!-- Resource directory for templates -->
     <browser:resourceDirectory
