@@ -27,10 +27,13 @@ body {
   
   }
 #portal-siteactions li a {
-  
+  border:0;
+  color:#fff;
   }
 #portal-siteactions li a:hover {
-
+  background:transparent;
+  border:0;
+  color:#fff;
   }
   
 /*---------- PORTAL SEARCHBOX ----------*/
@@ -148,7 +151,20 @@ body {
   
 /*---------- PORTAL BREAD CRUMBS ----------*/
 #portal-breadcrumbs {
-  
+  border:0;
+  font-size:0.92em;
+  padding:15px 2em;
+  }
+#portal-breadcrumbs a {
+  color:#929aa6;
+  text-decoration:underline;
+  }
+#breadcrumbs-you-are-here {
+  color:#929aa6;
+  font-size:1.09em;
+  }
+.breadcrumbSeparator {
+  color:#929aa6;
   }
 
 /*---------- PORTAL COLUMNS PROPERTIES ----------*/
@@ -159,13 +175,13 @@ body {
   
   }
 #portal-column-one .visualPadding {
-  
+  padding:0 0 1em;
   }
 #portal-column-two {
   
   }
 #portal-column-two .visualPadding {
-  
+  padding:0 0 1em;
   }
 .documentEditable {
   
@@ -243,7 +259,7 @@ body {
 
 /*---------- PORTAL FOOTER ----------*/
 #portal-footer {
-  
+  background-color:&dtml-globalBackgroundColor;;
   }
 #portal-footer p {
   
@@ -270,6 +286,7 @@ body.kssActive abbr.inlineEditable:hover {
 
 /*---------- PORTAL CONTENT ----------*/
 .documentContent {
+  background-color:&dtml-globalBackgroundColor;;
   font-size:100%;
   }
 .documentContent h1 {
