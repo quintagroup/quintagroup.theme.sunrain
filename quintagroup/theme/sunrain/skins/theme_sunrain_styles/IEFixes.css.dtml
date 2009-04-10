@@ -212,6 +212,20 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html #visual-portal-wrapper {
   text-align /**/:left;
   }
+#portal-slogan {
+  display:inline;
+  zoom:1;
+  }
+/** html #portal-siteactions,*/
+/** html #portal-personaltools {*/
+/*  background-image:none;*/
+/*  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/bg-header-actions.png', sizingMethod='image');*/
+/*  }*/
+/** html #portal-siteactions a,*/
+/** html #portal-personaltools a {*/
+/*position: relative;*/
+/*z-index: 1;*/
+/*}*/
 
 
 /* </dtml-with> */

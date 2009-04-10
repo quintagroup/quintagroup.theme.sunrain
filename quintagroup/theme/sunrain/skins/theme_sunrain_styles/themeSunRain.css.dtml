@@ -12,17 +12,22 @@ body {
   
 /*---------- PORTAL TOP ----------*/
 #portal-top {
-  
   }
 #portal-header {
   background:url(&dtml-portal_url;/bg-header.jpg) no-repeat 0 0;
-  height:&dtml-portalHeaderHeight;;
+  height:<dtml-var "portalHeaderHeight">px;
+  /*padding-right:320px;*/
   position:relative;
   }
   
 /*---------- PORTAL SITEACTIONS ----------*/
 #portal-siteactions {
-  
+  background:url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
+  margin:0;
+  padding:3px 20px 4px;
+  position:absolute;
+  right:0;
+  top:0;
   }
 #portal-siteactions li {
   
@@ -35,6 +40,7 @@ body {
   background:transparent;
   border:0;
   color:#fff;
+  text-decoration:underline;
   }
   
 /*---------- PORTAL SEARCHBOX ----------*/
@@ -68,8 +74,12 @@ body {
   
   }
 .searchSection {
-  
+  display:none;
   }
+#portal-searchbox:hover .searchSection {
+  display:block;
+  }
+
 .searchSection input {
   
   }
@@ -108,10 +118,29 @@ body {
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
-  
+  display:-moz-inline-box;
+  display:inline-block;
+  height:<dtml-var "portalHeaderHeight">px;
+  margin:0;
   }
 #portal-logo img {
-  
+  margin-left:28px;
+  margin-top:<dtml-var "(portalHeaderHeight-(_[logoName].height))/2">px;
+  }
+
+/*---------- PORTAL SLOGAN ----------*/
+#portal-slogan {
+  color:&dtml-evenRowBackgroundColor;;
+  display:-moz-inline-box;
+  display:inline-block;
+  font-family:Verdana,Geneva,sans-serif;
+  font-size:1.17em;
+  font-weight:bold;
+  overflow:hidden;
+  padding:0 0 0 40px;
+  text-align:left;
+  vertical-align:middle;
+  width:<dtml-var "592-(_[logoName].width)">px;
   }
 
 /*---------- GLOBAL NAVIGATION ----------*/
@@ -145,13 +174,18 @@ body {
   
 /*---------- PORTAL PERSONAL TOOLS ----------*/
 #portal-personaltools {
-  
+  background:transparent url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
+  border:0;
+  padding:2px 20px 3px;
+  position:absolute;
+  right:0;
+  bottom:0;
   }
 #portal-personaltools li a {
-  
+  color:#fff;
   }
 #portal-personaltools li a:hover {
-  
+  text-decoration:underline;
   }
   
 /*---------- PORTAL BREAD CRUMBS ----------*/
@@ -200,7 +234,10 @@ body {
 
 /*---------- GENERAL PORTLETS PROPERTIES ----------*/
 .portlet {
+  background-color:&dtml-evenRowBackgroundColor;;
   border:0;
+  margin:0;
+  padding-bottom:1em;
   }
 .portlet a {
   color:&dtml-fontColor;;
@@ -216,6 +253,7 @@ body {
   }
 .portletItem {
   border:0;
+  padding-bottom:1em;
   }
 .portletFooter {
   border:0;
@@ -283,7 +321,10 @@ body {
 
 /*---------- PORTAL FOOTER ----------*/
 #portal-footer {
-  background-color:&dtml-bgColorGlobal;;
+  background-color:#fff;
+  border:0;
+  border-top:30px solid &dtml-bgColorGlobal;;
+  padding:1em 0 0;
   }
 #portal-footer p {
   
@@ -328,6 +369,20 @@ body.kssActive abbr.inlineEditable:hover {
 #content a[href^="http:"] {
   background: 0;
   padding: 0;
+  }
+
+.documentActions {
+  border-top:1px solid &dtml-globalBackgroundColor;;
+  }
+.documentActions ul {
+  line-height:normal;
+  margin:2px 0 0;
+  padding:0;
+  }
+.documentActions li {
+  background-color:&dtml-evenRowBackgroundColor;;
+  margin:0 0 0 0.5em;
+  padding:2px 17px;  
   }
 
 /*---------- PORTAL FIXES ----------*/

@@ -29,7 +29,7 @@ body {
   }
 .documentEditable {
   margin: 0;
-  padding: 1em 0 0 !important;
+  padding: 0 !important;
   }
 .documentEditable .documentContent {
   padding: 1em 0.91em 2em !important;

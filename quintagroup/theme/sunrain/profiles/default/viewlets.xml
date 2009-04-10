@@ -7,6 +7,18 @@
   <viewlet name="sunrain.global_sections"/>
   <viewlet name="plone.path_bar"/>
  </order>
+ <order manager="plone.portalheader" skinname="qThemeRain">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="plone.searchbox"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="sunrain.slogan"/>
+  <viewlet name="sunrain.personal_bar"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <hidden manager="plone.portaltop" skinname="qThemeRain">
+  <viewlet name="plone.personal_bar"/>
+ </hidden>
  <hidden manager="plone.portalheader" skinname="qThemeRain">
   <viewlet name="plone.global_sections"/>
  </hidden>

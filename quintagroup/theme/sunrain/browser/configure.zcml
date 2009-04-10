@@ -19,9 +19,23 @@
     <!-- Zope 3 browser resources -->
 
     <browser:viewlet
+        name="sunrain.slogan"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        template="templates/portal_slogan.pt"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+    <browser:viewlet
         name="sunrain.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class=".viewlets.GlobalSectionsViewlet"
+        class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+     <browser:viewlet
+        name="sunrain.personal_bar"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
         />

@@ -1,0 +1,7 @@
+<div id="portal-slogan">
+  <span tal:define="portal context/@@plone_portal_state/portal;
+                    desc python:portal.getProperty('description')"
+        tal:condition="desc"
+        tal:content="desc">Portal Description</span>
+  <!-- <p class="themeComment11">This Slogan Viewlet registered to qPloneThemeBrendA product</p> -->
+</div>
