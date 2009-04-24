@@ -47,6 +47,14 @@
         permission="zope2.View"
         />
 
+    <browser:viewlet
+        name="sunrain.subscribe"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class=".subscribe.SubscribeViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+
     <!-- Resource directory for templates -->
     <browser:resourceDirectory
         name="quintagroup.theme.sunrain.templates"
@@ -55,5 +63,14 @@
         />
 
     <!-- -*- extra stuff goes here -*- -->
+    <!-- View for getting type of RSS feed for some context (used in 'portal_actions') -->
+    <browser:page
+        for="*"
+        name="rsstype"
+        class=".subscribe.RSSType"
+        allowed_attributes="quills other"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope.Public"
+        />
 
 </configure>
