@@ -212,10 +212,26 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html #visual-portal-wrapper {
   text-align /**/:left;
   }
+* html #portal-logo {
+  position:relative;
+  }
+* html .portal-logo-lining {
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/&dtml-logoName;',sizingMethod='crop');
+  height:<dtml-var "_[logoName].height">px;
+  margin-left:28px;
+  margin-top:<dtml-var "(portalHeaderHeight-(_[logoName].height))/2">px;
+  position:absolute;
+  width:<dtml-var "_[logoName].width">px;
+  zoom:1;
+  }
+* html #portal-logo img {
+  filter:progid:DXImageTransform.Microsoft.Alpha(opacity=0);
+  }
 #portal-slogan {
   display:inline;
   zoom:1;
   }
+  
 /** html #portal-siteactions,*/
 /** html #portal-personaltools {*/
 /*  background-image:none;*/

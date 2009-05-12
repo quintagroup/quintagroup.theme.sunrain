@@ -19,6 +19,13 @@
     <!-- Zope 3 browser resources -->
 
     <browser:viewlet
+        name="sunrain.logo"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.LogoViewlet"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        />
+    <browser:viewlet
         name="sunrain.slogan"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
         template="templates/portal_slogan.pt"
