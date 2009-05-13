@@ -33,6 +33,13 @@
         permission="zope2.View"
         />
     <browser:viewlet
+        name="sunrain.searchbox"
+        manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
+        class=".viewlets.SearchBoxViewlet"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+        />
+    <browser:viewlet
         name="sunrain.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
         class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"

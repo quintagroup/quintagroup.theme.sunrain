@@ -10,7 +10,7 @@
  <order manager="plone.portalheader" skinname="qThemeRain">
   <viewlet name="plone.skip_links"/>
   <viewlet name="plone.site_actions"/>
-  <viewlet name="plone.searchbox"/>
+  <viewlet name="sunrain.searchbox"/>
   <viewlet name="sunrain.logo"/>
   <viewlet name="sunrain.slogan"/>
   <viewlet name="sunrain.personal_bar"/>
@@ -22,6 +22,7 @@
  <hidden manager="plone.portalheader" skinname="qThemeRain">
   <viewlet name="plone.global_sections"/>
   <viewlet name="plone.logo"/>
+  <viewlet name="plone.searchbox"/>
  </hidden>
  <hidden manager="plone.portalfooter" skinname="qThemeRain">
   <viewlet name="plone.colophon"/>

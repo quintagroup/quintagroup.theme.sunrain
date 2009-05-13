@@ -4,3 +4,5 @@ from plone.app.layout.viewlets import content
 
 class LogoViewlet(common.LogoViewlet):
     render = ViewPageTemplateFile('templates/logo.pt')
+class SearchBoxViewlet(common.SearchBoxViewlet):
+    render = ViewPageTemplateFile('templates/searchbox.pt')

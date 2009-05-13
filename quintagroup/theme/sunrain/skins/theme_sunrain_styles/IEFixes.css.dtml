@@ -163,7 +163,7 @@ body.fullscreen #portal-searchbox {
     overflow: visible;
 }*/
 #portal-searchbox {
-  max-width: 230px;
+  /*max-width: 230px;*/
   }
 
 
@@ -207,6 +207,7 @@ body.kupu-fulleditor-zoomed #portal-columns {
 
 /* Custom Sun and Rain Theme Fixes */
 * html body {
+  behavior:url("&dtml-portal_url;/csshover.htc");
   text-align /**/:center;
   }
 * html #visual-portal-wrapper {
@@ -231,17 +232,46 @@ body.kupu-fulleditor-zoomed #portal-columns {
   display:inline;
   zoom:1;
   }
+* html #portal-siteactions {
+  background-image:none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/bg-header-actions.png', sizingMethod='crop');
+  }
+* html #portal-personaltools {
+  background-image:none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/bg-header-actions.png', sizingMethod='crop');
+  float:right;
+  }
+* html #portal-siteactions a,
+* html #portal-personaltools a {
+  position: relative;
+  z-index: 1;
+  }
+* html #searchGadget {
+  height /**/:33px;
+  width /**/:248px;
+  }
+* html .searchSection {
+  background-image:none;
+  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/bg-header-actions.png', sizingMethod='crop');
+  width:280px;
+  }
+* html .searchSection input,
+* html .searchSection label {
+  position: relative;
+  z-index: 1;
+  }
+* html #portal-searchbox .LSResult {
+  left:280px;
+  top:47px;
+  }
+* html #livesearchLegend {
+  margin-top:-1.8em !important;
+  }
   
-/** html #portal-siteactions,*/
-/** html #portal-personaltools {*/
-/*  background-image:none;*/
-/*  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/bg-header-actions.png', sizingMethod='image');*/
-/*  }*/
-/** html #portal-siteactions a,*/
-/** html #portal-personaltools a {*/
-/*position: relative;*/
-/*z-index: 1;*/
-/*}*/
-
+  
+  
+  
+  
+  
 
 /* </dtml-with> */
