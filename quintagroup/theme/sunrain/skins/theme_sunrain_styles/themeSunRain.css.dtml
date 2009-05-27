@@ -237,8 +237,20 @@ body {
 /*---------- PORTAL SUBSCRIBE LINKS ----------*/
 #subscribe-links {
   float:right;
-width:345px;
-}
+  width:345px;
+  }
+.subsribeHeader {
+  float:left;
+  }
+.subsribeItem {
+  margin:0;
+  }
+.subsribeItem .document-action-sendto {
+  display:inline;
+  }
+.subsribeItem .document-action-rss {
+  display:inline;
+  }
 
 /*---------- PORTAL COLUMNS PROPERTIES ----------*/
 #portal-columns {
