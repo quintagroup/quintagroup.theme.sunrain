@@ -1,10 +1,6 @@
 /* <dtml-with base_properties> (do not remove this :) */
 /* <dtml-call "REQUEST.set('portal_url', portal_url())"> (not this either :) */
 
-/*---------- GENERAL STYLE ----------*/
-body {
-  
-  }
 #visual-portal-wrapper {
   margin:0 auto;
   width:1000px;
@@ -12,11 +8,11 @@ body {
   
 /*---------- PORTAL TOP ----------*/
 #portal-top {
+  border-top:3px solid #000;
   }
 #portal-header {
   background:url(&dtml-portal_url;/bg-header.jpg) no-repeat 0 0;
   height:<dtml-var "portalHeaderHeight">px;
-  /*padding-right:320px;*/
   position:relative;
   }
   
@@ -25,14 +21,11 @@ body {
   position:absolute;
   right:0;
   top:0;  
-}
+  }
 #portal-siteactions {
   background:url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
   margin:0;
   padding:3px 20px 4px;
-  }
-#portal-siteactions li {
-  
   }
 #portal-siteactions li a {
   border:0;
@@ -65,19 +58,10 @@ body {
   padding:10px 0 10px 6px;
   width:242px;
   }
-.portlet-search-gadget {
-  
-  }
-#portal-searchbox .searchButton,
-.portletSearch .searchButton {
-  }
 #portal-searchbox .searchButton {
   background:transparent;
   border:0;
   padding:0 0 0 2px;
-  }
-.portletSearch .searchButton {
-  
   }
 .searchSection {
   background:transparent url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
@@ -89,49 +73,22 @@ body {
 #portal-searchbox:hover .searchSection {
   display:block;
   }
-
 .searchSection input {
   background-color:#fff;
   height:14px;
   margin-right:4px;
   width:14px;
   }
-.searchSection label {
-  
-  }
 .searchSection label:hover {
   color:#fff;
   }
 #portal-searchbox .LSResult {
-  left:285px;
+  /*left:285px;*/
   position:absolute;
   top:47px;
   }
-.LSResult {
-  
-  }
-.livesearchContainer {
-  
-  }
-#livesearchLegend {
-  
-  }
-.LSTable {
-  
-  }
-
-/*---------- PORTLET SEARCH ----------*/
-.portletSearch .portletItem {
-  
-  }
-.portletSearch .LSResult {
-  
-  }
-.portletSearch .livesearchContainer {
-  
-  }
-.portletSearch li.LSRow a {
-  
+.LSRow a {
+  white-space:normal;
   }
 
 /*---------- PORTAL LOGO ----------*/
@@ -140,14 +97,12 @@ body {
   display:inline-block;
   height:<dtml-var "portalHeaderHeight">px;
   margin:0;
+  text-decoration:none;
   }
 #portal-logo img {
   margin-left:28px;
   margin-top:<dtml-var "(portalHeaderHeight-(_[logoName].height))/2">px;
   }
-/*.portal-logo-lining {*/
-/*  border:0;*/
-/*  }*/
 
 /*---------- PORTAL SLOGAN ----------*/
 #portal-slogan {
@@ -220,7 +175,7 @@ body {
   border:0;
   float:left;
   font-size:0.92em;
-  padding:15px 2em;
+  padding:20px;
   width:610px;
   }
 #portal-breadcrumbs a {
@@ -237,19 +192,25 @@ body {
 /*---------- PORTAL SUBSCRIBE LINKS ----------*/
 #subscribe-links {
   float:right;
+  padding:15px 0;
   width:345px;
-  }
-.subsribeHeader {
-  float:left;
   }
 .subsribeItem {
   margin:0;
   }
-.subsribeItem .document-action-sendto {
-  display:inline;
+.subsribeItem a {
+  color:&dtml-fontColor;;
+  text-decoration:none;
   }
-.subsribeItem .document-action-rss {
+.subsribeItem li {
   display:inline;
+  font-size:1.50em;
+  padding-left:20px;
+  }
+li.subsribeHeader {
+  font-size:1.67em;
+  font-weight:normal;
+  padding-left:0;
   }
 
 /*---------- PORTAL COLUMNS PROPERTIES ----------*/
@@ -304,44 +265,74 @@ body {
 .portletFooter {
   border:0;
   }
-.portletItem a:visited, .portletFooter a:visited {
-  
+.portletItem a:visited,
+.portletFooter a:visited,
+a:visited .portletItemDetails {
+  color:&dtml-linkVisitedColor;;
   }
 
 /*---------- PORTLET NAVIGATION ----------*/
 .portletNavigationTree .portletItem {
   background-color:&dtml-evenRowBackgroundColor;;
+  padding:0;
   }
 .navTreeItem {
-  
-  } 
-.portletItem .navTreeItem a {
-  
+  }
+.navTree {
+  margin-left:0;
+  }
+.navTree li {
+  margin-bottom:0;
+  }
+.navTreeItem a, dd.portletItem .navTreeItem a {
+  border-color:#f5f5f7;
+  border-width:0 0 1px;
+  color:&dtml-fontColor; !important;
+  font-size:1.17em;
+  padding:5px 30px;
   }
 .navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
-  
+  background-color:&dtml-bgColorGlobal;;
+  border-color:#f5f5f7;
+  border-width:0 0 1px;
   }
 .navTreeCurrentItem {
-  
+  background-color:&dtml-bgColorGlobal;;
+  border-color:#f5f5f7 !important;
+  border-width:0 0 1px !important;
   }
 /* Second Level */
+.portletItem .navTreeLevel1 {
+  background-color:&dtml-bgColorGlobal;;
+  }
 .portletItem .navTreeLevel1 .navTreeItem a  {
-  
+  font-size:1em;
+  padding-left:41px;
+  }
+.portletItem .navTreeLevel1 .navTreeItem a:hover  {
+  background-color:&dtml-evenRowBackgroundColor;;
+  }
+.portletItem .navTreeLevel1 .navTreeCurrentItem {
+  background-color:&dtml-evenRowBackgroundColor;;
   }
 /* Third Level */
 .portletItem .navTreeLevel2 .navTreeItem a {
-  
-  }  
+  padding-left:54px;
+  }
+.portletItem .navTreeLevel3 .navTreeItem a {
+  padding-left:67px;
+  }
+
 /* Site Map */
 #portal-sitemap li {
   list-style-image: none;
   list-style-type: none;
   }
 #portal-sitemap a {
-  
+  border:1px solid #F0F2F2;
   }
 #portal-sitemap a:hover {
-  
+  background-color:#CCD0D6;
   }
   
 /*---------- PORTLET CALENDAR ----------*/
@@ -356,8 +347,65 @@ body {
 .portletSearch {
   background-color:&dtml-evenRowBackgroundColor;;
   }
+.portletSearch .portlet-search-gadget {
+  border-color:&dtml-globalBorderColor;;
+  border-style:solid;
+  border-width:1px 0 1px 1px;
+  float:left;
+  height:1.27em;
+  padding:2px 0 0 3px;
+  width:65%;
+  }
+.portletSearch .searchButton {
+  background:none &dtml-globalBorderColor;;
+  border:0;
+  color:#fff;
+  /*font-size:1em;*/
+  font-weight:bold;
+  height:1.64em;
+  margin:0 0 0 -5px !important;
+  overflow:visible;
+  padding:0;
+  width:35%;
+  }
+.portletSearch .LSResult {
+  left:11px;
+  padding:0;
+  text-align:left;
+  top:0.4em;
+  }
+#portal-column-two .LSResult {
+  top:2em;
+  }
+.portletSearch .livesearchContainer {
+  left:-12px;
+  width:100%;
+  }
+.portletSearch li.LSRow a {
+  white-space:normal;
+  }
+.LSTable {
+  margin-left:0;
+  }
+
+/*---------- PORTLET LOGIN ----------*/
+.portletLogin input {
+  background:#fff url(&dtml-portal_url;/input_background.gif) repeat-x;
+  padding:2px 15px;
+  }
+.portletLogin .field input {
+  border:&dtml-borderWidth; solid &dtml-globalBorderColor;;
+  padding:2px;
+  width:120px;
+  }
+.portletLogin img {
+  display:none;
+  }
 
 /*---------- PORTLET WEB BLOG ----------*/
+.portletWeblogAuthors a {
+  text-decoration:none;
+  }
 .portletWeblogArchive {
   background-color:&dtml-evenRowBackgroundColor;;
   }
@@ -394,6 +442,10 @@ body.kssActive abbr.inlineEditable:hover {
 .kupu-html body { 
 	text-align:left;
 	}
+.kupu-html .documentContent {
+  background-color:#fff;
+  }
+
 
 /*---------- PORTAL CONTENT ----------*/
 .documentContent {
@@ -412,9 +464,15 @@ body.kssActive abbr.inlineEditable:hover {
 .documentContent h3 {
   font-size:1em;
   }
+.documentContent li a,
+.documentContent p a,
+.documentContent dd a {
+  border:0;
+  text-decoration:underline;
+  }
 #content a[href^="http:"] {
-  background: 0;
-  padding: 0;
+  background:0;
+  padding:0;
   }
 
 .documentActions {
@@ -452,7 +510,7 @@ form.searchPage input.searchButton {
   color:&dtml-globalFontColor;;
   height:26px;
   margin-bottom:0 !important;
-  padding:0;
+  padding:0 15px;
   text-transform:none;
   }
 

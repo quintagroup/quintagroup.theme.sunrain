@@ -1,9 +1,7 @@
 <div id="subscribe-links" i18n:domain="plone">
     <tal:docactions tal:condition="view/actions">
-    <dl>
-        <dt class="subsribeHeader">Subscribe:</dt>
-        <dd class="subsribeItem">
-            <ul tal:define="normalizeString nocall: context/@@plone/normalizeString">
+            <ul tal:define="normalizeString nocall: context/@@plone/normalizeString" class="subsribeItem">
+                <li class="subsribeHeader">Subscribe:</li>
             <tal:actions repeat="action view/actions">
                 <li tal:attributes="class python:'document-action-' + normalizeString(action['id'])">
                     <a href=""
@@ -20,7 +18,5 @@
                 </li>
             </tal:actions>
             </ul>
-        </dd>
-    </dl>
     </tal:docactions>
 </div>

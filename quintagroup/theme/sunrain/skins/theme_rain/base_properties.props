@@ -42,9 +42,9 @@ notifyBackgroundColor:string=#ffce7b
 discreetColor:string=#76797c
 helpBackgroundColor:string=#ffffe1
 
-portalMinWidth:string=70em
-columnOneWidth:string=16em
-columnTwoWidth:string=16em
+portalMinWidth:string=0
+columnOneWidth:string=200px
+columnTwoWidth:string=200px
 
 portalHeaderHeight:int=104
 bgColorGlobal:string=#f0f2f2
