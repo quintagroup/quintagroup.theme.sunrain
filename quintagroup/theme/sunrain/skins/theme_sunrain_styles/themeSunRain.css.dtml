@@ -49,8 +49,8 @@
 .LSBox {
   clear:none;
   float:none;
-  text-align:left;
   padding-right:0;
+  text-align:left;
   }
 #searchGadget {
   background:url(&dtml-portal_url;/bg-search-input.png) no-repeat 0 0;
@@ -93,7 +93,6 @@
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
-  display:-moz-inline-box;
   display:inline-block;
   height:<dtml-var "portalHeaderHeight">px;
   margin:0;
@@ -154,9 +153,9 @@
   
 /*---------- PORTAL PERSONAL TOOLS ----------*/
 #portal-personaltools-wrapper {
+  bottom:0;
   position:absolute;
   right:0;
-  bottom:0;
   }
 #portal-personaltools {
   background:transparent url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
@@ -189,6 +188,7 @@
 .breadcrumbSeparator {
   color:#929aa6;
   }
+
 /*---------- PORTAL SUBSCRIBE LINKS ----------*/
 #subscribe-links {
   float:right;
@@ -214,29 +214,11 @@ li.subsribeHeader {
   }
 
 /*---------- PORTAL COLUMNS PROPERTIES ----------*/
-#portal-columns {
-  
-  }
-#portal-column-content #content-wrapper {
-  
-  }
 #portal-column-one .visualPadding {
   padding:0 0 1em;
   }
-#portal-column-two {
-  
-  }
 #portal-column-two .visualPadding {
   padding:0 0 1em;
-  }
-.documentEditable {
-  
-  }
-.documentContent {
-  
-  }
-.documentEditable .documentContent {
-  
   }
 
 /*---------- GENERAL PORTLETS PROPERTIES ----------*/
@@ -276,8 +258,6 @@ a:visited .portletItemDetails {
   background-color:&dtml-evenRowBackgroundColor;;
   padding:0;
   }
-.navTreeItem {
-  }
 .navTree {
   margin-left:0;
   }
@@ -301,6 +281,7 @@ a:visited .portletItemDetails {
   border-color:#f5f5f7 !important;
   border-width:0 0 1px !important;
   }
+
 /* Second Level */
 .portletItem .navTreeLevel1 {
   background-color:&dtml-bgColorGlobal;;
@@ -315,6 +296,7 @@ a:visited .portletItemDetails {
 .portletItem .navTreeLevel1 .navTreeCurrentItem {
   background-color:&dtml-evenRowBackgroundColor;;
   }
+
 /* Third Level */
 .portletItem .navTreeLevel2 .navTreeItem a {
   padding-left:54px;
@@ -335,14 +317,6 @@ a:visited .portletItemDetails {
   background-color:#CCD0D6;
   }
   
-/*---------- PORTLET CALENDAR ----------*/
-.portletCalendar {
-  
-  }
-.portletCalendar dt {
-  
-  }
-
 /*---------- PORTLET SEARCH ----------*/  
 .portletSearch {
   background-color:&dtml-evenRowBackgroundColor;;
@@ -360,7 +334,6 @@ a:visited .portletItemDetails {
   background:none &dtml-globalBorderColor;;
   border:0;
   color:#fff;
-  /*font-size:1em;*/
   font-weight:bold;
   height:1.64em;
   margin:0 0 0 -5px !important;
@@ -420,17 +393,6 @@ a:visited .portletItemDetails {
   border-top:30px solid &dtml-bgColorGlobal;;
   padding:1em 0 0;
   }
-#portal-footer p {
-  
-  }
-
-/*---------- PORTAL COLOPHON ----------*/
-#portal-colophon {
-  
-  }
-#portal-colophon ul {
-  
-  }
   
 /*---------- PORTAL EDIT ----------*/
 body.kssActive h1.inlineEditable:hover {
@@ -445,7 +407,6 @@ body.kssActive abbr.inlineEditable:hover {
 .kupu-html .documentContent {
   background-color:#fff;
   }
-
 
 /*---------- PORTAL CONTENT ----------*/
 .documentContent {
@@ -474,7 +435,6 @@ body.kssActive abbr.inlineEditable:hover {
   background:0;
   padding:0;
   }
-
 .documentActions {
   border-top:1px solid &dtml-globalBackgroundColor;;
   }
@@ -487,6 +447,27 @@ body.kssActive abbr.inlineEditable:hover {
   background-color:&dtml-evenRowBackgroundColor;;
   margin:0 0 0 0.5em;
   padding:2px 17px;  
+  }
+
+/*---------- PORTAL WEBLOG ----------*/
+.weblog-entry .weblog-topics {
+  color:&dtml-fontColor;;
+  font-size:0.84em;
+  }
+.weblog-entry .weblog-topics a {
+  text-decoration:none;
+  }
+.weblog-entry .weblog-topics ul {
+  margin-left:0.5em;
+  }
+.weblog-footer {
+  background-color:&dtml-evenRowBackgroundColor;;
+  border-bottom:20px solid &dtml-backgroundColor;;
+  margin:0.5em -1em 1em;
+  padding:0.5em 1em;
+  }
+.documentEditable .weblog-footer {
+  margin:0.5em -0.91em 1em;
   }
 
 /*---------- PORTAL FIXES ----------*/
@@ -514,4 +495,4 @@ form.searchPage input.searchButton {
   text-transform:none;
   }
 
-/* </dtml-with> */ 
+/* </dtml-with> */
