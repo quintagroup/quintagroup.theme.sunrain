@@ -1,6 +1,7 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:browser="http://namespaces.zope.org/browser"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     i18n_domain="quintagroup.theme.sunrain">
 
     <!-- Sun and Rain Theme Zope 3 browser layers -->
@@ -86,5 +87,34 @@
         layer=".interfaces.IThemeSpecific"
         permission="zope.Public"
         />
+
+    <!-- quills customized views -->
+
+    <browser:view
+        zcml:condition="installed quills.app"
+        for="*"
+        name="quills_entry_macros"
+        class=".macros.SunRainWeblogEntryMacros"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+    />
+
+    <browser:view
+        zcml:condition="installed quills.app"
+        for="*"
+        name="quills_weblog_macros"
+        class=".macros.SunRainWeblogMacros"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+    />
+
+    <browser:page
+        zcml:condition="installed quills.app"
+        for="quills.core.interfaces.IWeblogEntry"
+        class="quills.app.browser.weblogview.WeblogEntryView"
+        template="templates/weblogentry_view.pt"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        name="weblogentry_view" />
 
 </configure>

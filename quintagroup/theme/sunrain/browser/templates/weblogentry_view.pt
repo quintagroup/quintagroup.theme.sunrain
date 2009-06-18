@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US"
+      lang="en-US"
+      metal:use-macro="context/main_template/macros/master"
+      i18n:domain="quills.app">
+
+  <body>
+    <metal:feed fill-slot="head_slot">
+      <metal:block metal:use-macro="context/quills_header_macros/feed-links"></metal:block>
+
+    </metal:feed>
+    <div metal:fill-slot="main"
+         tal:define="entry_content nocall:context;
+                     entry view/getWeblogEntry;
+                     weblog_content python:view.getWeblogContentObject();
+                     weblog python:view.getWeblog();
+                     wvconfig view/getConfig;">
+
+      <div tal:replace="structure provider:plone.abovecontenttitle" />
+      <h1 class="documentFirstHeading">
+        <metal:field use-macro="python:here.widget('title', mode='view')">
+          Title
+        </metal:field>
+      </h1>
+      <!-- Commented out for now, we don't want the global keywords, we
+           want our own system.
+           <div tal:replace="structure provider:plone.belowcontenttitle" />
+      -->
+      <metal:macro use-macro="context/quills_entry_macros/filed-under" />
+      <metal:macro use-macro="context/quills_entry_macros/topic-images" />
+      <p class="documentDescription">
+        <metal:field use-macro="python:here.widget('description', mode='view')">
+          Description
+        </metal:field>
+      </p>
+      <div tal:replace="structure provider:plone.abovecontentbody" />
+      <div>
+        <metal:field use-macro="python:here.widget('text', mode='view')">
+          Main text
+        </metal:field>
+      </div>
+      <metal:macro use-macro="context/quills_entry_macros/sunrain_footer" />
+      <div tal:replace="structure provider:plone.belowcontentbody" />
+
+    </div>
+  </body>
+</html>
