@@ -251,20 +251,6 @@ body.kupu-fulleditor-zoomed #portal-columns {
   height /**/:33px;
   width /**/:248px;
   }
-* html .searchSection {
-  background-image:none;
-  filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/bg-header-actions.png', sizingMethod='crop');
-  width:280px;
-  }
-* html .searchSection input,
-* html .searchSection label {
-  position: relative;
-  z-index: 1;
-  }
-* html #portal-searchbox .LSResult {
-  left:280px;
-  top:47px;
-  }
 * html #livesearchLegend {
   margin-top:-1.8em !important;
   }
@@ -274,17 +260,16 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html .portletSearch .searchButton {
   margin-left:-7px !important;
   }
-  
 .portletSearch .portletItem,
-.LSBox {
-zoom:1;
-}
+.portletSearch .LSBox {
+  zoom:1;
+  }
 * html .portletSearch .portletItem {
-height:auto;
-}
-/*.portletSearch .LSResult {*/
-/*  zoom:1;*/
-/*  }*/
+  height:auto;
+  }
+* html .portletSearch .livesearchContainer {
+  clear:left;
+  }
 
 #dashboard-portlets1,
 #dashboard-portlets2,
