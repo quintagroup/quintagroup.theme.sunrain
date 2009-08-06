@@ -78,6 +78,7 @@
   height:14px;
   margin-right:4px;
   width:14px;
+  padding:0;
   }
 .searchSection label:hover {
   color:#fff;
@@ -131,6 +132,7 @@
   }  
 #portal-globalnav li a {
   border:0;
+  color:&dtml-bgColornavTabs;;
   display:-moz-inline-box;
   display:inline-block;
   padding:16px 16px 8px 17px;
@@ -236,9 +238,11 @@ li.subsribeHeader {
   border:0;
   font-size:1.50em;
   padding:3px 11px;
+  color: &dtml-globalFontColor;;
   }
 .portletHeader a {
   text-decoration:none;
+  color: &dtml-globalFontColor;;
   }
 .portletItem {
   border:0;
@@ -251,6 +255,42 @@ li.subsribeHeader {
 .portletFooter a:visited,
 a:visited .portletItemDetails {
   color:&dtml-linkVisitedColor;;
+  }
+.portletStaticText {
+  padding-bottom:0;
+  }
+.portletStaticText .portletItem {
+  padding-bottom:0;
+  border-bottom:1px solid #fff;
+  }
+.portletGreenItem {
+  background-color:&dtml-portletBackgroundItem;;
+  border-top:1px solid #fff;
+  color:#fff;
+  font-size:1.17em;
+  /*font-weight:bold;*/
+  margin:0 -1em;
+  padding:20px 25px 40px 35px;
+  position:relative;
+  }
+.portletGreenItem a {
+  color:#fff !important;
+  }
+.portletLinkItem {
+  /*background-color:#c7d98d;*/
+  bottom:0;
+  font-size:0.79em;
+  padding:2px 10px;
+  position:absolute;
+  right:0;
+  }
+.portletGreyItem {
+  background-color:#929aa6;
+  color:#fffdc1;
+  font-size:0.92em;
+  margin:0 -1em;
+  padding:11px 11px 25px;
+  position:relative;
   }
 
 /*---------- PORTLET NAVIGATION ----------*/
@@ -272,19 +312,19 @@ a:visited .portletItemDetails {
   padding:5px 30px;
   }
 .navTreeItem a:hover, dd.portletItem .navTreeItem a:hover {
-  background-color:&dtml-bgColorGlobal;;
+  background-color:&dtml-bgColorContent;;
   border-color:#f5f5f7;
   border-width:0 0 1px;
   }
 .navTreeCurrentItem {
-  background-color:&dtml-bgColorGlobal;;
+  background-color:&dtml-bgColorContent;;
   border-color:#f5f5f7 !important;
   border-width:0 0 1px !important;
   }
 
 /* Second Level */
 .portletItem .navTreeLevel1 {
-  background-color:&dtml-bgColorGlobal;;
+  background-color:&dtml-bgColorContent;;
   }
 .portletItem .navTreeLevel1 .navTreeItem a  {
   font-size:1em;
@@ -392,6 +432,12 @@ a:visited .portletItemDetails {
   }
   
 /*---------- PORTAL EDIT ----------*/
+.portlets-manager select {
+  width:&dtml-columnOneWidth;;
+  }
+#portal-column-two .portlets-manager select {
+  width:&dtml-columnTwoWidth;;
+  }
 body.kssActive h1.inlineEditable:hover {
   padding-bottom:0;
   }
@@ -407,7 +453,7 @@ body.kssActive abbr.inlineEditable:hover {
 
 /*---------- PORTAL CONTENT ----------*/
 .documentContent {
-  background-color:&dtml-bgColorGlobal;;
+  background-color:&dtml-bgColorContent;;
   font-size:100%;
   }
 .documentContent h1 {

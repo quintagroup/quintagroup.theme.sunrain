@@ -21,7 +21,7 @@ borderStyleAnnotations:string=solid
 
 globalBorderColor:string=#8cacbb
 globalBackgroundColor:string=#ccd0d6
-globalFontColor:string=#000
+globalFontColor:string=#332c34
 
 headingFontFamily:string=Tahoma, Geneva, sans-serif
 
@@ -44,8 +44,11 @@ helpBackgroundColor:string=#ffffe1
 
 portalMinWidth:string=0
 columnOneWidth:string=200px
-columnTwoWidth:string=200px
+columnTwoWidth:string=250px
 
 portalHeaderHeight:int=104
 bgColorGlobal:string=#f0f2f2
+bgColorContent:string=#f0f2f2
 bgColorGlobalnavTabs:string=#ff6046
+bgColornavTabs:string=#332c34
+portletBackgroundItem:string=#acc755
