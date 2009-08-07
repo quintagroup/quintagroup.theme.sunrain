@@ -2,7 +2,7 @@ title:string=Plone's color, font, logo and border defaults
 
 plone_skin:string=Plone Default
 
-logoName:string=logoRain.png
+logoName:string=logoSun.png
 
 fontFamily:string=Tahoma, Geneva, sans-serif
 fontBaseSize:string=75%
@@ -19,7 +19,7 @@ borderWidth:string=1px
 borderStyle:string=solid
 borderStyleAnnotations:string=solid
 
-globalBorderColor:string=#8cacbb
+globalBorderColor:string=#663300
 globalBackgroundColor:string=#663300
 globalFontColor:string=#bee458
 
@@ -47,6 +47,7 @@ columnOneWidth:string=200px
 columnTwoWidth:string=250px
 
 portalHeaderHeight:int=104
+linkColorHeader:string=#663300
 bgColorGlobal:string=#ffffcc
 bgColorContent:string=#fffff0
 bgColorGlobalnavTabs:string=#663300
