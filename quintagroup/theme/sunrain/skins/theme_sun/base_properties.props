@@ -21,7 +21,7 @@ borderStyleAnnotations:string=solid
 
 globalBorderColor:string=#663300
 globalBackgroundColor:string=#663300
-globalFontColor:string=#bee458
+globalFontColor:string=#ffffcc
 
 headingFontFamily:string=Tahoma, Geneva, sans-serif
 

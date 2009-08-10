@@ -93,6 +93,9 @@
 .LSRow a {
   white-space:normal;
   }
+.livesearchContainer {
+  color:&dtml-linkColorHeader;;
+  }
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
@@ -242,7 +245,8 @@ li.subsribeHeader {
   padding:3px 11px;
   color: &dtml-globalFontColor;;
   }
-.portletHeader a {
+.portletHeader a,
+.managedPortlet .portletHeader a {
   text-decoration:none;
   color:&dtml-globalFontColor;;
   }
@@ -258,29 +262,40 @@ li.subsribeHeader {
 a:visited .portletItemDetails {
   color:&dtml-linkVisitedColor;;
   }
-.portletStaticText {
-  padding-bottom:0;
-  }
-.portletStaticText .portletItem {
-  padding-bottom:0;
-  border-bottom:1px solid #fff;
-  }
+/*.portletStaticText {*/
+/*  padding-bottom:0;*/
+/*  }*/
+/*.portletStaticText .portletItem {*/
+/*  padding-bottom:0;*/
+/*  border-bottom:1px solid #fff;*/
+/*  }*/
+
+/*---------- portlet Green and Grey Items ----------*/
 .portletGreenItem {
   background-color:&dtml-portletBackgroundItem;;
-  border-top:1px solid #fff;
+  border-bottom:1px solid #fff;
   color:#fff;
   font-size:1.17em;
-  /*font-weight:bold;*/
-  margin:0 -1em;
-  padding:20px 25px 40px 35px;
+  padding:15px 25px 30px 35px;
   position:relative;
   }
-.portletGreenItem a {
-  color:#fff !important;
+.portletGreenItem .portletHeader,
+.portletGreyItem .portletHeader {
+  display:none;
   }
-.portletLinkItem {
-  /*background-color:#c7d98d;*/
+.portletGreenItem .portletItem,
+.portletGreyItem .portletItem {
+  background-color:transparent;
+  padding:0;
+  }
+.portletGreyItem .image-left,
+.portletGreenItem  .image-left {
+  margin-top:0;
+  }
+.portletGreenItem a {
+  background-color:#c7d98d;
   bottom:0;
+  color:#fff !important;
   font-size:0.79em;
   padding:2px 10px;
   position:absolute;
@@ -288,11 +303,19 @@ a:visited .portletItemDetails {
   }
 .portletGreyItem {
   background-color:#929aa6;
+  border-bottom:1px solid #fff;
   color:#fffdc1;
   font-size:0.92em;
-  margin:0 -1em;
   padding:11px 11px 25px;
   position:relative;
+  }
+.portletGreyItem a {
+  background-color:#b6bbc3;
+  bottom:0;
+  color:#fff !important;
+  padding:2px 10px;
+  position:absolute;
+  right:0;
   }
 
 /*---------- PORTLET NAVIGATION ----------*/
@@ -406,6 +429,14 @@ a:visited .portletItemDetails {
   }
 .portletSearch li.LSRow a {
   white-space:normal;
+  }
+
+/*---------- PORTLET TAG CUMULUS ----------*/
+.portletCumulusPortlet {
+  padding:0;
+  }
+.portletCumulusPortlet .portletFooter {
+  padding:0;
   }
 
 /*---------- PORTLET LOGIN ----------*/
