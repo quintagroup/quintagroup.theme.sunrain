@@ -94,7 +94,7 @@
   white-space:normal;
   }
 .livesearchContainer {
-  color:&dtml-linkColorHeader;;
+  color:&dtml-discreetColor;;
   }
 
 /*---------- PORTAL LOGO ----------*/
@@ -262,13 +262,6 @@ li.subsribeHeader {
 a:visited .portletItemDetails {
   color:&dtml-linkVisitedColor;;
   }
-/*.portletStaticText {*/
-/*  padding-bottom:0;*/
-/*  }*/
-/*.portletStaticText .portletItem {*/
-/*  padding-bottom:0;*/
-/*  border-bottom:1px solid #fff;*/
-/*  }*/
 
 /*---------- portlet Green and Grey Items ----------*/
 .portletGreenItem {
@@ -526,9 +519,16 @@ body.kssActive abbr.inlineEditable:hover {
   padding:0;
   }
 .documentActions {
-  border-top:1px solid &dtml-globalBackgroundColor;;
+  background-color:&dtml-backgroundColor;;
+  border-top:0;
+  margin:0 -1em -2em;
+  padding:1.5em 0 2em 0;
+  } 
+.documentEditable .documentActions {
+  margin:0 -0.9em -2em;
   }
 .documentActions ul {
+  border-top:1px solid &dtml-globalBackgroundColor;;
   line-height:normal;
   margin:2px 0 0;
   padding:0;
@@ -536,7 +536,7 @@ body.kssActive abbr.inlineEditable:hover {
 .documentActions li {
   background-color:&dtml-evenRowBackgroundColor;;
   margin:0 0 0 0.5em;
-  padding:2px 17px;  
+  padding:0 17px 3px;  
   }
 li.formTab a.selected {
   background:&dtml-bgColorGlobal;;
@@ -556,6 +556,20 @@ table.listing th a,
   color:&dtml-globalFontColor;;
   }
 
+.discussion {
+background-color:&dtml-backgroundColor;;
+margin:1em -1em -2em;
+padding:1em;
+}
+.documentEditable .discussion {
+margin:1em -0.9em -2em;
+}
+.documentEditable .reviewHistory,
+.documentEditable .contentHistory {
+display:block;
+padding-bottom:0.5em;
+}
+
 /*---------- PORTAL WEBLOG ----------*/
 .weblog-topics,
 .weblog-entry .weblog-topics {
@@ -574,11 +588,11 @@ table.listing th a,
 .weblogEntryFooter {
   background-color:&dtml-evenRowBackgroundColor;;
   border-bottom:20px solid &dtml-backgroundColor;;
-  margin:0.5em -1em 1em;
+  margin:0.5em -1em 0;
   padding:0.5em 1em;
   }
 .documentEditable .weblogEntryFooter {
-  margin:0.5em -0.91em 1em;
+  margin:0.5em -0.91em 0.5em;
   }
 
 .weblogEntryFooter .item {
