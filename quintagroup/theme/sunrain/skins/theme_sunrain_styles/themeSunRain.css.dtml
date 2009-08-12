@@ -285,14 +285,18 @@ a:visited .portletItemDetails {
 .portletGreenItem  .image-left {
   margin-top:0;
   }
-.portletGreenItem a {
-  background-color:#c7d98d;
+a.portletLinkItem {
   bottom:0;
-  color:#fff !important;
-  font-size:0.79em;
   padding:2px 10px;
   position:absolute;
   right:0;
+  }
+.portletGreenItem a {
+  color:#fff !important;
+  }
+.portletGreenItem a.portletLinkItem {
+  background-color:#c7d98d;
+  font-size:0.79em;
   }
 .portletGreyItem {
   background-color:#929aa6;
@@ -303,12 +307,10 @@ a:visited .portletItemDetails {
   position:relative;
   }
 .portletGreyItem a {
-  background-color:#b6bbc3;
-  bottom:0;
   color:#fff !important;
-  padding:2px 10px;
-  position:absolute;
-  right:0;
+  }
+.portletGreyItem a.portletLinkItem {
+  background-color:#b6bbc3;
   }
 
 /*---------- PORTLET NAVIGATION ----------*/
