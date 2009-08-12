@@ -15,7 +15,8 @@
                      entry view/getWeblogEntry;
                      weblog_content python:view.getWeblogContentObject();
                      weblog python:view.getWeblog();
-                     wvconfig view/getConfig;">
+                     wvconfig view/getConfig;
+                     item_modified python:entry.getPublicationDate() or entry.modified()">
 
       <div tal:replace="structure provider:plone.abovecontenttitle" />
       <h1 class="documentFirstHeading">

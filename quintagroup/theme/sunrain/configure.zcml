@@ -1,10 +1,17 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
+    xmlns:zcml="http://namespaces.zope.org/zcml"
     xmlns:cmf="http://namespaces.zope.org/cmf"
     i18n_domain="quintagroup.theme.sunrain">
 
    <five:registerPackage package="." initialize=".initialize" />
+
+  <!-- Include configuration for dependencies listed in setup.py -->
+  <configure zcml:condition="installed z3c.autoinclude">
+    <includeDependencies package="." />
+  </configure>
+
 
    <include package=".browser" />
    <include package=".portlets" />

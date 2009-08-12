@@ -34,29 +34,17 @@ setup(name='quintagroup.theme.sunrain',
       include_package_data=True,
       zip_safe=False,
       install_requires=['setuptools',
-                        # -*- Extra requirements: -*-
+                        'Products.Quills',
+                        'quintagroup.portlet.static',
+                        'quintagroup.portlet.cumulus',
                         ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),
       test_suite = 'quintagroup.theme.sunrain.tests',
       entry_points="""
-      # -*- entry_points -*- 
-      [distutils.setup_keywords]
-      paster_plugins = setuptools.dist:assert_string_list
-      theme_vars = distwriters:assert_dict
-
-      [egg_info.writers]
-      paster_plugins.txt = setuptools.command.egg_info:write_arg
-      theme_vars.txt = distwriters:write_map
-
+      # -*- entry_points -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
-      paster_plugins = ["ZopeSkel",],
       setup_requires = ["setuptools",],
-      theme_vars = {'skinname': 'Sun and Rain Theme',
-          'skinbase'          : 'Plone Default',
-          'namespace_package' : 'quintagroup',
-          'namespace_package2': 'theme',
-          'package'           : 'sunrain',
-          'used_subtemplates' : '',
-      },
       )

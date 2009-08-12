@@ -283,35 +283,36 @@
               <div class="item weblogModifiedDate">
               <tal:comment condition="nothing">last modified date</tal:comment>
               <span tal:define="item_modified item_modified | entry/getPublicationDate;"
-                tal:replace="python:item_modified.strftime('%d %B %Y')">
+                    tal:condition="item_modified"
+                    tal:replace="python:item_modified.strftime('%d %B %Y')">
                 16 August 2001
               </span>
               </div>
 
-              <div class="item weblogComment">
+              <div class="item weblogComment"
+                   tal:define="displaying_one_entry python:view.displayingOneEntry(context, entry);
+                               isDiscussionAllowedFor nocall:view/isDiscussionAllowedFor;
+                               comment_url python:'%s#comments' % view.getArchiveURLFor(entry);"
+                   tal:condition="python:isDiscussionAllowedFor(entry)">
               <tal:comment condition="nothing">comment block</tal:comment>
-              <span tal:define="displaying_one_entry python:view.displayingOneEntry(context, entry);
-                              isDiscussionAllowedFor nocall:view/isDiscussionAllowedFor;
-                              comment_url python:'%s#comments' % view.getArchiveURLFor(entry);">
-                <tal:if condition="python:isDiscussionAllowedFor(entry)">
-                  <tal:single tal:condition="displaying_one_entry">
-                    <a href="" name="comments"
-                      tal:attributes="href comment_url"
-                      i18n:translate="number_of_comments">
-                      Comments:</a>
-                  </tal:single>
-                  <tal:single tal:condition="not: displaying_one_entry">
-                    <a href=""
-                       tal:attributes="href comment_url"
-                       i18n:translate="number_of_comments">
-                      Comments:</a>
-                  </tal:single>
-                  (<span
-                      tal:content="python:view.getCommentCountFor(entry)">
-                    0
-                  </span>)
-                </tal:if>
-              </span>
+              <span>
+                <tal:single tal:condition="displaying_one_entry">
+                  <a href="" name="comments"
+                     tal:attributes="href comment_url"
+                     i18n:translate="number_of_comments">
+                    Comments:</a>
+                </tal:single>
+                <tal:single tal:condition="not: displaying_one_entry">
+                  <a href=""
+                     tal:attributes="href comment_url"
+                     i18n:translate="number_of_comments">
+                    Comments:</a>
+                </tal:single>
+                (<span
+                    tal:content="python:view.getCommentCountFor(entry)">
+                  0
+                </span>)
+                </span>
               </div>
               
             
