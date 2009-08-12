@@ -7,11 +7,8 @@
 
    <five:registerPackage package="." initialize=".initialize" />
 
-  <!-- Include configuration for dependencies listed in setup.py -->
-  <configure zcml:condition="installed z3c.autoinclude">
-    <includeDependencies package="." />
-  </configure>
-
+   <include package="quintagroup.portlet.static" />
+   <include package="quintagroup.portlet.cumulus" />
 
    <include package=".browser" />
    <include package=".portlets" />
