@@ -117,4 +117,13 @@
         layer=".interfaces.IThemeSpecific"
         name="weblogentry_view" />
 
+    <browser:page
+        zcml:condition="installed quills.app"
+        for="quills.core.interfaces.IWeblog"
+        class="quills.app.browser.commentViews.ManageCommentsView"
+        template="templates/manage_comments.pt"
+        permission="cmf.ManagePortal"
+        layer=".interfaces.IThemeSpecific"
+        name="manage_comments" />
+
 </configure>
