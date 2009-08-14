@@ -20,7 +20,7 @@
 #portal-siteactions-wrapper {
   position:absolute;
   right:0;
-  top:0;  
+  top:0;
   }
 #portal-siteactions {
   background:url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
@@ -47,7 +47,7 @@
   top:33px;
   }
 .LSBox {
-  /*clear:none;*/
+  clear:none;
   float:none;
   padding-right:0;
   position:relative;
@@ -86,9 +86,10 @@
   color:&dtml-linkColorHeader;;
   }  
 #portal-searchbox .LSResult {
-  left:285px;
+  /*left:285px;*/
+  right:10px;
   position:absolute;
-  top:47px;
+  top:53px;
   }
 .LSRow a {
   white-space:normal;
@@ -501,6 +502,7 @@ body.kssActive abbr.inlineEditable:hover {
 .documentContent h1 {
   border-bottom:0;
   font-size:1.5em;
+  margin-bottom:0.5em;
   }
 .documentContent h2 {
   border-bottom:0;
@@ -557,20 +559,22 @@ table.listing th a,
 .stx table th a {
   color:&dtml-globalFontColor;;
   }
-
 .discussion {
-background-color:&dtml-backgroundColor;;
-margin:1em -1em -2em;
-padding:1em;
-}
+  background-color:&dtml-backgroundColor;;
+  margin:1em -1em -2em;
+  padding:1em;
+  }
 .documentEditable .discussion {
-margin:1em -0.9em -2em;
-}
+  margin:1em -0.9em -2em;
+  }
 .documentEditable .reviewHistory,
 .documentEditable .contentHistory {
-display:block;
-padding-bottom:0.5em;
-}
+  display:block;
+  padding-bottom:0.5em;
+  }
+.documentDescription {
+  margin:0 0 1em;
+  }
 
 /*---------- PORTAL WEBLOG ----------*/
 .weblog-topics,
@@ -619,6 +623,28 @@ padding-bottom:0.5em;
   }
 .weblogComment {
   background:url(&dtml-portal_url;/comments.gif) no-repeat 0 0;
+  }
+
+.listingBar {
+  background-color:&dtml-backgroundColor;;
+  border:0;
+  font-size:1em;
+  margin:-0.5em -1em 0;
+padding-bottom:1em;
+padding-top:0.5em;
+  text-transform:none;
+  }
+.documentEditable .listingBar {
+  margin:-0.5em -0.91em 0;
+  }
+
+.listingBar span.previous {
+  background:url(&dtml-portal_url;/previous.gif) no-repeat 0 0;
+  padding:3px 0 3px 28px;
+  }
+.listingBar span.next {
+  background:url(&dtml-portal_url;/next.gif) no-repeat 100% 0;
+  padding:3px 28px 3px 0;
   }
 
 /*---------- PORTAL FIXES ----------*/
