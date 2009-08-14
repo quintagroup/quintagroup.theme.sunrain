@@ -33,11 +33,11 @@
   <viewlet name="plone.global_sections"/>
  </order>
  <order manager="plone.belowcontentbody" skinname="qThemeRain">
-  <viewlet name="plone.belowcontentbody.workflowhistory"/>
+  <viewlet name="plone.belowcontentbody.contenthistory"/>
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
  <order manager="plone.belowcontentbody" skinname="qThemeSun">
-  <viewlet name="plone.belowcontentbody.workflowhistory"/>
+  <viewlet name="plone.belowcontentbody.contenthistory"/>
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
  <hidden manager="plone.portaltop" skinname="qThemeRain">
