@@ -9,4 +9,13 @@
     handlers.
   </import-step>
  <!-- -*- extra stuff goes here -*- -->
+
+  <import-step id="quintagroup.theme.sunrain.import_zexps" 
+               version="20090819-01" 
+               handler="quintagroup.theme.sunrain.setuphandlers.importZEXPs" 
+               title="Sun and Rain Theme: Import zexps objects"> 
+    <dependency step="skins" /> 
+    Import zexp objects into portal on Sun and Rain Theme theme installation 
+  </import-step> 
+
 </import-steps>
