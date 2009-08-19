@@ -65,7 +65,6 @@
   padding:0 0 0 2px;
   }
 .searchSection {
-  /*color:#fff;*/
   color:&dtml-linkColorHeader;;
   display:none;
   font-size:0.92em;
@@ -82,11 +81,9 @@
   padding:0;
   }
 .searchSection label:hover {
-  /*color:#fff;*/
   color:&dtml-linkColorHeader;;
   }  
 #portal-searchbox .LSResult {
-  /*left:285px;*/
   right:10px;
   position:absolute;
   top:53px;
@@ -112,7 +109,7 @@
 
 /*---------- PORTAL SLOGAN ----------*/
 #portal-slogan {
-  color:&dtml-evenRowBackgroundColor;;
+  color:&dtml-ItemSloganColor;;
   display:-moz-inline-box;
   display:inline-block;
   font-family:Verdana,Geneva,sans-serif;
@@ -244,7 +241,7 @@ li.subsribeHeader {
   border:0;
   font-size:1.50em;
   padding:3px 11px;
-  color: &dtml-globalFontColor;;
+  color:&dtml-globalFontColor;;
   }
 .portletHeader a,
 .managedPortlet .portletHeader a {
@@ -387,9 +384,6 @@ a.portletLinkItem {
   }
 
 /*---------- PORTLET SEARCH ----------*/  
-.portletSearch {
-  /*background-color:&dtml-evenRowBackgroundColor;;*/
-  }
 .portletSearch .portlet-search-gadget {
   border-color:&dtml-globalBorderColor;;
   border-style:solid;
@@ -589,8 +583,6 @@ table.listing th a,
 .weblog-topics ul {
   margin-left:0.5em;
   }
-
-
 .weblogEntryFooter {
   background-color:&dtml-evenRowBackgroundColor;;
   border-bottom:20px solid &dtml-backgroundColor;;
@@ -600,12 +592,10 @@ table.listing th a,
 .documentEditable .weblogEntryFooter {
   margin:0.5em -0.91em 0.5em;
   }
-
 .weblogEntryFooter .item {
   color:#929aa6;
   display:inline;
   float:left;
-  /*font-size:0.92em;*/
   margin:0 45px 0 0;
   padding:2px 0 2px 25px;
   }
@@ -624,20 +614,18 @@ table.listing th a,
 .weblogComment {
   background:url(&dtml-portal_url;/comments.gif) no-repeat 0 0;
   }
-
 .listingBar {
   background-color:&dtml-backgroundColor;;
   border:0;
   font-size:1em;
   margin:-0.5em -1em 0;
-padding-bottom:1em;
-padding-top:0.5em;
+  padding-bottom:1em;
+  padding-top:0.5em;
   text-transform:none;
   }
 .documentEditable .listingBar {
   margin:-0.5em -0.91em 0;
   }
-
 .listingBar span.previous {
   background:url(&dtml-portal_url;/previous.gif) no-repeat 0 0;
   padding:3px 0 3px 28px;

@@ -52,4 +52,5 @@ bgColorGlobal:string=#ffffcc
 bgColorContent:string=#fffff0
 bgColorGlobalnavTabs:string=#663300
 bgColornavTabs:string=#663300
-portletBackgroundItem:string=#ff0000
+portletBackgroundItem:string=#acc755
+ItemSloganColor:string=#663300

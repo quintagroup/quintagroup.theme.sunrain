@@ -125,7 +125,7 @@ body {
 /* Fix for IE float bug - have to use the Limi Hack here, since the paragraph
    tag doesn't take nicely to the height hack above in IE. */
 * html .documentContent p {
-    position: relative;
+    /*position: relative;*/
 }
 * html h1.documentFirstHeading {
     height: auto;
@@ -254,6 +254,9 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html #livesearchLegend {
   margin-top:-1.8em !important;
   }
+* html #portal-searchbox .LSResult {
+  left:auto;
+  }
 * html .portletSearch .portlet-search-gadget {
   padding:2px 0 1px 3px;
   }
@@ -274,7 +277,10 @@ body.kupu-fulleditor-zoomed #portal-columns {
   height:1%;
   width:100%;
   }
-
+* html .portletGreenItem,
+* html .portletGreyItem {
+  zoom:1;
+  }
 #dashboard-portlets1,
 #dashboard-portlets2,
 #dashboard-portlets3,
