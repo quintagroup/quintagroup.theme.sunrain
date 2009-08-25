@@ -3,5 +3,5 @@
                     desc python:portal.getProperty('description')"
         tal:condition="desc"
         tal:content="desc">Portal Description</span>
-  <!-- <p class="themeComment11">This Slogan Viewlet registered to qPloneThemeBrendA product</p> -->
+  <p class="themeComment">This Slogan Viewlet registered to SunRain Theme Product</p>
 </div>

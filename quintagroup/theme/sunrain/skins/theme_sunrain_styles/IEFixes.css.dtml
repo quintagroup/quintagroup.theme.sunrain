@@ -281,6 +281,13 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html .portletGreyItem {
   zoom:1;
   }
+#portal-column-content #content-wrapper {
+  padding: 0.1em 1em;
+  }
+.contentActions,
+.actionMenu {
+  position:static;
+  }
 #dashboard-portlets1,
 #dashboard-portlets2,
 #dashboard-portlets3,

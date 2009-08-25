@@ -139,8 +139,10 @@
   display:-moz-inline-box;
   display:inline-block;
   padding:16px 16px 8px 17px;
+  border-bottom-right-radius:6px;
   -webkit-border-bottom-right-radius:6px;
   -moz-border-radius-bottomright:6px;
+  border-bottom-left-radius:6px;
   -webkit-border-bottom-left-radius:6px;
   -moz-border-radius-bottomleft:6px;
   }
@@ -364,6 +366,12 @@ a.portletLinkItem {
   }
 
 /* Site Map */
+#portal-sitemap .navTreeItem a {
+  padding:5px;
+}
+#portal-sitemap .navTreeItem ul {
+  margin:5px 0;
+}
 #portal-sitemap li {
   list-style-image: none;
   list-style-type: none;
@@ -458,6 +466,9 @@ a.portletLinkItem {
   }
 .portletTagCloud {
   background-color:&dtml-evenRowBackgroundColor;;
+  }
+.portletQuillsLinks dd {
+  padding:0.5em;
   }
 
 /*---------- PORTAL FOOTER ----------*/
@@ -619,8 +630,7 @@ table.listing th a,
   border:0;
   font-size:1em;
   margin:-0.5em -1em 0;
-  padding-bottom:1em;
-  padding-top:0.5em;
+  padding:0.5em 0 1em;
   text-transform:none;
   }
 .documentEditable .listingBar {

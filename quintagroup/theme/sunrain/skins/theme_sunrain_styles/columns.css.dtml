@@ -25,7 +25,7 @@ body {
   }
 #portal-column-content #content-wrapper {
   margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 <dtml-var columnOneWidth missing="16em">;
-  padding: 0.1em 1em;
+  padding: 0 1em;
   }
 .documentEditable {
   margin: 0;
