@@ -42,6 +42,14 @@
   <viewlet name="plone.belowcontentbody.contenthistory"/>
   <viewlet name="plone.abovecontenttitle.documentactions"/>
  </order>
+ <order manager="plone.portalfooter" skinname="qThemeRain">
+  <viewlet name="sunrain.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="qThemeSun">
+  <viewlet name="sunrain.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
  <hidden manager="plone.portaltop" skinname="qThemeRain">
   <viewlet name="plone.personal_bar"/>
  </hidden>
@@ -59,11 +67,9 @@
   <viewlet name="plone.searchbox"/>
  </hidden>
  <hidden manager="plone.portalfooter" skinname="qThemeRain">
-  <viewlet name="plone.colophon"/>
   <viewlet name="plone.footer"/>
  </hidden>
  <hidden manager="plone.portalfooter" skinname="qThemeSun">
-  <viewlet name="plone.colophon"/>
   <viewlet name="plone.footer"/>
  </hidden>
 </object>
