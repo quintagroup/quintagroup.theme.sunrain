@@ -254,6 +254,9 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html #livesearchLegend {
   margin-top:-1.8em !important;
   }
+.searchSection input {
+  background-color:transparent;
+  }
 * html #portal-searchbox .LSResult {
   left:auto;
   }

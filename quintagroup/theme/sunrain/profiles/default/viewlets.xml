@@ -5,6 +5,7 @@
   <viewlet name="plone.personal_bar"/>
   <viewlet name="sunrain.global_sections"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="sunrain.subscribe"/>
   <viewlet name="plone.path_bar"/>
  </order>
  <order manager="plone.portaltop" skinname="qThemeSun">
@@ -12,6 +13,7 @@
   <viewlet name="plone.personal_bar"/>
   <viewlet name="sunrain.global_sections"/>
   <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="sunrain.subscribe"/>
   <viewlet name="plone.path_bar"/>
  </order>
  <order manager="plone.portalheader" skinname="qThemeRain">

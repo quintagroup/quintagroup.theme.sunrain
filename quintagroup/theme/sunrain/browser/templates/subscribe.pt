@@ -1,22 +1,28 @@
-<div id="subscribe-links" i18n:domain="plone">
-    <tal:docactions tal:condition="view/actions">
-            <ul tal:define="normalizeString nocall: context/@@plone/normalizeString" class="subsribeItem">
-                <li class="subsribeHeader">Subscribe:</li>
-            <tal:actions repeat="action view/actions">
-                <li tal:attributes="class python:'document-action-' + normalizeString(action['id'])">
-                    <a href=""
-                       tal:attributes="href action/url;
-                                       title action/description"
-                       tal:define="icon python:action.get('icon', None)">
-                        <img alt="" src=""
-                             tal:condition="icon"
-                             tal:attributes="src icon; alt action/title;" />
-                        <tal:action tal:content="action/title" i18n:translate="">
-                            Action name
-                        </tal:action>
-                    </a>
-                </li>
-            </tal:actions>
-            </ul>
-    </tal:docactions>
-</div>
+<dl id="subscribe-links"
+    tal:define="normalizeString nocall: context/@@plone/normalizeString"
+    tal:condition="view/actions"
+    i18n:domain="plone">
+
+    <dt class="subsribeHeader">Subscribe:</dt>
+
+    <dd class="subsribeWrapper">
+    <tal:actions repeat="action view/actions">
+
+        <div tal:attributes="class python:'subsribeItem document-action-' + normalizeString(action['id'])">
+            <a href=""
+               tal:attributes="href action/url;
+                               title action/description"
+               tal:define="icon python:action.get('icon', None)">
+               <img alt="" src=""
+                    tal:condition="icon"
+                    tal:attributes="src icon; alt action/title;" />
+                    <tal:action tal:content="action/title" i18n:translate="">
+                       Action name
+                    </tal:action>
+            </a>
+        </div>
+
+    </tal:actions>
+    </dd>
+    
+</dl>
