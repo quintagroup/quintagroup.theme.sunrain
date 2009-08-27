@@ -46,7 +46,6 @@ portalMinWidth:string=0
 columnOneWidth:string=200px
 columnTwoWidth:string=250px
 
-portalHeaderHeight:int=104
 linkColorHeader:string=#663300
 bgColorGlobal:string=#ffffcc
 bgColorContent:string=#fffff0

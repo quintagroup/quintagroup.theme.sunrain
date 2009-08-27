@@ -6,3 +6,4 @@
    <span class="portal-logo-lining"></span>
       <img src="logo.jpg" alt=""
            tal:replace="structure view/logo_tag" /></a>
+<p class="themeComment">This Slogan Viewlet registered to SunRain Theme Product</p>

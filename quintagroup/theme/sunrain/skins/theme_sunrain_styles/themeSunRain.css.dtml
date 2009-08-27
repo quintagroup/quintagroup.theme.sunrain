@@ -12,7 +12,7 @@
   }
 #portal-header {
   background:url(&dtml-portal_url;/bg-header.jpg) no-repeat 0 0;
-  height:<dtml-var "portalHeaderHeight">px;
+  min-height:104px;
   position:relative;
   }
   
@@ -99,13 +99,12 @@
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
   display:inline-block;
-  height:<dtml-var "portalHeaderHeight">px;
   margin:0;
   text-decoration:none;
   }
 #portal-logo img {
-  margin-left:28px;
-  margin-top:<dtml-var "(portalHeaderHeight-(_[logoName].height))/2">px;
+  margin-left:25px;
+  margin-top:10px;
   }
 
 /*---------- PORTAL SLOGAN ----------*/
@@ -595,6 +594,9 @@ table.listing th a,
   }
 .documentDescription {
   margin:0 0 1em;
+  }
+#content-history div.historyComment {
+  background-color:transparent;
   }
 
 /*---------- PORTAL WEBLOG ----------*/

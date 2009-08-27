@@ -213,14 +213,21 @@ body.kupu-fulleditor-zoomed #portal-columns {
 * html #visual-portal-wrapper {
   text-align /**/:left;
   }
+#portal-header {
+  height: expression(document.body.clientHeight > 104 ? "100%" : "104px")
+  }
+* html #portal-header {
+  height:104px;
+  }
 * html #portal-logo {
   position:relative;
   }
 * html .portal-logo-lining {
+  cursor:pointer;
   filter:progid:DXImageTransform.Microsoft.AlphaImageLoader(src='&dtml-portal_url;/&dtml-logoName;',sizingMethod='crop');
   height:<dtml-var "_[logoName].height">px;
-  margin-left:28px;
-  margin-top:<dtml-var "(portalHeaderHeight-(_[logoName].height))/2">px;
+  margin-left:25px;
+  margin-top:10px;
   position:absolute;
   width:<dtml-var "_[logoName].width">px;
   zoom:1;
