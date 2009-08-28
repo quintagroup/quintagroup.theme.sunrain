@@ -239,6 +239,7 @@
 .portlet {
   background-color:&dtml-evenRowBackgroundColor;;
   border:0;
+  border-bottom:1px solid #fff;
   margin:0;
   padding-bottom:1em;
   }
@@ -272,8 +273,7 @@ a:visited .portletItemDetails {
 
 /*---------- portlet Green and Grey Items ----------*/
 .portletGreenItem {
-  background-color:&dtml-portletBackgroundItem;;
-  border-bottom:1px solid #fff;
+  background-color:#acc755;
   color:#fff;
   font-size:1.17em;
   padding:15px 25px 30px 35px;
@@ -292,7 +292,7 @@ a:visited .portletItemDetails {
 .portletGreenItem  .image-left {
   margin-top:0;
   }
-a.portletLinkItem {
+.portlet a.portletLinkItem {
   bottom:0;
   padding:2px 10px;
   position:absolute;
