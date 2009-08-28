@@ -168,6 +168,7 @@
   background:transparent url(&dtml-portal_url;/bg-header-actions.png) no-repeat 0 0;
   border:0;
   padding:1px 20px 2px;
+  white-space:nowrap;
   }
 #portal-personaltools li a {
   color:&dtml-linkColorHeader;;
