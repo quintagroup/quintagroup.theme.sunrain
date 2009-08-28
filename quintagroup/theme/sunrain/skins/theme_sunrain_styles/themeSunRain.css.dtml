@@ -85,7 +85,7 @@
   color:&dtml-linkColorHeader;;
   }  
 #portal-searchbox .LSResult {
-  right:10px;
+  right:20px;
   position:absolute;
   top:53px;
   }
