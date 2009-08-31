@@ -8,7 +8,7 @@ Features
 
   * SunRain Theme changes a default Plone look using tableless layout.
 
-  * SunRain theme has 'subscribe' viewlet integrated, that adds two actions 'Send this' and 'RSS.
+  * SunRain theme has 'subscribe' viewlet integrated, that adds two actions 'Send this' and 'RSS'.
 
   * SunRain theme has Quills Plone product integrated. Blog view and blogs listing view were changed.
 
