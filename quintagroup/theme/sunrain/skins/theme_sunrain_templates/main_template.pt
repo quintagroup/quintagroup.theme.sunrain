@@ -1,5 +1,9 @@
-<metal:page define-macro="master"><metal:doctype define-slot="doctype"><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"></metal:doctype>
+<metal:page define-macro="master">
 <metal:block define-slot="top_slot" />
+
+<tal:doctype tal:replace="structure string:&lt;!DOCTYPE html PUBLIC 
+	  &quot;-//W3C//DTD XHTML 1.0 Transitional//EN&quot; 
+	  &quot;http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd&quot;&gt;" /> 
 <metal:block use-macro="here/global_defines/macros/defines" />
 
 <html xmlns="http://www.w3.org/1999/xhtml"
@@ -21,26 +25,30 @@
           tal:define="charset site_properties/default_charset|string:utf-8"
           tal:attributes="content string:text/html;;charset=${charset}" />
 
+    <meta name="generator" content="Plone - http://plone.org" />
+
     <metal:baseslot define-slot="base">
       <base tal:attributes="href here/renderBase" /><!--[if lt IE 7]></base><![endif]-->
     </metal:baseslot>
 
-    <meta name="generator" content="Plone - http://plone.org" />
-
     <div tal:replace="structure provider:plone.htmlhead" />
-
-    <meta tal:define="metatags python:putils.listMetaTags(here).items()"
-          tal:condition="metatags"
-          tal:repeat="keyval metatags"
-          tal:attributes="name python:keyval[0];
-                          content python:keyval[1];" />
 
     <!-- Internet Explorer CSS Fixes -->
     <tal:iefixstart replace="structure string:&lt;!--[if lte IE 7]&gt;" />
         <style type="text/css" media="all" tal:condition="exists: portal/IEFixes.css"
                tal:content="string:@import url($portal_url/IEFixes.css);">
         </style>
+
+        <script type="text/javascript"
+                tal:attributes="src string:${portal_url}/iefixes.js">
+        </script>
     <tal:iefixend replace="structure string:&lt;![endif]--&gt;" />
+
+    <meta tal:define="metatags python:putils.listMetaTags(here).items()"
+          tal:condition="metatags"
+          tal:repeat="keyval metatags"
+          tal:attributes="name python:keyval[0];
+                          content python:keyval[1];" />
 
     <link tal:replace="structure provider:plone.htmlhead.links" />
 
@@ -98,13 +106,7 @@
                     <div id="viewlet-above-content" tal:content="structure provider:plone.abovecontent" />
 
                     <metal:slot metal:define-slot="body">
-                    <tal:comment replace="nothing">
-                        The div with ID #content will only show up if we're actually on a content
-                        view, never on edit forms, control panels etc. It's meant to only wrap the
-                        actual content that gets rendered on a page, not the other UI elements.
-                    </tal:comment>
-                    <div id="content"
-                         tal:omit-tag="not:context/@@plone_context_state/is_view_template">
+                    <div id="content">
                       <metal:header metal:define-slot="header" tal:content="nothing">
                         Visual Header
                       </metal:header>
