@@ -229,6 +229,15 @@
 #portal-columns {
   clear:both;
   }
+.visualColumnHideOne #portal-column-content #content-wrapper {
+  padding:0 1em 0 0;
+  }
+.visualColumnHideTwo #portal-column-content #content-wrapper {
+  padding:0 0 0 1em;
+  }
+.visualColumnHideOneTwo #portal-column-content #content-wrapper {
+  padding:0;
+  }
 #portal-column-one .visualPadding {
   padding:0 0 1em;
   }
