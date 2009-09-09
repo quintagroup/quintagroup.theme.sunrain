@@ -1,29 +1,26 @@
-quintagroup.theme.sunrain Installation
-=======================
+SunRain Plone Theme Installation
+================================
 
- * When you're reading this you have probably already run
-   ``easy_install quintagroup.theme.sunrain``. Find out how to install setuptools
-   (and EasyInstall) here:
-   http://peak.telecommunity.com/DevCenter/EasyInstall
+To install quintagroup.plonecomments into the global Python environment (or a workingenv),
+using a traditional Zope 2 instance, you can do this:
 
- * Get `pythonproducts`_ and install it via::
+* Copy ``quintagroup`` folder to the ``/path/to/instance/lib/python`` directory.
 
-       python setup.py install --home /path/to/instance
-
-   into your Zope instance.
-
- * Create a file called ``quintagroup.theme.sunrain-configure.zcml`` in the
+* Create a file called ``quintagroup.theme.sunrain-configure.zcml`` in the
    ``/path/to/instance/etc/package-includes`` directory.  The file
    should only contain this::
 
-       <include package="quintagroup.theme.sunrain" />
+       <include package="quintagroup.theme.sunrain"/>
 
-.. _pythonproducts: http://plone.org/products/pythonproducts
+* Restart the Zope server, for example, with the following command in the terminal::
+
+   $ ./bin/zopectl restart
+
 
 Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
 recipe to manage your project, you can do this:
 
- * Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.:
+* Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
 
     [buildout]
     ...
@@ -31,7 +28,7 @@ recipe to manage your project, you can do this:
         ...
         quintagroup.theme.sunrain
 
-  * Tell the plone.recipe.zope2instance recipe to install a ZCML slug:
+* Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
 
     [instance]
     recipe = plone.recipe.zope2instance
@@ -39,9 +36,12 @@ recipe to manage your project, you can do this:
     zcml =
         quintagroup.theme.sunrain
 
-  * Re-run buildout, e.g. with:
+* Re-run buildout, e.g. with::
 
     $ ./bin/buildout
 
-You can skip the ZCML slug if you are going to explicitly include the package
-from another package's configure.zcml file.
+* Restart the Zope server, for example, with the following command in the terminal::
+
+    $ ./bin/instance restart
+
+Then install SunRain Theme in Plone with Quickinstaller (Site Setup -> Add-on Products)
