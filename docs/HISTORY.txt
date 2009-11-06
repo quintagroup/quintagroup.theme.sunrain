@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.1 - Nov 6, 2009
+-----------------
+
+* Default theme logo changes
+
 1.0 - Sep 9, 2009
 -----------------
 
