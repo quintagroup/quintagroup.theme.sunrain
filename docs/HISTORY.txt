@@ -1,6 +1,11 @@
 Changelog
 =========
 
+1.2 - Dec 9, 2009
+-----------------
+
+* Fixed error when Sun & Rain theme is installed but turned off in portal_skins
+
 1.1 - Nov 6, 2009
 -----------------
 

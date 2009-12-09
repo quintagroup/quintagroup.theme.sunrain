@@ -84,7 +84,6 @@
         name="rsstype"
         class=".subscribe.RSSType"
         allowed_attributes="quills other"
-        layer=".interfaces.IThemeSpecific"
         permission="zope.Public"
         />
 
