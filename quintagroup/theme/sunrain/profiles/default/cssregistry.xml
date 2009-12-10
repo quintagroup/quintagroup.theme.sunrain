@@ -2,7 +2,7 @@
 <object name="portal_css">
 
  <stylesheet title="" cacheable="True" compression="safe" cookable="True"
-    enabled="on" expression="" id="themeSunRain.css" media="" rel="stylesheet"
+    enabled="on" expression="" id="themeSunRain.css" media="screen" rel="stylesheet"
     rendering="import"/>
 
 </object>

@@ -1,5 +1,7 @@
 <?xml version="1.0"?>
 <site>
+ <property name="default_page"
+    type="string">welcome-to-sunrain-theme</property>
  <property
     name="description">Type your slogan here</property>
 </site>
