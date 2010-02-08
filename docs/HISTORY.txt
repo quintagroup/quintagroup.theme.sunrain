@@ -1,8 +1,8 @@
 Changelog
 =========
 
-1.2
----
+1.2 - Unreleased
+----------------
 
 * Fixed error when Sun & Rain theme is installed but turned off in portal_skins [koval] - Dec 9, 2009
 * Improved print styles [serg] - Dec 10, 2009
@@ -11,7 +11,7 @@ Changelog
 1.1 - Nov 6, 2009
 -----------------
 
-* Default theme logo changes
+* Default theme logo changed
 
 1.0 - Sep 9, 2009
 -----------------
