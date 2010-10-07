@@ -24,7 +24,9 @@ from quintagroup.theme.sunrain.browser.interfaces import IThemeSpecific
 PROJECT_NAME = "quintagroup.theme.sunrain"
 # This step made in collective.testcaselayer.ptc
 #ptc.setupPloneSite()
-ztc.installProduct("Quills")
+
+# Commented until release of Quills for plone4
+#ztc.installProduct("Quills")
 
 class NotInstalled(BasePTCLayer):
     """Initialize the package, without installation into portal

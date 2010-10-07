@@ -12,12 +12,18 @@ SKIN_LAYERS = ['theme_sunrain_templates', 'theme_sunrain_styles', 'theme_sunrain
 CSS_RESOURCES = ['themeSunRain.css']
 VIEWLETS = {'plone.portalfooter': ['sunrain.footer'], 'plone.portalheader': ['sunrain.searchbox', 'sunrain.logo', 'sunrain.slogan', 'sunrain.personal_bar'], 'plone.portaltop': ['sunrain.global_sections', 'sunrain.subscribe']}
 
+
+REQUIREMENTS = ['quintagroup.portlet.static', 'quintagroup.portlet.cumulus',
+                #'Quills' -> not yet released version for plone-4
+]
+                        
 class TestDefaultInstallation(TestCase):
 
-    def testInstalled(self):
+    def testInstalledRequirements(self):
         qi = self.portal.portal_quickinstaller
-        self.assertTrue(qi.isProductInstalled(PROJECT_NAME),
-            '%s is not installed.' % PROJECT_NAME)
+        for r in REQUIREMENTS:
+            self.assertTrue(qi.isProductInstalled(r),
+                'Required product "%s" is not installed.' % r)
 
     def testStyles(self):
         """ Test styles registration."""
