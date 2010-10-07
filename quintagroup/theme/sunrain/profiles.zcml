@@ -19,4 +19,23 @@
       provides="Products.GenericSetup.interfaces.EXTENSION"
       />
 
+  <genericsetup:importStep
+      name="quintagroup.theme.sunrain.uninstall"
+      title="Sun and Rain Theme: miscellaneous uninstall steps"
+      description="Various uninstall steps that are not handled by GS import/export handlers."
+      handler="quintagroup.theme.sunrain.setuphandlers.uninstallVarious">
+        <depends name="skins"/>
+
+  </genericsetup:importStep>
+
+
+  <genericsetup:importStep
+      name="quintagroup.theme.sunrain.various"
+      title="Sun and Rain Theme: miscellaneous import steps"
+      description="Various import steps that are not handled by GS import/export handlers."
+      handler="quintagroup.theme.sunrain.setuphandlers.setupVarious">
+        <depends name="skins"/>
+
+  </genericsetup:importStep>
+
 </configure>
