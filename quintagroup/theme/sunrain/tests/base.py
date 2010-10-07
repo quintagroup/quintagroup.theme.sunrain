@@ -50,8 +50,9 @@ class UnInstalled(BasePTCLayer):
     """ UnInstall product from the portal
     """
     def afterSetUp(self):
-        qi = getattr(self.portal, 'portal_quickinstaller', None)
-        qi.uninstallProducts(products=[PROJECT_NAME,])
+        self.addProfile("%s:uninstall" % PROJECT_NAME)
+        # qi = getattr(self.portal, 'portal_quickinstaller', None)
+        # qi.uninstallProducts(products=[PROJECT_NAME,])
 
 
 NotInstalledLayer = NotInstalled([ptc_layer,])
