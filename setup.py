@@ -10,7 +10,7 @@ def read(*rnames):
 
 version = '1.2'
 
-tests_require=['zope.testing']
+tests_require=['zope.testing', 'collective.testcaselayer',]
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
