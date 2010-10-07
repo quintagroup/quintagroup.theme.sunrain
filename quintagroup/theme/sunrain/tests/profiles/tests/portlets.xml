@@ -1,0 +1,12 @@
+<?xml version="1.0"?>
+<!-- This file is used to register new types of portlets. It can also
+     be used to register completely new column types. See CMFPlone's version
+     of this file for more information.
+  -->
+<portlets>
+ <portlet
+   addview="quintagroup.theme.sunrain.portlet.Cumulus"
+   title="SunRain Tag Cloud (cumulus)"
+   description="This portlet displays a tag cloud using a Flash movie that rotates tags in 3D."
+   />
+</portlets>

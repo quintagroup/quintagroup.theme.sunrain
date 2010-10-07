@@ -1,0 +1,75 @@
+<?xml version="1.0"?>
+<object>
+ <order manager="plone.portaltop" skinname="qThemeRain">
+  <viewlet name="plone.header"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="sunrain.global_sections"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="sunrain.subscribe"/>
+  <viewlet name="plone.path_bar"/>
+ </order>
+ <order manager="plone.portaltop" skinname="qThemeSun">
+  <viewlet name="plone.header"/>
+  <viewlet name="plone.personal_bar"/>
+  <viewlet name="sunrain.global_sections"/>
+  <viewlet name="plone.app.i18n.locales.languageselector"/>
+  <viewlet name="sunrain.subscribe"/>
+  <viewlet name="plone.path_bar"/>
+ </order>
+ <order manager="plone.portalheader" skinname="qThemeRain">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="sunrain.searchbox"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="sunrain.logo"/>
+  <viewlet name="sunrain.slogan"/>
+  <viewlet name="sunrain.personal_bar"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.portalheader" skinname="qThemeSun">
+  <viewlet name="plone.skip_links"/>
+  <viewlet name="sunrain.searchbox"/>
+  <viewlet name="plone.site_actions"/>
+  <viewlet name="sunrain.logo"/>
+  <viewlet name="sunrain.slogan"/>
+  <viewlet name="sunrain.personal_bar"/>
+  <viewlet name="plone.global_sections"/>
+ </order>
+ <order manager="plone.belowcontentbody" skinname="qThemeRain">
+  <viewlet name="plone.belowcontentbody.contenthistory"/>
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+ <order manager="plone.belowcontentbody" skinname="qThemeSun">
+  <viewlet name="plone.belowcontentbody.contenthistory"/>
+  <viewlet name="plone.abovecontenttitle.documentactions"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="qThemeRain">
+  <viewlet name="sunrain.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
+ <order manager="plone.portalfooter" skinname="qThemeSun">
+  <viewlet name="sunrain.footer"/>
+  <viewlet name="plone.colophon"/>
+ </order>
+ <hidden manager="plone.portaltop" skinname="qThemeRain">
+  <viewlet name="plone.personal_bar"/>
+ </hidden>
+ <hidden manager="plone.portaltop" skinname="qThemeSun">
+  <viewlet name="plone.personal_bar"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="qThemeRain">
+  <viewlet name="plone.global_sections"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.searchbox"/>
+ </hidden>
+ <hidden manager="plone.portalheader" skinname="qThemeSun">
+  <viewlet name="plone.global_sections"/>
+  <viewlet name="plone.logo"/>
+  <viewlet name="plone.searchbox"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="qThemeRain">
+  <viewlet name="plone.footer"/>
+ </hidden>
+ <hidden manager="plone.portalfooter" skinname="qThemeSun">
+  <viewlet name="plone.footer"/>
+ </hidden>
+</object>

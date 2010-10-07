@@ -1,0 +1,13 @@
+<configure
+    xmlns="http://namespaces.zope.org/zope"
+    xmlns:gs="http://namespaces.zope.org/genericsetup">
+
+  <gs:registerProfile
+      name="tests"
+      title="Test qThemeRain"
+      directory="profiles/tests"
+      description="Extension profile for tests 'qThemeRain' Plone theme."
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
+
+</configure>

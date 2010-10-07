@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<object name="portal_properties" meta_type="Plone Properties Tool">
+ <object name="site_properties" meta_type="Plone Property Sheet">
+   <property name="icon_visibility" type="string">disabled</property>
+ </object>
+ <object name="staticportlet_properties" meta_type="Plone Property Sheet">
+  <property name="title">Static Stylish portlet properties</property>
+  <property name="portlet_dropdown" type="lines" purge="True">
+   <element value="portletGreenItem|Green Item"/>
+   <element value="portletGreyItem|Grey Item"/>
+  </property>
+ </object>
+</object>

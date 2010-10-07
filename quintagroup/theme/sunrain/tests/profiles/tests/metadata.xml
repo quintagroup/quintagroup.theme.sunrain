@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<metadata>
+  <version>1.1</version>
+  <dependencies>
+    <dependency>profile-Products.Quills:default</dependency>
+    <dependency>profile-quintagroup.portlet.static:default</dependency>
+    <dependency>profile-quintagroup.portlet.cumulus:default</dependency>
+  </dependencies>
+</metadata>
