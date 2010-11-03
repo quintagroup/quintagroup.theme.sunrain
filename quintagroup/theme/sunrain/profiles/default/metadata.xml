@@ -5,5 +5,6 @@
     <dependency>profile-Products.Quills:default</dependency>
     <dependency>profile-quintagroup.portlet.static:default</dependency>
     <dependency>profile-quintagroup.portlet.cumulus:default</dependency>
+    <dependency>profile-plonetheme.classic:default</dependency>
   </dependencies>
 </metadata>
