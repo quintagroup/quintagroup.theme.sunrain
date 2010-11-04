@@ -17,6 +17,24 @@ REQUIREMENTS = ['quintagroup.portlet.static', 'quintagroup.portlet.cumulus',
                 #'Quills' -> not yet released version for plone-4
 ]
                         
+
+class TestInstallPloneClassic(TestCaseNotInstalled):
+
+    def testAutomateInstallPloneClassic(self):
+        ptc = "plonetheme.classic"
+        qi = self.portal.portal_quickinstaller
+        installed = lambda qi=qi:[p['id'] for p in qi.listInstalledProducts()]
+        if ptc in installed():
+            self.qi.uninstallProducts([ptc,])
+
+        self.assertFalse(ptc in installed(),
+            '"%s" still present among installed products' % ptc)
+        self.addProduct(PROJECT_NAME)
+        self.assertTrue(ptc in installed(),
+            '"%s" product not installed with "%s" theme' % (
+                ptc, PROJECT_NAME))
+
+
 class TestDefaultInstallation(TestCase):
 
     def testInstalledRequirements(self):
@@ -111,6 +129,7 @@ class TestUninstallation(TestCaseUnInstalled):
 def test_suite():
     from unittest import TestSuite, makeSuite
     suite = TestSuite()
+    suite.addTest(makeSuite(TestInstallPloneClassic))
     suite.addTest(makeSuite(TestDefaultInstallation))
     suite.addTest(makeSuite(TestUninstallation))
     return suite
