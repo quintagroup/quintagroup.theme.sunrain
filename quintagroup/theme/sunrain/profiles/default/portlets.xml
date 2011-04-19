@@ -4,9 +4,5 @@
      of this file for more information.
   -->
 <portlets>
- <portlet
-   addview="quintagroup.theme.sunrain.portlet.Cumulus"
-   title="SunRain Tag Cloud (cumulus)"
-   description="This portlet displays a tag cloud using a Flash movie that rotates tags in 3D."
-   />
-</portlets>
+  <!-- -*- extra stuff goes here -*- -->
+</portlets> 

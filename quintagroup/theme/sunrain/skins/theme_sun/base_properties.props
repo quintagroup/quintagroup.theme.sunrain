@@ -52,3 +52,4 @@ bgColorContent:string=#fffff0
 bgColorGlobalnavTabs:string=#663300
 bgColornavTabs:string=#663300
 ItemSloganColor:string=#663300
+bgHoverColorPersonaltools:string=#fee566

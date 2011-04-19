@@ -8,15 +8,4 @@
       -->
     <include package="plone.app.portlets" />
 
-    <plone:portlet
-        name="quintagroup.theme.sunrain.portlet.Cumulus"
-        interface=".cumulusportlet.ICumulusPortlet"
-        assignment=".cumulusportlet.Assignment"
-        view_permission="zope2.View"
-        edit_permission="cmf.ManagePortal"
-        renderer=".cumulusportlet.Renderer"
-        addview=".cumulusportlet.AddForm"
-        editview=".cumulusportlet.EditForm"
-        />
-
 </configure>

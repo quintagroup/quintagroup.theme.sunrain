@@ -4,6 +4,5 @@
 	    &copy; 2005-<span tal:define="now modules/DateTime/DateTime"
 	                       tal:content="now/year" />
 	    <a href="http://quintagroup.com">Quintagroup</a>.
-	    Powered by <a href="http://plone.org">Plone</a>. 
 	  </p>
 </div>

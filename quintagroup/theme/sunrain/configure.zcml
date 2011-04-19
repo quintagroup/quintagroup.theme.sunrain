@@ -8,7 +8,6 @@
    <five:registerPackage package="." initialize=".initialize" />
 
    <include package="quintagroup.portlet.static" />
-   <include package="quintagroup.portlet.cumulus" />
 
    <include package=".browser" />
    <include package=".portlets" />

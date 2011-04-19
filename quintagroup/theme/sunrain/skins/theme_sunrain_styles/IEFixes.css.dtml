@@ -39,6 +39,9 @@ textarea {
 }
 
 /* Fix bottom margin on tabs in IE */
+#portal-globalnav {
+  zoom:1;
+  }
 #portal-globalnav li.selected a {
 position: relative;
 }
@@ -304,5 +307,7 @@ body.kupu-fulleditor-zoomed #portal-columns {
 #dashboard-portlets4 {
   width:23%;
   }
-
+#content-views {
+  margin-top:1px;
+  }
 /* </dtml-with> */

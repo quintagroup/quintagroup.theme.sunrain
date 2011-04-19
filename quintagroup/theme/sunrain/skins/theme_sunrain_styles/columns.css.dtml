@@ -5,66 +5,43 @@
 
 /* <dtml-with base_properties> */
 
-body {
-  min-width: <dtml-var portalMinWidth missing="70em">;
-  }
 #portal-columns {
-  margin: 0;
-  /*overflow: auto;*/
-  width: 100% !important;
+  margin:0;
+  width:100%;
   }
 #visual-column-wrapper {
-  float: left;
-  margin-right: -<dtml-var columnTwoWidth missing="16em">;
-  width: 100%;
+  float:left;
+  margin-right:-<dtml-var columnTwoWidth missing="16em">;
+  width:100%;
   }
 #portal-column-content {
-  float: right;
-  margin-left: -<dtml-var columnOneWidth missing="16em">;
-  width: 100%;  
+  float:right;
+  margin-left:-<dtml-var columnOneWidth missing="16em">;
+  width:100%;  
   }
-#portal-column-content #content-wrapper {
-  margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 <dtml-var columnOneWidth missing="16em">;
-  padding: 0 1em;
-  }
-.documentEditable {
-  margin: 0;
-  padding: 0 !important;
-  }
-.documentEditable .documentContent {
-  padding: 1em 0.91em 2em !important;
+#content-wrapper {
+  margin:0 <dtml-var columnTwoWidth missing="16em"> 0 <dtml-var columnOneWidth missing="16em">;
   }
 #portal-column-one {
-  float: left;
-  overflow: hidden;
-  width: <dtml-var columnOneWidth missing="16em">;
+  float:left;
+  overflow:hidden;
+  width:<dtml-var columnOneWidth missing="16em">;
   }
 #portal-column-two {
-  float: right;
-  overflow: hidden;
-  width: <dtml-var columnTwoWidth missing="16em">;
-  }
-
-/* padding - thanks to the w3c box model :P */
-#portal-column-content .visualPadding {
-  padding: 1em 2em;
-  }
-#portal-column-one .visualPadding {
-  padding: 1em 0em 1em 2em;
-  }
-#portal-column-two .visualPadding {
-  padding: 1em 2em 1em 0em;
+  float:right;
+  overflow:hidden;
+  width:<dtml-var columnTwoWidth missing="16em">;
   }
 
 /* hide columns */
-.visualColumnHideOneTwo #portal-column-content #content-wrapper {
-  margin: 0;
+.visualColumnHideOneTwo #content-wrapper {
+  margin:0;
   }
-.visualColumnHideOne #portal-column-content #content-wrapper {
-  margin: 0 <dtml-var columnTwoWidth missing="16em"> 0 0;
+.visualColumnHideOne #content-wrapper {
+  margin:0 <dtml-var columnTwoWidth missing="16em"> 0 0;
   }
-.visualColumnHideTwo #portal-column-content #content-wrapper {
-  margin: 0 0 0 <dtml-var columnOneWidth missing="16em">;
+.visualColumnHideTwo #content-wrapper {
+  margin:0 0 0 <dtml-var columnOneWidth missing="16em">;
   }
   
 /* different fixes */
@@ -93,5 +70,10 @@ body.fullscreen #portal-column-content {
 body.fullscreen #portal-column-content #content-wrapper {
   margin: 0;
   }
-
+* html #region-content form {
+	width: 99%;
+	}
+* html #portal-searchbox {
+  overflow: visible !important; 
+  }
 /* </dtml-with> */

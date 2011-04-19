@@ -15,8 +15,7 @@
                      entry view/getWeblogEntry;
                      weblog_content python:view.getWeblogContentObject();
                      weblog python:view.getWeblog();
-                     wvconfig view/getConfig;
-                     item_modified python:entry.getPublicationDate() or entry.modified()">
+                     wvconfig view/getConfig;">
 
       <div tal:replace="structure provider:plone.abovecontenttitle" />
       <h1 class="documentFirstHeading">
@@ -28,7 +27,8 @@
            want our own system.
            <div tal:replace="structure provider:plone.belowcontenttitle" />
       -->
-
+      <metal:macro use-macro="context/quills_entry_macros/byline" />
+      <metal:macro use-macro="context/quills_entry_macros/filed-under" />
       <metal:macro use-macro="context/quills_entry_macros/topic-images" />
       <p class="documentDescription">
         <metal:field use-macro="python:here.widget('description', mode='view')">
@@ -41,8 +41,6 @@
           Main text
         </metal:field>
       </div>
-      <metal:macro use-macro="context/quills_entry_macros/filed-under" />
-      <metal:macro use-macro="context/quills_entry_macros/sunrain_footer" />
       <div tal:replace="structure provider:plone.belowcontentbody" />
 
     </div>

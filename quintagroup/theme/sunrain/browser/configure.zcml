@@ -41,16 +41,28 @@
         permission="zope2.View"
         />
     <browser:viewlet
-        name="sunrain.global_sections"
+        name="plone.path_bar"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
-        class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
+        class="plone.app.layout.viewlets.common.PathBarViewlet"
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
         />
-     <browser:viewlet
-        name="sunrain.personal_bar"
+    <browser:viewlet
+        name="plone.site_actions"
         manager="plone.app.layout.viewlets.interfaces.IPortalHeader"
-        class="plone.app.layout.viewlets.common.PersonalBarViewlet"
+        class="plone.app.layout.viewlets.common.SiteActionsViewlet"
+        permission="zope2.View"
+        />
+   <browser:viewlet
+      name="plone.app.i18n.locales.languageselector"
+      manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+      class="plone.app.i18n.locales.browser.selector.LanguageSelector"
+      permission="zope2.View"
+      />
+    <browser:viewlet
+        name="sunrain.global_sections"
+        manager="plone.app.layout.viewlets.interfaces.IPortalTop"
+        class="plone.app.layout.viewlets.common.GlobalSectionsViewlet"
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
         />
@@ -77,6 +89,13 @@
         layer=".interfaces.IThemeSpecific"
         />
 
+  <!-- Zope 3 browser resources -->
+  <browser:resourceDirectory
+      name="quintagroup.theme.sunrain.resources"
+      directory="resources"
+      layer=".interfaces.IThemeSpecific"
+      />
+
     <!-- -*- extra stuff goes here -*- -->
     <!-- View for getting type of RSS feed for some context (used in 'portal_actions') -->
     <browser:page
@@ -87,7 +106,7 @@
         permission="zope.Public"
         />
 
-    <!-- quills customized views -->
+    <!-- quills customized views 
 
     <browser:view
         zcml:condition="installed quills.app"
@@ -123,6 +142,52 @@
         template="templates/manage_comments.pt"
         permission="cmf.ManagePortal"
         layer=".interfaces.IThemeSpecific"
-        name="manage_comments" />
+        name="manage_comments" /> -->
+
+    <!-- blog.star customized views -->
+    <include package="collective.blog.star" />
+    <browser:page
+       for="*"
+       name="blog_view"
+       class="collective.blog.view.blog.BlogView"
+       template="templates/blog.pt"
+       permission="zope2.View"
+       />
+
+    <browser:page
+       for="*"
+       name="blog_item_view"
+       class=".default_item.DefaultItemView"
+       permission="zope2.View"
+       />
+
+    <!-- quills customized views -->
+
+    <browser:view
+        zcml:condition="installed quills.app"
+        for="*"
+        name="quills_entry_macros"
+        class=".macros.SunRainWeblogEntryMacros"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+    />
+
+    <browser:page
+        zcml:condition="installed quills.app"
+        for="quills.core.interfaces.IWeblogEntry"
+        class="quills.app.browser.weblogview.WeblogEntryView"
+        template="templates/weblogentry_view.pt"
+        permission="zope2.View"
+        layer=".interfaces.IThemeSpecific"
+        name="weblogentry_view" />
+
+    <browser:view
+        zcml:condition="installed quills.app"
+        for="*"
+        name="quills_weblog_macros"
+        class=".macros.SunRainWeblogMacros"
+        layer=".interfaces.IThemeSpecific"
+        permission="zope2.View"
+    />
 
 </configure>
