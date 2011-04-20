@@ -1,24 +1,7 @@
 SunRain Plone Theme Installation
 ================================
 
-To install quintagroup.plonecomments into the global Python environment (or a workingenv),
-using a traditional Zope 2 instance, you can do this:
-
-* Copy ``quintagroup`` folder to the ``/path/to/instance/lib/python`` directory.
-
-* Create a file called ``quintagroup.theme.sunrain-configure.zcml`` in the
-   ``/path/to/instance/etc/package-includes`` directory.  The file
-   should only contain this::
-
-       <include package="quintagroup.theme.sunrain"/>
-
-* Restart the Zope server, for example, with the following command in the terminal::
-
-   $ ./bin/zopectl restart
-
-
-Alternatively, if you are using zc.buildout and the plone.recipe.zope2instance
-recipe to manage your project, you can do this:
+To install quintagroup.theme.sunrain on Plone 4 - in the buildout.cfg file of your instance:
 
 * Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
 
@@ -28,10 +11,9 @@ recipe to manage your project, you can do this:
         ...
         quintagroup.theme.sunrain
 
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
+* Add ``quintagroup.theme.sunrain`` to a ZCML slug::
 
     [instance]
-    recipe = plone.recipe.zope2instance
     ...
     zcml =
         quintagroup.theme.sunrain
@@ -44,4 +26,13 @@ recipe to manage your project, you can do this:
 
     $ ./bin/instance restart
 
-Then install SunRain Theme in Plone with Quickinstaller (Site Setup -> Add-on Products)
+Then activate 'Sun and Rain Theme' in Plone (Site Setup -> Add-ons).
+
+Other products
+--------------
+
+Other products tested with the theme:
+
+* quintagroup.portlet.culumus
+* Products.Quills
+* collective.blog.star
