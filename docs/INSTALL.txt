@@ -31,8 +31,11 @@ Then activate 'Sun and Rain Theme' in Plone (Site Setup -> Add-ons).
 Other products
 --------------
 
-Other products tested with the theme:
+The following products were tested and can be used with SunRain Theme:
 
-* quintagroup.portlet.culumus
-* Products.Quills
-* collective.blog.star
+* quintagroup.portlet.cumulus - adds Tag cloud portlet 
+  http://projects.quintagroup.com/products/wiki/quintagroup.portlet.cumulus#Installation
+  
+* Products.Quills and/or collective.blog.star - blogging suites for Plone
+  http://pypi.python.org/pypi/Products.Quills
+  http://pypi.python.org/pypi/collective.blog.star
