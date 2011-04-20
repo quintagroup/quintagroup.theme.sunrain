@@ -106,7 +106,9 @@
         permission="zope.Public"
         />
 
-    <!-- quills customized views 
+    <!-- quills customized views -->
+
+    <configure zcml:condition="installed Products.Quills">
 
     <browser:view
         zcml:condition="installed quills.app"
@@ -115,16 +117,7 @@
         class=".macros.SunRainWeblogEntryMacros"
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
-    />
-
-    <browser:view
-        zcml:condition="installed quills.app"
-        for="*"
-        name="quills_weblog_macros"
-        class=".macros.SunRainWeblogMacros"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-    />
+        />
 
     <browser:page
         zcml:condition="installed quills.app"
@@ -133,18 +126,24 @@
         template="templates/weblogentry_view.pt"
         permission="zope2.View"
         layer=".interfaces.IThemeSpecific"
-        name="weblogentry_view" />
+        name="weblogentry_view" 
+        />
 
-    <browser:page
+    <browser:view
         zcml:condition="installed quills.app"
-        for="quills.core.interfaces.IWeblog"
-        class="quills.app.browser.commentViews.ManageCommentsView"
-        template="templates/manage_comments.pt"
-        permission="cmf.ManagePortal"
+        for="*"
+        name="quills_weblog_macros"
+        class=".macros.SunRainWeblogMacros"
         layer=".interfaces.IThemeSpecific"
-        name="manage_comments" /> -->
+        permission="zope2.View"
+        />
+
+    </configure>
 
     <!-- blog.star customized views -->
+
+    <configure zcml:condition="installed collective.blog.star">
+
     <include package="collective.blog.star" />
     <browser:page
        for="*"
@@ -161,33 +160,6 @@
        permission="zope2.View"
        />
 
-    <!-- quills customized views -->
-
-    <browser:view
-        zcml:condition="installed quills.app"
-        for="*"
-        name="quills_entry_macros"
-        class=".macros.SunRainWeblogEntryMacros"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-    />
-
-    <browser:page
-        zcml:condition="installed quills.app"
-        for="quills.core.interfaces.IWeblogEntry"
-        class="quills.app.browser.weblogview.WeblogEntryView"
-        template="templates/weblogentry_view.pt"
-        permission="zope2.View"
-        layer=".interfaces.IThemeSpecific"
-        name="weblogentry_view" />
-
-    <browser:view
-        zcml:condition="installed quills.app"
-        for="*"
-        name="quills_weblog_macros"
-        class=".macros.SunRainWeblogMacros"
-        layer=".interfaces.IThemeSpecific"
-        permission="zope2.View"
-    />
+    </configure>
 
 </configure>
