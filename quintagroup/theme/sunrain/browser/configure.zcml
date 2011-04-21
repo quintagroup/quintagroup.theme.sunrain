@@ -106,6 +106,7 @@
         class=".subscribe.RSSType"
         allowed_attributes="quills other"
         permission="zope.Public"
+        layer=".interfaces.IThemeSpecific"
         />
 
     <!-- quills customized views -->
