@@ -328,7 +328,7 @@ div.portletGreenItem {
   background-color:#acc755;
   color:#fff;
   font-size:1.17em;
-  padding:15px 25px 30px 35px;
+  padding:23px 38px 19px 14px;
   position:relative;
   }
 div.portletGreyItem .image-left,
