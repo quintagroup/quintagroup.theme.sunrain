@@ -59,6 +59,7 @@
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       class="plone.app.i18n.locales.browser.selector.LanguageSelector"
       permission="zope2.View"
+      layer=".interfaces.IThemeSpecific"
       />
     <browser:viewlet
         name="sunrain.global_sections"
@@ -152,6 +153,7 @@
        class="collective.blog.view.blog.BlogView"
        template="templates/blog.pt"
        permission="zope2.View"
+       layer=".interfaces.IThemeSpecific"
        />
 
     <browser:page
@@ -159,6 +161,7 @@
        name="blog_item_view"
        class=".default_item.DefaultItemView"
        permission="zope2.View"
+       layer=".interfaces.IThemeSpecific"
        />
 
     </configure>
