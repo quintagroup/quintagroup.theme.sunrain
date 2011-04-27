@@ -710,15 +710,17 @@ table.listing th a,
 .documentEditable .listingBar {
   margin:0 -0.91em;
   }
-.listingBar span.previous {
+#content .listingBar span.previous a {
   background:url(&dtml-portal_url;/previous.gif) no-repeat 0 0;
-  float:none;
   padding:3px 0 3px 28px;
   }
-.listingBar span.next {
+#content .listingBar span.next a {
   background:url(&dtml-portal_url;/next.gif) no-repeat 100% 0;
-  float:none;
   padding:3px 28px 3px 0;
+  }
+#content-weblog .previous,
+#content-weblog .next {
+  float:none;
   }
 
 /*---------- COLLECTIVE BLOG VIEW ----------*/
