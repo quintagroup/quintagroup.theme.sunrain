@@ -3,36 +3,53 @@
    xmlns:i18n="http://xml.zope.org/namespaces/i18n">
  <object name="subscribe" meta_type="CMF Action Category">
   <property name="title"></property>
-  <object name="sendto" meta_type="CMF Action" i18n:domain="plone">
-   <property name="title" i18n:translate="">Send this</property>
+  <object name="twiter" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Twiter</property>
    <property name="description" i18n:translate=""></property>
-   <property name="url_expr">string:$object_url/sendto_form</property>
-   <property name="icon_expr">string:$portal_url/mail_icon.gif</property>
+   <property name="url_expr">string:http://twitter.com/quintagroup</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:$portal_url/twiter.png</property>
    <property name="available_expr"></property>
    <property name="permissions">
-    <element value="Allow sendto"/>
+    <element value="View"/>
+   </property>
+   <property name="visible">True</property>
+  </object>
+  <object name="facebook" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Facebook</property>
+   <property name="description" i18n:translate=""></property>
+   <property
+      name="url_expr">string:http://www.facebook.com/QuintagroupPloneThemes</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:$portal_url/facebook.png</property>
+   <property name="available_expr"></property>
+   <property name="permissions">
+    <element value="View"/>
    </property>
    <property name="visible">True</property>
   </object>
   <object name="rss" meta_type="CMF Action" i18n:domain="plone">
    <property name="title" i18n:translate="">RSS</property>
    <property name="description" i18n:translate=""></property>
-   <property name="url_expr">string:$portal_url/news/aggregator/RSS</property>
-   <property name="icon_expr">string:$portal_url/rss.gif</property>
-   <property name="available_expr">object/@@rsstype/other</property>
+   <property
+      name="url_expr">string:http://feeds2.feedburner.com/quintagroup</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:$portal_url/rss.png</property>
+   <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
    </property>
    <property name="visible">True</property>
   </object>
-  <object name="rss-1" meta_type="CMF Action">
-   <property name="title">RSS</property>
-   <property name="description"></property>
-   <property name="url_expr">string:$object_url/rss.xml</property>
-   <property name="icon_expr">string:$portal_url/rss.gif</property>
-   <property name="available_expr">object/@@rsstype/quills</property>
+  <object name="sendto" meta_type="CMF Action" i18n:domain="plone">
+   <property name="title" i18n:translate="">Send this</property>
+   <property name="description" i18n:translate=""></property>
+   <property name="url_expr">string:$object_url/sendto_form</property>
+   <property name="link_target"></property>
+   <property name="icon_expr">string:$portal_url/email.png</property>
+   <property name="available_expr"></property>
    <property name="permissions">
-    <element value="View"/>
+    <element value="Allow sendto"/>
    </property>
    <property name="visible">True</property>
   </object>
