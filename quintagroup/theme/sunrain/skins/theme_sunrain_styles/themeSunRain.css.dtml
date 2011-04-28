@@ -253,6 +253,9 @@
   display:inline;
   font-size:1.50em;
   }
+.subsribeItem a {
+  text-decoration:none;
+  }
 
 /*---------- PORTAL COLUMNS PROPERTIES ----------*/
 #portal-columns {
