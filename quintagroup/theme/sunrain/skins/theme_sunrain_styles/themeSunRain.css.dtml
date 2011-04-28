@@ -280,6 +280,9 @@
 .visualColumnHideOneTwo #portal-column-content #content-wrapper {
   padding:0;
   }
+.visualColumnHideNone #portal-column-content #content-wrapper {
+  padding:0 1em;
+  }
 #portal-column-one .visualPadding {
   padding:0 0 1em;
   }
@@ -326,6 +329,7 @@ a:visited .portletItemDetails {
 /*---------- portlet Green and Grey Items ----------*/
 div.portletGreenItem {
   background-color:#acc755;
+  border-bottom:1px solid #fff;
   color:#fff;
   font-size:1.17em;
   padding:23px 38px 19px 14px;
