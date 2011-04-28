@@ -74,9 +74,9 @@ http://skins.quintagroup.com/sunrain
 Authors
 -------
 
-* Volodymyr Rudnytskyi
+* Volodymyr Rudnytskyy
 * Borys Olekhnovych
 * Yuriy Hvozdovych
 * Taras Peretiatko
 
-&copy; "Quintagroup": http://quintagroup.com, 2006-2011
+Quintagroup - http://quintagroup.com, 2006-2011
