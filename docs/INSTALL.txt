@@ -1,5 +1,5 @@
 Installation
-============
+------------
 
 To install quintagroup.theme.sunrain on Plone 4 - in the buildout.cfg file of your instance:
 
