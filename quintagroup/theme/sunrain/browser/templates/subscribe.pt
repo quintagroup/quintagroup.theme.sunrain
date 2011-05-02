@@ -3,8 +3,6 @@
     tal:condition="view/actions"
     i18n:domain="plone">
 
-    <dt class="subsribeHeader">Subscribe:</dt>
-
     <dd class="subsribeWrapper">
     <tal:actions repeat="action view/actions">
 
@@ -16,9 +14,6 @@
                <img alt="" src=""
                     tal:condition="icon"
                     tal:attributes="src icon; alt action/title;" />
-                    <tal:action tal:content="action/title" i18n:translate="">
-                       Action name
-                    </tal:action>
             </a>
         </div>
 
