@@ -819,4 +819,31 @@ form.searchPage input.searchButton {
   margin:0 !important;
   }
 
+/*----- template logged out -----*/
+.template-logged_out #content {
+  text-align:center;
+  }
+.template-logged_out #content .documentFirstHeading {
+  background:transparent;
+  font-size:2em;
+  font-weight:bold;
+  }
+.template-logged_out #content .documentDescription {
+  color:#666666;
+  font:bold 1.25em "Helvetica Neue",Arial,FreeSans,sans-serif;
+  }
+#login-form label {
+  display:inline-block;
+  margin-right:0.5em;
+  padding-top:0.2em;
+  text-align:right;
+  width:10em;
+  }
+#login-form .formControls input {
+  margin-left:1em;
+  padding:1px 10px;
+  }
+.pb-ajax #content-core {
+  text-align:center;
+  }
 /* </dtml-with> */
