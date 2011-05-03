@@ -718,6 +718,13 @@ table.listing th a,
   }
 
 /*---------- COLLECTIVE BLOG VIEW ----------*/
+.template-blog_view #content {
+  padding:1em 1em 0 !important;
+  margin-bottom:-2em;
+  }
+.template-blog_view .documentEditable #content {
+  margin-bottom:0;
+  }
 #blog-listing .previous,
 #blog-listing .next {
   float:none;
