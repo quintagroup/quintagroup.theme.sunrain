@@ -718,9 +718,6 @@ table.listing th a,
   }
 
 /*---------- COLLECTIVE BLOG VIEW ----------*/
-#blog-listing {
-  margin-top:-2em;
-  }
 #blog-listing .previous,
 #blog-listing .next {
   float:none;
