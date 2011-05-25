@@ -43,7 +43,8 @@ setup(name='quintagroup.theme.sunrain',
       extras_require=dict(tests=tests_require),
       test_suite = 'quintagroup.theme.sunrain.tests',
       entry_points="""
-      # -*- entry_points -*-
+      # -*- Entry points: -*-
+      [z3c.autoinclude.plugin]
+      target = plone
       """,
-      setup_requires = ["setuptools",],
       )
