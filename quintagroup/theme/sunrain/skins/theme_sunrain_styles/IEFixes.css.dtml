@@ -310,4 +310,9 @@ body.kupu-fulleditor-zoomed #portal-columns {
 #content-views {
   margin-top:1px;
   }
+.documentActions,
+.listingBar {
+  position:relative;
+  zoom:1;
+  }
 /* </dtml-with> */
