@@ -853,10 +853,8 @@ form.searchPage input.searchButton {
   width:10em;
   }
 #login-form .formControls input {
-  margin-left:1em;
+  margin-left:130px;
   padding:1px 10px;
   }
-.pb-ajax #content-core {
-  text-align:center;
-  }
+
 /* </dtml-with> */
