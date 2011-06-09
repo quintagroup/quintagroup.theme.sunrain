@@ -25,7 +25,8 @@ and 'Sun':
   Static Stylish portlets include special styling for links (e.g. 'More...' link). To enable it - select a piece of text 
   and set 'Link Item' style for it (Styles drop-down menu on TinyMCE toolbar).
 
-* SunRain theme has 'subscribe' viewlet integrated, that adds two actions 'Send this' and 'RSS'.
+* SunRain theme has 'subscribe' viewlet integrated, that adds 4 actions 'Share on Twitter', 'Share on Facebook', 'Send this'
+  and 'Subscribe to RSS'.
 
 * Slogan. SunRain Theme uses customizable slogan. To change portal slogan go to ZMI, open 'Properties' tab and type in
   your new slogan into 'description' field. Save changes.
