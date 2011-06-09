@@ -1,4 +1,4 @@
-Free Theme for Plone 4 and Plone 3.
+SunRain free Theme for Plone 4.
     
 Features
 --------
@@ -76,4 +76,4 @@ Authors
 * Yuriy Hvozdovych
 * Taras Peretiatko
 
-Quintagroup - http://quintagroup.com, 2006-2011
+Quintagroup: http://quintagroup.com, 2006-2011

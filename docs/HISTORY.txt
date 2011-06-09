@@ -1,12 +1,12 @@
 Changelog
 ---------
 
-2.0 - Apr 22, 2011
+2.0 - June 9, 2011
 
-* Theme is compatible with Plone 4
+* Theme is compatible with Plone 4.0
 * IE fixes for rounded tab cournes
-* Dependencies for cumulus portlet and Products.Quills disabled
-* LinguaPlone compayibility tested
+* Dependencies for Cumulus portlet and Products.Quills disabled
+* LinguaPlone compatibility tested
 
 1.2 - Feb 8, 2010
 
