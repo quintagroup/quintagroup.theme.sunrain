@@ -744,6 +744,7 @@ table.listing th a,
   }
 #blog-listing .blog-item {
   margin-top:1.5em;
+  position:relative;
   }
 #blog-listing #parent-fieldname-text {
   margin-bottom:30px;
@@ -778,7 +779,7 @@ table.listing th a,
   font-weight:bold;
   }
 #blog-listing .documentActions {
-  margin:0 -16px -2em;
+  margin:0 -16px 0;
   padding:1px 0 20px 0;
   }
 #blog-listing .documentActions ul {
@@ -796,8 +797,8 @@ table.listing th a,
   line-height:1.2em;
   }
 #blog-listing .comment-link {
-  position:relative;
-  top:-10px; 
+  bottom:12px;
+  position:absolute;
   }
 #blog-listing .comment-link a {
   background:url(&dtml-portal_url;/coments_ico.png) no-repeat 0 4px;
