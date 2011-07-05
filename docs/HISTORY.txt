@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+2.1 - July 5, 2001
+
+* Fixes style for Blog Star (Amend your style for the blog when comments are disabled) [naivok]
+
 2.0 - June 9, 2011
 
 * Theme is compatible with Plone 4.0
