@@ -3,6 +3,5 @@
   <version>2.1</version>
   <dependencies>
       <dependency>profile-plonetheme.classic:default</dependency>
-      <dependency>profile-quintagroup.portlet.static:default</dependency>
   </dependencies>
 </metadata>

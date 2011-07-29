@@ -54,13 +54,13 @@
         layer=".interfaces.IThemeSpecific"
         permission="zope2.View"
         />
-   <browser:viewlet
+   <!--browser:viewlet
       name="plone.app.i18n.locales.languageselector"
       manager="plone.app.layout.viewlets.interfaces.IPortalTop"
       class="plone.app.i18n.locales.browser.selector.LanguageSelector"
       permission="zope2.View"
       layer=".interfaces.IThemeSpecific"
-      />
+      /-->
     <browser:viewlet
         name="sunrain.global_sections"
         manager="plone.app.layout.viewlets.interfaces.IPortalTop"
