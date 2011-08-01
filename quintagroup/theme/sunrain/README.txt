@@ -45,16 +45,6 @@ and 'Sun':
 
 SunRain Plone Theme is available at http://pypi.python.org/pypi/quintagroup.theme.sunrain
 
-Supported Plone version
-=======================
- 
-This version of SunRain Theme was developed and tested on Plone-4.0 (Python-2.6.4, Zope-2.12.10).
-
-Dependency
-==========
-
-* quintagroup.portlet.static
-
 Other products
 ==============
 

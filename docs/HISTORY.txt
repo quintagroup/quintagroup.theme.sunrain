@@ -1,7 +1,14 @@
 Changelog
 ---------
 
-2.1 - July 5, 2001
+2.1.1 - August 1, 2011
+
+* removed dependency for quintagroup.portlet.static
+* tinymce.xml cleared
+* LanguageSelector issue fixed by removing it from configure.zcml
+* Plone 4.1 compatibility tested
+
+2.1 - July 5, 2011
 
 * Fixes style for Blog Star (Amend your style for the blog when comments are disabled) [naivok]
 
