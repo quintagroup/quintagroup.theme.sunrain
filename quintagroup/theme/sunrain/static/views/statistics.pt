@@ -1,0 +1,4 @@
+<div id="plone-statistics"
+     tal:content="structure context/portal_properties/site_properties/webstats_js">
+     Statistics
+</div>

@@ -1,18 +1,24 @@
 <configure
     xmlns="http://namespaces.zope.org/zope"
     xmlns:five="http://namespaces.zope.org/five"
-    xmlns:zcml="http://namespaces.zope.org/zcml"
-    xmlns:cmf="http://namespaces.zope.org/cmf"
+    xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
+    xmlns:plone="http://namespaces.plone.org/plone">
     i18n_domain="quintagroup.theme.sunrain">
 
    <five:registerPackage package="." initialize=".initialize" />
 
-   <include package=".browser" />
-   <include package=".portlets" />
+  <genericsetup:registerProfile
+      name="default"
+      title="SunRain Theme"
+      directory="profiles/default"
+      description='Diazo Theme for Plone'
+      provides="Products.GenericSetup.interfaces.EXTENSION"
+      />
 
-   <include file="skins.zcml" />
-   <include file="profiles.zcml" />
-
+   <plone:static
+        directory="static"
+        type="theme"
+        />
    <!-- -*- extra stuff goes here -*- -->
 
 </configure>

@@ -2,6 +2,6 @@
 <metadata>
   <version>2.1.1</version>
   <dependencies>
-      <dependency>profile-plonetheme.classic:default</dependency>
+      <dependency>profile-plone.app.theming:default</dependency>
   </dependencies>
 </metadata>

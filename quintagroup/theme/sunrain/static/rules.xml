@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rules
+    xmlns="http://namespaces.plone.org/diazo"
+    xmlns:css="http://namespaces.plone.org/diazo/css"
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+
+    <!-- The default theme, used for standard Plone web pages -->
+    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
+    <notheme if-path="@@manage-viewlets" />
+    <!-- Rules applying to a standard Plone web page -->
+    <rules css:if-content="#visual-portal-wrapper">
+        <!-- Add meta tags -->
+        <drop theme="/html/head/meta" />
+        <drop css:content="link[href$='public.css']" />
+        <drop css:content="link[href$='columns.css']" />
+        <drop css:content="link[href$='portlets.css']" />
+        <drop css:content="link[href$='discussion.css']" />
+        <drop css:content="link[href*='base-cachekey']" />
+        <drop css:content="link[href$='favicon.ico']" />
+        <after content="/html/head/meta" theme-children="/html/head" />
+        <replace theme='/html/head/title' content='/html/head/title' />
+
+        <!-- Copy style, script and link tags in the order they appear in the content -->
+        <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
+
+        <!-- Copy over the id/class attributes on the body tag.
+             This is important for per-section styling -->
+        <copy attributes="id dir class" css:content="body" css:theme="body" />
+        <copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
+
+        <!-- Skip Links -->
+        <before css:content="#portal-header > p.hiddenStructure" css:theme-children="#portal-header" />
+
+        <!-- Logo -->
+        <copy attributes="*" css:content="#portal-logo" css:theme="#portal-logo" />
+        <replace css:content="#portal-logo" css:theme="#portal-logo" />
+
+        <!-- Site actions -->
+        <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
+
+        <!-- Portal languageselector -->
+        <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
+
+        <!-- Global navigation -->
+<!--        <replace css:content='#portal-globalnav' css:theme='#portal-globalnav' />-->
+
+        <!-- Portal-searchbox -->
+        <replace css:content='#portal-searchbox' css:theme='#portal-searchbox' />
+
+        <!-- Portal-Personaltools -->
+        <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper"/>
+
+        <!-- Breadcrumbs -->
+        <replace css:content='#portal-breadcrumbs' css:theme='#portal-breadcrumbs' method="raw"/>
+        <drop css:content='#viewlet-above-content #portal-breadcrumbs' />
+
+        <!-- Document Content -->
+        <replace css:content='.documentEditable' css:theme='#content' css:if-content=".documentEditable" />
+        <replace css:content='#content' css:theme='#content'  />
+        <after css:content="#edit-bar" css:theme="#viewlet-above-content" css:if-content=".template-dashboard" />
+        <after css:content="#edit-bar" css:theme="#viewlet-above-content" css:if-content=".template-manage-dashboard" />
+        <before css:content="#dashboard-info-message" css:theme="#content" css:if-content="#dashboard-info-message" />
+
+        <!-- Viewlet Above Content -->
+        <replace css:content="#viewlet-above-content" css:theme="#viewlet-above-content" />
+
+        <!-- Viewlet Below Content -->
+        <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
+
+        <!-- Columns -->
+        <!--rules css:if-content='#portal-column-content[class~="width-3:4 position-0"]'>
+        <drop css:theme="#portal-column-one" />
+        </rules>
+ 
+        <rules css:if-content='#portal-column-content[class~="width-3:4 position-1:4"]'>
+        <replace css:theme-children="div#portal-column-one div.portletWrapper:first-child dl.portlet dd" css:content="#portal-globalnav"/>
+        <after css:theme-children="#portal-column-one" css:content-children="#portal-column-one" />
+        </rules>
+        
+        <rules css:if-content='#portal-column-content[class~="width-1:2 position-1:4"]'>
+        <replace css:theme-children="div#portal-column-one div.portletWrapper:first-child dl.portlet dd" css:content="#portal-globalnav"/>
+        <after css:theme-children="#portal-column-one" css:content-children="#portal-column-one" />
+        </rules>
+        
+        <rules css:if-content='#portal-column-content[class~="width-full position-0"]'>
+        <drop css:theme="#portal-column-one" />
+        </rules-->
+        <drop css:theme="div#portal-column-one div.portletWrapper:first-child"   if-path="@@manage-portlets" />
+        <replace css:theme-children="div#portal-column-one div.portletWrapper:first-child dl.portlet dd #theme-globalnav" css:content-children="#portal-globalnav"/>
+        <after css:theme-children="#portal-column-one" css:content-children="#portal-column-one" />
+        <!--replace css:content-children="#portal-column-one" css:theme-children="#portal-column-one" /-->
+        <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
+   
+<!--        <rules if-content="not(//*[@id='portal-column-one'])">
+        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideOne" theme='//*[@id="portal-columns"]'  css:if-content='#portal-column-two' />
+        </rules>
+        
+        <rules css:if-content='#portal-column-one'>
+        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideTwo" theme='//*[@id="portal-columns"]'  if-content="not(//*[@id='portal-column-two'])" />
+        </rules>
+
+        <rules css:if-content='#portal-column-one'>
+        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideNone" theme='//*[@id="portal-columns"]'  css:if-content='#portal-column-two' />
+        </rules>
+      
+        <rules if-content="not(//*[@id='portal-column-one'])">
+        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideOneTwo" theme='//*[@id="portal-columns"]'  if-content="not(//*[@id='portal-column-two'])" />
+        </rules>-->
+
+        <!-- Footer -->
+        <replace css:theme="#portal-footer" css:content="#portal-footer" />
+
+        <replace css:theme="#portal-colophon" css:content="#portal-colophon" />
+
+        <replace css:theme="#kss-spinner" css:content="#kss-spinner" />
+
+        <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="./@@statistics" />
+
+    </rules>
+
+</rules>

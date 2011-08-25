@@ -14,7 +14,7 @@ tests_require=['zope.testing']
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
-      description="A free theme for Plone 4",           
+      description="Diazo Theme for Plone",
       long_description=open(os.path.join("quintagroup", "theme", "sunrain", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),    
@@ -36,7 +36,8 @@ setup(name='quintagroup.theme.sunrain',
       include_package_data=True,
       zip_safe=False,
       install_requires=['setuptools',
-                        'plonetheme.classic',
+                        'plone.app.theming',
+                        'plone.app.themingplugins',
                         ],
       tests_require=tests_require,
       extras_require=dict(tests=tests_require),
