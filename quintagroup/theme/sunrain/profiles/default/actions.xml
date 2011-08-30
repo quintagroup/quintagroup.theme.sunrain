@@ -8,7 +8,7 @@
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:javascript:this.print();</property>
    <property name="link_target"></property>
-   <property name="icon_expr">string:$portal_url/print_icon.png</property>
+   <property name="icon_expr">string:$portal_url/++theme++quintagroup.theme.sunrain/images/printer_ico.png</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
@@ -23,7 +23,7 @@
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:http://twitter.com/quintagroup</property>
    <property name="link_target"></property>
-   <property name="icon_expr">string:$portal_url/twiter.png</property>
+   <property name="icon_expr">string:$portal_url/++theme++quintagroup.theme.sunrain/images/twiter.png</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
@@ -36,7 +36,7 @@
    <property
       name="url_expr">string:http://www.facebook.com/QuintagroupPloneThemes</property>
    <property name="link_target"></property>
-   <property name="icon_expr">string:$portal_url/facebook.png</property>
+   <property name="icon_expr">string:$portal_url/++theme++quintagroup.theme.sunrain/images/facebook.png</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
@@ -49,7 +49,7 @@
    <property
       name="url_expr">string:http://feeds2.feedburner.com/quintagroup</property>
    <property name="link_target"></property>
-   <property name="icon_expr">string:$portal_url/rss.png</property>
+   <property name="icon_expr">string:$portal_url/++theme++quintagroup.theme.sunrain/images/rss.png</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="View"/>
@@ -61,7 +61,7 @@
    <property name="description" i18n:translate=""></property>
    <property name="url_expr">string:$object_url/sendto_form</property>
    <property name="link_target"></property>
-   <property name="icon_expr">string:$portal_url/email.png</property>
+   <property name="icon_expr">string:$portal_url/++theme++quintagroup.theme.sunrain/images/email.png</property>
    <property name="available_expr"></property>
    <property name="permissions">
     <element value="Allow sendto"/>
