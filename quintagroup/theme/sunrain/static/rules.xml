@@ -34,6 +34,11 @@
         <!-- Logo -->
         <copy attributes="*" css:content="#portal-logo" css:theme="#portal-logo" />
         <replace css:content="#portal-logo" css:theme="#portal-logo" />
+        
+        <!-- Portal Slogan -->
+        <replace css:theme="#portal-slogan" css:content="#portal-slogan" href="/@@portal_slogan" />
+
+        <replace css:theme="#subscribe-links" css:content="#subscribe-links" href="/@@subscribe" />
 
         <!-- Site actions -->
         <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
@@ -42,7 +47,7 @@
         <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
 
         <!-- Global navigation -->
-<!--        <replace css:content='#portal-globalnav' css:theme='#portal-globalnav' />-->
+        <replace css:content-children='#portal-globalnav' css:theme-children='#theme-globalnav' />>
 
         <!-- Portal-searchbox -->
         <replace css:content='#portal-searchbox' css:theme='#portal-searchbox' />
@@ -50,9 +55,11 @@
         <!-- Portal-Personaltools -->
         <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper"/>
 
-        <!-- Breadcrumbs -->
-        <replace css:content='#portal-breadcrumbs' css:theme='#portal-breadcrumbs' method="raw"/>
-        <drop css:content='#viewlet-above-content #portal-breadcrumbs' />
+         <!-- Breadcrumbs -->
+        <replace css:content='#portal-breadcrumbs' css:theme='#portal-breadcrumbs'/>
+
+        <!-- Viewlet Above Content -->
+        <replace css:content="#viewlet-above-content > *:not(#portal-breadcrumbs)" css:theme="#viewlet-above-content" />
 
         <!-- Document Content -->
         <replace css:content='.documentEditable' css:theme='#content' css:if-content=".documentEditable" />
@@ -60,52 +67,14 @@
         <after css:content="#edit-bar" css:theme="#viewlet-above-content" css:if-content=".template-dashboard" />
         <after css:content="#edit-bar" css:theme="#viewlet-above-content" css:if-content=".template-manage-dashboard" />
         <before css:content="#dashboard-info-message" css:theme="#content" css:if-content="#dashboard-info-message" />
-
-        <!-- Viewlet Above Content -->
-        <replace css:content="#viewlet-above-content" css:theme="#viewlet-above-content" />
+        <drop css:content="img[alt='Image'][src$='image.png']" />
 
         <!-- Viewlet Below Content -->
         <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
 
         <!-- Columns -->
-        <!--rules css:if-content='#portal-column-content[class~="width-3:4 position-0"]'>
-        <drop css:theme="#portal-column-one" />
-        </rules>
- 
-        <rules css:if-content='#portal-column-content[class~="width-3:4 position-1:4"]'>
-        <replace css:theme-children="div#portal-column-one div.portletWrapper:first-child dl.portlet dd" css:content="#portal-globalnav"/>
-        <after css:theme-children="#portal-column-one" css:content-children="#portal-column-one" />
-        </rules>
-        
-        <rules css:if-content='#portal-column-content[class~="width-1:2 position-1:4"]'>
-        <replace css:theme-children="div#portal-column-one div.portletWrapper:first-child dl.portlet dd" css:content="#portal-globalnav"/>
-        <after css:theme-children="#portal-column-one" css:content-children="#portal-column-one" />
-        </rules>
-        
-        <rules css:if-content='#portal-column-content[class~="width-full position-0"]'>
-        <drop css:theme="#portal-column-one" />
-        </rules-->
-        <drop css:theme="div#portal-column-one div.portletWrapper:first-child"   if-path="@@manage-portlets" />
-        <replace css:theme-children="div#portal-column-one div.portletWrapper:first-child dl.portlet dd #theme-globalnav" css:content-children="#portal-globalnav"/>
-        <after css:theme-children="#portal-column-one" css:content-children="#portal-column-one" />
-        <!--replace css:content-children="#portal-column-one" css:theme-children="#portal-column-one" /-->
+        <replace css:content="#portal-column-one" css:theme="#portal-column-one" />
         <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
-   
-<!--        <rules if-content="not(//*[@id='portal-column-one'])">
-        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideOne" theme='//*[@id="portal-columns"]'  css:if-content='#portal-column-two' />
-        </rules>
-        
-        <rules css:if-content='#portal-column-one'>
-        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideTwo" theme='//*[@id="portal-columns"]'  if-content="not(//*[@id='portal-column-two'])" />
-        </rules>
-
-        <rules css:if-content='#portal-column-one'>
-        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideNone" theme='//*[@id="portal-columns"]'  css:if-content='#portal-column-two' />
-        </rules>
-      
-        <rules if-content="not(//*[@id='portal-column-one'])">
-        <merge attributes="class" href="/++theme++quintagroup.theme.techlight/extra.html" css:content=".visualColumnHideOneTwo" theme='//*[@id="portal-columns"]'  if-content="not(//*[@id='portal-column-two'])" />
-        </rules>-->
 
         <!-- Footer -->
         <replace css:theme="#portal-footer" css:content="#portal-footer" />
@@ -114,7 +83,7 @@
 
         <replace css:theme="#kss-spinner" css:content="#kss-spinner" />
 
-        <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="./@@statistics" />
+        <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="/@@statistics" />
 
     </rules>
 

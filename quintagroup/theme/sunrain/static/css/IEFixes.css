@@ -315,4 +315,12 @@ body.kupu-fulleditor-zoomed #portal-columns {
   position:relative;
   zoom:1;
   }
+
+/* New Custom Sun and Rain Theme Fixes */
+.photoAlbumEntry a:hover .photoAlbumEntryTitle { 
+  background-color:rgb(241,241,241); 
+  cursor:pointer; 
+  } 
+
+
 /* </dtml-with> */

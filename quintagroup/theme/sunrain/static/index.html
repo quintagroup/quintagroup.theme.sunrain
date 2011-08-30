@@ -3,7 +3,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     <title>Quintagroup Theme - home page</title>
-    <link rel="stylesheet" type="text/css" media="screen" href="css/techlight.css" />
+    <link rel="stylesheet" type="text/css" media="screen" href="css/themeSunRain.css" />
     <link rel="shortcut icon" type="image/x-icon" href="images/favicon.ico" />
 
      <!--[if lte IE 7]>
@@ -13,8 +13,56 @@
   <body>
     <div id="visual-portal-wrapper">
 
-     <div id="portal-top">
-        <div id="portal-personaltools-wrapper">
+     <div id="portal-top" class="row">
+
+         <div id="portal-header">
+
+              <div id="portal-searchbox">
+                <form action="#" id="livesearch0" name="searchform">
+                  <div class="LSBox">
+                    <label for="searchGadget" class="hiddenStructure">Search Site</label>
+                    <input type="text" id="searchGadget" class="searchField inputLabel inputLabelActive" accesskey="4" title="Search Site" size="18" name="SearchableText" />
+                    <input type="submit" value="Search" class="searchButton" />
+                    <div class="searchSection">
+                        <input type="checkbox" value="/brio" name="path" class="noborder" id="searchbox_currentfolder_only" />
+                        <label style="cursor: pointer" for="searchbox_currentfolder_only">
+                            only in current section
+                        </label>
+                    </div>
+                    <div style="" id="LSResult" class="LSResult"><div id="LSShadow" class="LSShadow"></div></div>
+                    </div>
+                </form>
+                <div class="hiddenStructure" id="portal-advanced-search">
+                    <a accesskey="5" href="#">
+                        Advanced Search…
+                    </a>
+                </div>
+              </div>
+
+
+
+
+          <ul id="portal-siteactions">
+            <li id="siteaction-sitemap">
+              <a href="#" accesskey="3" title="Site Map">Site Map</a>
+            </li>
+            <li id="siteaction-accessibility">
+              <a href="#" accesskey="0" title="Accessibility">Accessibility</a>
+            </li>
+            <li id="siteaction-contact">
+              <a href="#" accesskey="9" title="Contact">Contact</a>
+            </li>
+          </ul>
+
+
+
+            <a id="portal-logo">
+              <img src="images/theme_rain/logoRain.png" alt="" title="" height="73" width="200" />
+            </a>
+
+            <span id="portal-slogan">Type your slogan here</span>
+
+          <div id="portal-personaltools-wrapper">
           <h5 class="hiddenStructure">Personal tools</h5>
 
           <dl class="actionMenu deactivated" id="portal-personaltools"><dt class="actionMenuHeader">
@@ -36,87 +84,76 @@
                       <a href="#">Log out</a>
                   </li>
               </ul></dd>
-            
+
           </dl>
         </div>
-        <div id="portal-header-wrapper">
-         <div id="portal-header">
+
+          <div class="themeComment visualNoPrint"> This is SunRain Plone Theme</div>
+
+        </div>
 
           <ul id="portal-languageselector">
 
             <li class="currentLanguage language-en">
+
                 <a title="English" href="#">English</a>
+
             </li>
 
             <li class="language-ru">
+
                 <a title="Русский" href="#">Русский</a>
+
             </li>
 
             <li class="language-uk">
+
                 <a title="Українська" href="#">Українська</a>
+
             </li>
+
           </ul>
 
+          <ul id="theme-globalnav"><li class="selected" id="portaltab-index_html"><a title="" href="#">Home</a></li><li class="plain" id="portaltab-news"><a title="Site News" href="#">News</a></li><li class="plain" id="portaltab-events"><a title="Site Events" href="#">Events</a></li><li class="plain" id="portaltab-Members"><a title="Site Users" href="#">Users</a></li></ul>
 
-          <ul id="portal-siteactions">
-            <li id="siteaction-sitemap"><a href="#" accesskey="3" title="Site Map">Site Map</a></li>
-            <li id="siteaction-accessibility"><a href="#" accesskey="0" title="Accessibility">Accessibility</a></li>
-            <li id="siteaction-contact"><a href="#" accesskey="9" title="Contact">Contact</a></li>
-          </ul>
-
-          <div id="portal-searchbox">
-              <form name="searchform" id="searchGadget_form" action="#">
-
-                  <div class="LSBox">
-                  <label class="hiddenStructure" for="searchGadget">Search Site</label>
-
-                  <input name="SearchableText" type="text" size="18" title="Search Site" accesskey="4" class="searchField inputLabel" id="searchGadget" /><input class="searchButton" type="submit" value="Search" /><div class="searchSection">
-                      <input id="searchbox_currentfolder_only" class="noborder" type="checkbox" name="path" value="/www" /><label for="searchbox_currentfolder_only" style="cursor: pointer">
-
-                          only in current section
-                      </label>
+          <dl id="subscribe-links">
+              <dd class="subsribeWrapper">
+                  <div class="subsribeItem document-action-twiter">
+                      <a href="http://twitter.com/quintagroup" title="">
+                        <img alt="Twiter" src="http://devel.office.quintagroup.com:51004/SunRain/twiter.png" />
+                      </a>
                   </div>
-
-                  <div class="LSResult" id="LSResult" style=""><div class="LSShadow" id="LSShadow"></div></div>
+                  <div class="subsribeItem document-action-facebook">
+                      <a href="http://www.facebook.com/QuintagroupPloneThemes" title="">
+                        <img alt="Facebook" src="http://devel.office.quintagroup.com:51004/SunRain/facebook.png" />
+                      </a>
                   </div>
-              </form>
+                  <div class="subsribeItem document-action-rss">
+                      <a href="http://feeds2.feedburner.com/quintagroup" title="">
+                        <img alt="RSS" src="http://devel.office.quintagroup.com:51004/SunRain/rss.png" />
+                      </a>
+                  </div>
+                  <div class="subsribeItem document-action-sendto">
+                      <a href="http://devel.office.quintagroup.com:51004/SunRain/front-page/sendto_form" title="">
+                        <img alt="Send this" src="http://devel.office.quintagroup.com:51004/SunRain/email.png" />
+                      </a>
+                  </div>
+              </dd>
+          </dl>
 
-              <div id="portal-advanced-search" class="hiddenStructure">
-                  <a href="#" accesskey="5">
-
-                      Advanced Search…
-                  </a>
-              </div>
-            </div>
-
-          <div id="portal-logo-wrapper">
-            <a id="portal-logo">
-              <img src="images/logoTechlight.gif" alt="" title="" height="46" width="219" />
-            </a>
-            <div class="themeComment visualNoPrint">This Logo Viewlet registered to Techlight Theme</div>
+          <div id="portal-breadcrumbs">
+            <span id="breadcrumbs-you-are-here">You are here:</span>
+            <span id="breadcrumbs-home">
+                <a href="#">Home</a>
+            </span>
           </div>
-          </div>
-         </div>
-       </div>
 
-        <div id="portal-breadcrumbs">
-          <span id="breadcrumbs-you-are-here">You are here:</span>
-          <span id="breadcrumbs-home">
-              <a href="#">Home</a>
-          </span>
-        </div>
+    </div>
 
-      </div>
+      <div id="portal-columns" class="row">
 
-      <div class="visualClear" id="clear-space-before-wrapper-table"><!-- --></div>
+            <div id="portal-column-content" class="cell width-1:2 position-1:4">
 
-      <div id="portal-columns" class="">
-
-        <div id="visual-column-wrapper">
-            
-            <div id="portal-column-content">
-
-              <div id="content-wrapper">
 
                 <div id="viewlet-above-content">
                   <div id="plone-lock-status">
@@ -191,28 +228,44 @@ Before you start exploring your newly created Plone site, please do the followin
 
                 <div id="viewlet-below-content">
 
-                </div>
 
             </div>
          </div>
 
-                <div id="portal-column-one">
+                <div id="portal-column-one"  class="cell width-1:4 position-0">
                     <div class="portletWrapper">
-                      <dl class="portlet portletActionsPortlet">
-                        <dd>
-                          <ul id="theme-globalnav">
-                              <li class="selected" id="portaltab-index_html"><a title="" href="#">Home</a></li>
-                              <li class="plain" id="portaltab-news"><a title="Site News" href="#">News</a></li>
-                              <li class="plain" id="portaltab-events"><a title="Site Events" href="#">Events</a></li>
-                              <li class="plain" id="portaltab-Members"><a title="Site Users" href="#">Users</a></li>
-                          </ul>
-                        </dd>
+                      <dl class="portlet portletNavigationTree">
+                          <dt class="portletHeader">
+                              <span class="portletTopLeft"></span>
+                              <a class="tile" href="#">Navigation</a>
+                              <span class="portletTopRight"></span>
+                          </dt>
+                          <dd class="portletItem lastItem">
+                              <ul class="navTree navTreeLevel0">
+                                  <li class="navTreeItem visualNoMarker navTreeFolderish section-news">
+                                      <a title="Site News" class="state-published navTreeFolderish contenttype-folder" href="#">
+                                        <span>News</span>
+                                      </a>
+                                  </li>
+                                  <li class="navTreeItem visualNoMarker navTreeFolderish section-events">
+                                      <a title="Site Events" class="state-published navTreeFolderish contenttype-folder" href="#">
+                                        <span>Events</span>
+                                      </a>
+                                  </li>
+                                  <li class="navTreeItem visualNoMarker navTreeFolderish section-members">
+                                      <a title="Site Users" class="state-published navTreeFolderish contenttype-folder" href="#">
+                                        <span>Users</span>
+                                      </a>
+                                  </li>
+                              </ul><span class="portletBottomLeft"></span>
+                              <span class="portletBottomRight"></span>
+                          </dd>
                       </dl>
                     </div>
                 </div>
-      </div>
 
-                <div id="portal-column-two">
+
+                <div id="portal-column-two" class="cell width-1:4 position-3:4">
                  <div class="portletWrapper">
                   <dl class="portlet portletNews">
                       <dt class="portletHeader">
@@ -349,15 +402,16 @@ Before you start exploring your newly created Plone site, please do the followin
                  </div>
                 </div>
      </div>
-      <div class="visualClear" id="clear-space-before-footer"><!-- --></div>
-        <div id="portal-footer">
+
+  <div class="row">
+    <div id="portal-footer">
           <p>
-            <a href="http://skins.quintagroup.com/techlight">Techlight Plone Theme</a>
+            <a href="http://skins.quintagroup.com/sunrain">SunRain Plone Theme</a>
             &copy; 2005-<span>2011</span>
             <a href="http://quintagroup.com">Quintagroup</a>.
           </p>
         </div>
-      <div id="portal-colophon">
+    <div id="portal-colophon">
         <div class="colophonWrapper">
         <ul>
           <li>
@@ -367,15 +421,10 @@ Before you start exploring your newly created Plone site, please do the followin
         </ul>
         </div>
       </div>
-
-
-
-      
-
-      <div class="visualClear"><!-- --></div>
-    </div>
     <div id="kss-spinner"></div>
     <div id="plone-statistics"> Statistics  </div>
+  </div>
+   </div>
 </body>
 </html>
 
