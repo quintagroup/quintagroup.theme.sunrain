@@ -1,0 +1,24 @@
+<dl id="subscribe-links"
+    tal:define="normalizeString nocall: context/@@plone/normalizeString;
+                actions context/@@plone_context_state/actions;
+                actions python:actions.get('subscribe', None)"
+    tal:condition="actions"
+    i18n:domain="plone">
+
+    <dd class="subsribeWrapper">
+    <tal:actions repeat="action actions">
+
+        <div tal:attributes="class python:'subsribeItem document-action-' + normalizeString(action['id'])">
+            <a href=""
+               tal:attributes="href action/url;
+                               title action/description"
+               tal:define="icon python:action.get('icon', None)">
+               <img alt="" src=""
+                    tal:condition="icon"
+                    tal:attributes="src icon; alt action/title;" />
+            </a>
+        </div>
+
+    </tal:actions>
+    </dd>
+</dl>
