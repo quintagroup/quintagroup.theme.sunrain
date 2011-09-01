@@ -11,6 +11,9 @@
     <rules css:if-content="#visual-portal-wrapper">
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
+        <drop css:theme="link[href$='rain.css']" if="$theme = 'sun'" />
+        <drop css:theme="link[href$='sun.css']" if="$theme != 'sun'" />
+<!--        <drop css:theme="link[href$='sun.css']" />-->
         <drop css:content="link[href$='public.css']" />
         <drop css:content="link[href$='columns.css']" />
         <drop css:content="link[href$='portlets.css']" />
@@ -34,10 +37,11 @@
         <!-- Logo -->
         <copy attributes="*" css:content="#portal-logo" css:theme="#portal-logo" />
         <replace css:content="#portal-logo" css:theme="#portal-logo" />
-        
+
         <!-- Portal Slogan -->
         <replace css:theme="#portal-slogan" css:content="#portal-slogan" href="/@@portal_slogan" />
 
+        <!-- Subscribe Links -->
         <replace css:theme="#subscribe-links" css:content="#subscribe-links" href="/@@subscribe" />
 
         <!-- Site actions -->
@@ -59,7 +63,7 @@
         <replace css:content='#portal-breadcrumbs' css:theme='#portal-breadcrumbs'/>
 
         <!-- Viewlet Above Content -->
-        <replace css:content="#viewlet-above-content > *:not(#portal-breadcrumbs)" css:theme="#viewlet-above-content" />
+        <replace css:content="#viewlet-above-content > *:not(#portal-breadcrumbs)" css:theme-children="#viewlet-above-content" />
 
         <!-- Document Content -->
         <replace css:content='.documentEditable' css:theme='#content' css:if-content=".documentEditable" />
