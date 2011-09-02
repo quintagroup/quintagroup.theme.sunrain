@@ -1,6 +1,6 @@
 @media screen {
 
-/*----- Reset -----*/
+/*---------- RESET ----------*/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
   margin:0;
   padding:0;
@@ -33,7 +33,7 @@ abbr,acronym {
   border:0;
   }
 
-/*----- Layout -----*/
+/*---------- LAYOUT ----------*/
 div.row {
   float: left;
   width: 100%;
@@ -132,7 +132,7 @@ div.position-0 {
   width:250px;
   }
 
-/*----- General Styles -----*/
+/*---------- PORTAL CONTENT ----------*/
 body {
   background-color:#fff;
   color:#332c34;
@@ -188,6 +188,106 @@ pre {
 input {
   font-size:1em;
   }
+#content {
+  background-color:#fffff0;
+  clear:both;
+  line-height:1.5em;
+  padding:1em 1em 2em;
+  }
+h1 {
+  border-bottom:0;
+  font-size:1.5em;
+  line-height:1.23em;
+  margin-bottom:0.5em;
+  }
+h2 {
+  border-bottom:0;
+  font-size:1.17em;
+  line-height:1.27em;
+  }
+h3 {
+  font-size:1.1em;
+  line-height:1.25em;
+  }
+h4 {
+  font-size:1em;
+  line-height:1.2em;
+  }
+h5 {
+  font-size:0.9em;
+  line-height:1.15em;
+  }
+h6 {
+  font-size:0.85em;
+  line-height:1.1em;
+  }
+h2, h3, h4, h5, h6 {
+  font-weight:bold;
+  }
+#content li a,
+#content p a,
+#content dd a {
+  border:0;
+  text-decoration:underline;
+  }
+#content .link-presentation {
+  font-size:90%;
+  }
+#content ul li {
+  background:url(../images/theme_sun/sun_sprite.png) no-repeat -989px -382px;
+  line-height:1.5em;
+  padding:6px 0 0 22px;
+  }
+.documentActions {
+  background-color:#fff;
+  margin:1em -1em -2em;
+  padding:1.5em 0 2em 0;
+  text-align:right;
+  }
+.template-folder_full_view .documentActions {
+  margin:0 -1em;
+  }
+#content .documentActions ul {
+  border-top:1px solid #663300;
+  margin:2px 0 0;
+  }
+#content .documentActions li {
+  background:#ffffcc;
+  display:inline-block;
+  margin:0 0 0 0.5em;
+  padding:0 17px 3px;  
+  }
+.documentActions li a {
+  color:#929aa6;
+  }
+li.formTab a.selected {
+  background:#ffffcc;
+  }
+li.formTab a:hover {
+  background:#ffffcc;
+  }
+.standalone,
+.documentEditable * .standalone {
+  color:#ffffcc;
+  padding:0 3px;
+  }
+.discussion {
+  background-color:#fff;
+  margin:1em -1em -2em;
+  padding:1em;
+  }
+.documentEditable .discussion {
+  margin:1em -0.9em -2em;
+  }
+.documentDescription {
+  margin:0 0 1em;
+  }
+#content-history div.historyComment {
+  background-color:transparent;
+  }
+.discreet {
+  color:#76797c;
+  }
 
 /*----- Plone Elements -----*/
 .pullquote {
@@ -209,7 +309,7 @@ input {
 .visualClear {
   clear:both;
   }
-  
+
 /* Image alignment classes */
 .image-left {
   clear:both;
@@ -254,12 +354,11 @@ fieldset {
   padding:0 3px;
   }
 
-
 #visual-portal-wrapper {
   margin:0 auto;
   width:1000px;
   }
-  
+
 /*---------- PORTAL TOP ----------*/
 #portal-top {
   border-top:3px solid #000;
@@ -269,7 +368,7 @@ fieldset {
   min-height:104px;
   position:relative;
   }
-  
+
 /*---------- PORTAL SITEACTIONS ----------*/
 #portal-siteactions {
   background:url(../images/theme_sun/sun_sprite.png) no-repeat 0 -250px;
@@ -395,7 +494,6 @@ input.inputLabelActive {
   font-weight:normal;
   margin-left:2.5em;
   }
-
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
@@ -568,14 +666,14 @@ input.inputLabelActive {
   margin:0;
   }
 #portal-personaltools .actionMenuContent a {
-  color:#332c34;
+  color:#ffffcc;
   line-height:1.5em;
   margin:0;
   padding:0.2em 0.5em;
   }
 #portal-personaltools li a:hover {
-  background-color:#323953;
-  color:#fff;
+  background-color:#fee566;
+  color:#663300;
   opacity:0.9;
   text-decoration:underline;
   }
@@ -588,7 +686,6 @@ input.inputLabelActive {
 #portal-personaltools #anon-personalbar a:hover {
   background-color:transparent;
   }
-
 
 /*---------- PORTAL BREAD CRUMBS ----------*/
 #portal-breadcrumbs {
@@ -662,7 +759,7 @@ input.inputLabelActive {
   padding-bottom:1em;
   }
 .portlet a {
-  color:#332c34;
+  color:#663300;
   }
 .portletHeader {
   background-color:#663300;
@@ -728,6 +825,7 @@ div.portletAssignments div.portletHeader {
 div.managePortletsLink,
 a.managePortletsFallback {
   font-size:85%;
+  margin-top:1em;
   }
 
 /*---------- portlet Green and Grey Items ----------*/
@@ -978,123 +1076,15 @@ dl.portlet.portletCalendar dd {
 .portletWeblogAuthors .documentFirstHeading {
   border:0;
   }
-.portletWeblogArchive {
-  background-color:#ffffcc;
-  }
 .portletWeblogArchive a {
   border:0 !important;
   }
 .portletWeblogArchive a:hover {
   border:0 !important;
   }
-.portletTagCloud {
-  background-color:#ffffcc;
-  }
 .portletQuillsLinks dd {
   margin:0;
   padding:0.5em;
-  }
-
-/*---------- PORTAL CONTENT ----------*/
-#content {
-  background-color:#fffff0;
-  clear:both;
-  line-height:1.5em;
-  padding:1em 1em 2em;
-  }
-h1 {
-  border-bottom:0;
-  font-size:1.5em;
-  line-height:1.23em;
-  margin-bottom:0.5em;
-  }
-h2 {
-  border-bottom:0;
-  font-size:1.17em;
-  line-height:1.27em;
-  }
-h3 {
-  font-size:1.1em;
-  line-height:1.25em;
-  }
-h4 {
-  font-size:1em;
-  line-height:1.2em;
-  }
-h5 {
-  font-size:0.9em;
-  line-height:1.15em;
-  }
-h6 {
-  font-size:0.85em;
-  line-height:1.1em;
-  }
-h2, h3, h4, h5, h6 {
-  font-weight:bold;
-  }
-#content li a,
-#content p a,
-#content dd a {
-  border:0;
-  text-decoration:underline;
-  }
-#content .link-presentation {
-  font-size:90%;
-  }
-#content ul li {
-  background:url(../images/theme_sun/sun_sprite.png) no-repeat -989px -382px;
-  line-height:1.5em;
-  padding:6px 0 0 22px;
-  }
-.documentActions {
-  background-color:#fff;
-  margin:1em -1em -2em;
-  padding:1.5em 0 2em 0;
-  text-align:right;
-  }
-.template-folder_full_view .documentActions {
-  margin:0 -1em;
-  }
-#content .documentActions ul {
-  border-top:1px solid #663300;
-  margin:2px 0 0;
-  }
-#content .documentActions li {
-  background:#ffffcc;
-  display:inline-block;
-  margin:0 0 0 0.5em;
-  padding:0 17px 3px;  
-  }
-.documentActions li a {
-  color:#929aa6;
-  }
-li.formTab a.selected {
-  background:#ffffcc;
-  }
-li.formTab a:hover {
-  background:#ffffcc;
-  }
-.standalone,
-.documentEditable * .standalone {
-  color:#ffffcc;
-  padding:0 3px;
-  }
-.discussion {
-  background-color:#fff;
-  margin:1em -1em -2em;
-  padding:1em;
-  }
-.documentEditable .discussion {
-  margin:1em -0.9em -2em;
-  }
-.documentDescription {
-  margin:0 0 1em;
-  }
-#content-history div.historyComment {
-  background-color:transparent;
-  }
-.discreet {
-  color:#76797c;
   }
 
 /*---------- PORTAL WEBLOG ----------*/
@@ -1217,7 +1207,6 @@ li.formTab a:hover {
   line-height:1.2em;
   padding:2px 0 2px 20px;
   }
-
 
 /*----- Search -----*/
 form.searchPage {

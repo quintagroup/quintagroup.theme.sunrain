@@ -1,6 +1,6 @@
 @media screen {
 
-/*----- Reset -----*/
+/*---------- RESET ----------*/
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
   margin:0;
   padding:0;
@@ -33,7 +33,7 @@ abbr,acronym {
   border:0;
   }
 
-/*----- Layout -----*/
+/*---------- LAYOUT ----------*/
 div.row {
   float: left;
   width: 100%;
@@ -104,7 +104,7 @@ div.width-2\3a 3 { width: 64.42%; } /* .width-2:3 */
 div.position-1\3a 3 {margin-left: -65.545%;} /* .position-1:3 */
 div.position-2\3a 3 {margin-left: -32.205%;} /* .position-2:3 */
 
-/*---------- PORTAL COLUMNS ----------=*/
+/*---------- PORTAL COLUMNS -----------*/
 div.width-full {
   width:100%;
   }
@@ -132,7 +132,7 @@ div.position-0 {
   width:250px;
   }
 
-/*----- General Styles -----*/
+/*---------- PORTAL CONTENT ----------*/
 body {
   background-color:#fff;
   color:#332c34;
@@ -187,6 +187,106 @@ pre {
   }
 input {
   font-size:1em;
+  }
+#content {
+  background-color:#f0f2f2;
+  clear:both;
+  line-height:1.5em;
+  padding:1em 1em 2em;
+  }
+h1 {
+  border-bottom:0;
+  font-size:1.5em;
+  line-height:1.23em;
+  margin-bottom:0.5em;
+  }
+h2 {
+  border-bottom:0;
+  font-size:1.17em;
+  line-height:1.27em;
+  }
+h3 {
+  font-size:1.1em;
+  line-height:1.25em;
+  }
+h4 {
+  font-size:1em;
+  line-height:1.2em;
+  }
+h5 {
+  font-size:0.9em;
+  line-height:1.15em;
+  }
+h6 {
+  font-size:0.85em;
+  line-height:1.1em;
+  }
+h2, h3, h4, h5, h6 {
+  font-weight:bold;
+  }
+#content li a,
+#content p a,
+#content dd a {
+  border:0;
+  text-decoration:underline;
+  }
+#content .link-presentation {
+  font-size:90%;
+  }
+#content ul li {
+  background:url(../images/theme_rain/rain_sprite.png) no-repeat -989px -382px;
+  line-height:1.5em;
+  padding:6px 0 0 22px;
+  }
+.documentActions {
+  background-color:#fff;
+  margin:1em -1em -2em;
+  padding:1.5em 0 2em 0;
+  text-align:right;
+  }
+.template-folder_full_view .documentActions {
+  margin:0 -1em;
+  }
+#content .documentActions ul {
+  border-top:1px solid #ccd0d6;
+  margin:2px 0 0;
+  }
+#content .documentActions li {
+  background:#e5e7eb;
+  display:inline-block;
+  margin:0 0 0 0.5em;
+  padding:0 17px 3px;  
+  }
+.documentActions li a {
+  color:#929aa6;
+  }
+li.formTab a.selected {
+  background:#f0f2f2;
+  }
+li.formTab a:hover {
+  background:#f0f2f2;
+  }
+.standalone,
+.documentEditable * .standalone {
+  color:#332c34;
+  padding:0 3px;
+  }
+.discussion {
+  background-color:#fff;
+  margin:1em -1em -2em;
+  padding:1em;
+  }
+.documentEditable .discussion {
+  margin:1em -0.9em -2em;
+  }
+.documentDescription {
+  margin:0 0 1em;
+  }
+#content-history div.historyComment {
+  background-color:transparent;
+  }
+.discreet {
+  color:#76797c;
   }
 
 /*----- Plone Elements -----*/
@@ -253,7 +353,6 @@ fieldset {
   margin-right:4px;
   padding:0 3px;
   }
-
 
 #visual-portal-wrapper {
   margin:0 auto;
@@ -396,7 +495,6 @@ input.inputLabelActive {
   font-weight:normal;
   margin-left:2.5em;
   }
-
 
 /*---------- PORTAL LOGO ----------*/
 #portal-logo {
@@ -583,13 +681,11 @@ input.inputLabelActive {
   background-color:transparent;
   }
 
-
 /*---------- PORTAL BREAD CRUMBS ----------*/
 #portal-breadcrumbs {
   font-size:0.92em;
   line-height:1.6em;
   padding:18px 16px;
-  text-transform:none;
   }
 #portal-breadcrumbs a {
   color:#929aa6;
@@ -615,9 +711,6 @@ input.inputLabelActive {
 .subsribeItem {
   display:inline;
   font-size:1.50em;
-  }
-.subsribeItem a {
-  text-decoration:none;
   }
 
 /*---------- PORTAL FOOTER ----------*/
@@ -664,12 +757,10 @@ input.inputLabelActive {
   font-weight:normal;
   line-height:1.6em;
   padding:3px 11px;
-  color:#332c34;
   }
 .portletHeader a,
 .managedPortlet .portletHeader a {
   text-decoration:none;
-  color:#332c34;
   }
 .portletItem {
   margin:0;
@@ -722,6 +813,7 @@ div.portletAssignments div.portletHeader {
 div.managePortletsLink,
 a.managePortletsFallback {
   font-size:85%;
+  margin-top:1em;
   }
 
 /*---------- portlet Green and Grey Items ----------*/
@@ -888,7 +980,7 @@ dl.portlet.portletCalendar a {
   font-weight:bold;
   }
 dl.portlet.portletCalendar dd {
-  padding: 0;
+  padding:0;
   }
 .ploneCalendar {
   border-collapse:collapse;
@@ -971,126 +1063,15 @@ dl.portlet.portletCalendar dd {
 .portletWeblogAuthors a {
   text-decoration:none;
   }
-.portletWeblogAuthors .documentFirstHeading {
-  border:0;
-  }
-.portletWeblogArchive {
-  background-color:#e5e7eb;
-  }
 .portletWeblogArchive a {
   border:0 !important;
   }
 .portletWeblogArchive a:hover {
   border:0 !important;
   }
-.portletTagCloud {
-  background-color:#e5e7eb;
-  }
 .portletQuillsLinks dd {
   margin:0;
   padding:0.5em;
-  }
-
-/*---------- PORTAL CONTENT ----------*/
-#content {
-  background-color:#f0f2f2;
-  clear:both;
-  line-height:1.5em;
-  padding:1em 1em 2em;
-  }
-h1 {
-  border-bottom:0;
-  font-size:1.5em;
-  line-height:1.23em;
-  margin-bottom:0.5em;
-  }
-h2 {
-  border-bottom:0;
-  font-size:1.17em;
-  line-height:1.27em;
-  }
-h3 {
-  font-size:1.1em;
-  line-height:1.25em;
-  }
-h4 {
-  font-size:1em;
-  line-height:1.2em;
-  }
-h5 {
-  font-size:0.9em;
-  line-height:1.15em;
-  }
-h6 {
-  font-size:0.85em;
-  line-height:1.1em;
-  }
-h2, h3, h4, h5, h6 {
-  font-weight:bold;
-  }
-#content li a,
-#content p a,
-#content dd a {
-  border:0;
-  text-decoration:underline;
-  }
-#content .link-presentation {
-  font-size:90%;
-  }
-#content ul li {
-  background:url(../images/theme_rain/rain_sprite.png) no-repeat -989px -382px;
-  line-height:1.5em;
-  padding:6px 0 0 22px;
-  }
-.documentActions {
-  background-color:#fff;
-  margin:1em -1em -2em;
-  padding:1.5em 0 2em 0;
-  text-align:right;
-  }
-.template-folder_full_view .documentActions {
-  margin:0 -1em;
-  }
-#content .documentActions ul {
-  border-top:1px solid #ccd0d6;
-  margin:2px 0 0;
-  }
-#content .documentActions li {
-  background:#e5e7eb;
-  display:inline-block;
-  margin:0 0 0 0.5em;
-  padding:0 17px 3px;  
-  }
-.documentActions li a {
-  color:#929aa6;
-  }
-li.formTab a.selected {
-  background:#f0f2f2;
-  }
-li.formTab a:hover {
-  background:#f0f2f2;
-  }
-.standalone,
-.documentEditable * .standalone {
-  color:#332c34;
-  padding:0 3px;
-  }
-.discussion {
-  background-color:#fff;
-  margin:1em -1em -2em;
-  padding:1em;
-  }
-.documentEditable .discussion {
-  margin:1em -0.9em -2em;
-  }
-.documentDescription {
-  margin:0 0 1em;
-  }
-#content-history div.historyComment {
-  background-color:transparent;
-  }
-.discreet {
-  color:#76797c;
   }
 
 /*---------- PORTAL WEBLOG ----------*/
