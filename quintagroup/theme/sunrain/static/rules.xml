@@ -60,21 +60,14 @@
         <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper"/>
 
          <!-- Breadcrumbs -->
-        <replace css:content='#portal-breadcrumbs' css:theme='#portal-breadcrumbs'/>
-
-        <!-- Viewlet Above Content -->
-        <replace css:content="#viewlet-above-content > *:not(#portal-breadcrumbs)" css:theme-children="#viewlet-above-content" />
+        <drop css:content="#portal-breadcrumbs" /> 
+        <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw"/>
 
         <!-- Document Content -->
-        <replace css:content='.documentEditable' css:theme='#content' css:if-content=".documentEditable" />
-        <replace css:content='#content' css:theme='#content'  />
-        <after css:content="#edit-bar" css:theme="#viewlet-above-content" css:if-content=".template-dashboard" />
-        <after css:content="#edit-bar" css:theme="#viewlet-above-content" css:if-content=".template-manage-dashboard" />
-        <before css:content="#dashboard-info-message" css:theme="#content" css:if-content="#dashboard-info-message" />
+        <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
+        <replace css:content="#portal-column-content" css:theme="#portal-column-content" />
+        <strip css:content="#content > div:not(div[class]):not(div[id])" />
         <drop css:content="img[alt='Image'][src$='image.png']" />
-
-        <!-- Viewlet Below Content -->
-        <replace css:content="#viewlet-below-content" css:theme="#viewlet-below-content" />
 
         <!-- Columns -->
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />
