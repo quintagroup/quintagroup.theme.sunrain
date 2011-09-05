@@ -108,28 +108,28 @@ div.position-2\3a 3 {margin-left: -32.205%;} /* .position-2:3 */
 div.width-full {
   width:100%;
   }
-div.position-0 {
+#portal-column-content.position-0 {
   margin-left:-100%;
   }
 #portal-column-content.width-1\3a 2 {
-  width:528px;
+  width:52.8%;
   }
 #portal-column-content.position-1\3a 4 {
-  margin-left:-789px;
+  margin-left:-78.9%;
   }
 #portal-column-content.width-3\3a 4 {
-  width:789px;
+  width:78.9%;
   }
 #portal-column-content.width-3\3a 4.position-0 {
-  width:739px;
+  width:73.9%;
   }
 #portal-column-one {
-  margin-left:-1000px;
-  width:200px;
+  margin-left:-100%;
+  width:20%;
   }
 #portal-column-two {
-  margin-left:-250px;
-  width:250px;
+  margin-left:-25%;
+  width:25%;
   }
 
 /*---------- PORTAL CONTENT ----------*/
@@ -417,6 +417,7 @@ input.inputLabelActive {
 #portal-searchbox .searchButton {
   background:url(../images/home_sprite.png) no-repeat 0 -33px;
   border:0;
+  cursor:pointer;
   height:33px;
   padding:0 0 0 2px;
   text-indent:-9999px;
@@ -918,10 +919,10 @@ div.portletGreyItem a.portletLinkItem {
   padding-left:41px;
   }
 .portletItem .navTreeLevel1 .navTreeItem a:hover  {
-  background-color:#ffffcc;
+  background-color:#ffffcc !important;
   }
 .portletItem .navTreeLevel1 .navTreeCurrentItem {
-  background-color:#ffffcc;
+  background-color:#ffffcc !important;
   }
 
 /* Third Level */
@@ -1219,10 +1220,10 @@ form.searchPage input.searchButton {
   background:#663300;
   border:0;
   color:#ffffcc;
-  height:26px;
-  margin-bottom:0 !important;
+  cursor:pointer;
+  height:29px;
+  margin-left:1em;
   padding:0 15px;
-  text-transform:none;
   }
 
 /*----- template logged out -----*/
