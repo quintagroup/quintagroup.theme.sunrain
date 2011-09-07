@@ -74,6 +74,10 @@
         <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
 
         <!-- Footer -->
+        <before css:theme="#portal-footer" css:content="#portlets-footer" />
+        
+        <before css:theme="#portal-footer" css:content=".manageFooterPortletsLink" />
+        
         <replace css:theme="#portal-footer" css:content="#portal-footer" />
 
         <replace css:theme="#portal-colophon" css:content="#portal-colophon" />
