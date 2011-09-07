@@ -724,6 +724,7 @@ input.inputLabelActive {
 /*---------- PORTAL FOOTER ----------*/
 #portal-footer {
   border-top:30px solid #f0f2f2;
+  clear:both;
   line-height:1.2em;
   margin:2em 0 1em;
   padding:1em 0 0;
