@@ -1825,6 +1825,11 @@ table.grid th {
   }
 
 /*---------- COMMENTING ----------*/
+div#commenting.reply {
+  font-size:100%;
+  float:left;
+  width:99%;
+  }
 .discussion .hide {
   display:none;
   }
