@@ -1,7 +1,7 @@
 Installation
 ------------
 
-To install quintagroup.theme.sunrain on Plone 4 - in the buildout.cfg file of your instance:
+To install diazo sunrain theme on Plone 4 - in the buildout.cfg file of your instance:
 
 * Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
 
@@ -11,31 +11,13 @@ To install quintagroup.theme.sunrain on Plone 4 - in the buildout.cfg file of yo
         ...
         quintagroup.theme.sunrain
 
-* Add ``quintagroup.theme.sunrain`` to a ZCML slug::
-
-    [instance]
-    ...
-    zcml =
-        quintagroup.theme.sunrain
-
-* Re-run buildout, e.g. with::
+* Re-run buildout::
 
     $ ./bin/buildout
 
-* Restart the Zope server, for example, with the following command in the terminal::
+* Restart the Zope server::
 
     $ ./bin/instance restart
 
 Then activate 'Sun and Rain Theme' in Plone (Site Setup -> Add-ons).
 
-Other products
-==============
-
-The following products were tested and can be used with SunRain Theme:
-
-* quintagroup.portlet.cumulus - adds Tag cloud portlet 
-  http://projects.quintagroup.com/products/wiki/quintagroup.portlet.cumulus#Installation
-  
-* Products.Quills and/or collective.blog.star - blogging suites for Plone
-  http://pypi.python.org/pypi/Products.Quills
-  http://pypi.python.org/pypi/collective.blog.star

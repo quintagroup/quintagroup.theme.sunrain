@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.0 - September 14, 2011
+
+* theme package converted into diazo theme
+
 2.1.1 - August 1, 2011
 
 * removed dependency for quintagroup.portlet.static

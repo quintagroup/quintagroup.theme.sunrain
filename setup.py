@@ -8,13 +8,13 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '2.1.1'
+version = '6.0'
 
 tests_require=['zope.testing']
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
-      description="Diazo Theme for Plone",
+      description="Free Diazo Theme for Plone",
       long_description=open(os.path.join("quintagroup", "theme", "sunrain", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),    
