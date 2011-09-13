@@ -28,6 +28,8 @@ Features
 
 * SunRain Plone Theme changes default Plone look using tableless layout.
 
+* Improved thumbnail display view.
+
 **Additional Features**
 
 Features, that require additional packages installation:
