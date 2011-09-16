@@ -1229,6 +1229,9 @@ form.searchPage input.searchButton {
   margin-left:1em;
   padding:0 15px;
   }
+#search-results-bar a {
+  color:#5981d2;
+  }
 
 /*----- template logged out -----*/
 .template-logged_out #content {

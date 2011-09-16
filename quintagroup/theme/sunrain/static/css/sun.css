@@ -1234,6 +1234,9 @@ form.searchPage input.searchButton {
   margin-left:1em;
   padding:0 15px;
   }
+#search-results-bar a {
+  color:#663300;
+  }
 
 /*----- template logged out -----*/
 .template-logged_out #content {
