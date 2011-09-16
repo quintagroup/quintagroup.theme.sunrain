@@ -82,7 +82,7 @@
 
         <replace css:theme="#portal-colophon" css:content="#portal-colophon" />
 
-        <replace css:theme="#kss-spinner" css:content="#kss-spinner" />
+        <after css:content="#kss-spinner" css:theme-children="#visual-portal-wrapper" />
 
         <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="/@@statistics" />
 
