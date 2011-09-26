@@ -29,13 +29,11 @@
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
         <copy attributes="id dir class" css:content="body" css:theme="body" />
-        <copy attributes="class" content='//*[@id="portal-column-content"]' theme='//*[@id="portal-column-content"]' />
 
         <!-- Skip Links -->
         <before css:content="#portal-header > p.hiddenStructure" css:theme-children="#portal-header" />
 
         <!-- Logo -->
-        <copy attributes="*" css:content="#portal-logo" css:theme="#portal-logo" />
         <replace css:content="#portal-logo" css:theme="#portal-logo" />
 
         <!-- Portal Slogan -->
