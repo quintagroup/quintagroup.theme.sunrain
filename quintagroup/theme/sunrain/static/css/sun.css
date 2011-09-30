@@ -1941,6 +1941,9 @@ table.grid th {
   display:block;
   padding-left:17px;
   }
+#plone-contentmenu-factories li a img {
+  display:none;
+  }
 #plone-contentmenu-factories li a:hover {
   background-color:#fff;
   background-position:1px -2799px;
