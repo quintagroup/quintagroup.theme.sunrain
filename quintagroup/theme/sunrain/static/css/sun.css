@@ -1,7 +1,7 @@
 @media screen {
 
 /*---------- RESET ----------*/
-body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,textarea,p,blockquote,th,td { 
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,textarea,p,blockquote,th,td { 
   margin:0;
   padding:0;
   }
@@ -276,7 +276,7 @@ li.formTab a:hover {
   }
 .standalone,
 .documentEditable * .standalone {
-  color:#ffffcc;
+  color:#332c34;
   padding:0 3px;
   }
 .discussion {
@@ -372,7 +372,7 @@ fieldset {
   border-top:3px solid #000;
   }
 #portal-header {
-  background:url(../images/theme_sun/sun_sprite.png) no-repeat 0 0;
+  background:#fcd753 url(../images/theme_sun/sun_sprite.png) no-repeat 0 0;
   min-height:104px;
   position:relative;
   }
@@ -911,7 +911,8 @@ div.portletGreyItem a.portletLinkItem {
 .navTreeItem a:hover {
   background-color:#fffff0 !important;
   }
-.navTreeItem a img {
+.navTreeItem a img,
+.portletRecent a img {
   display:none;
   }
 .navTreeCurrentItem {
