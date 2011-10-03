@@ -4,5 +4,6 @@
   <styles>
    <element value="Link Item|a|portletLinkItem"/>
   </styles>
+  <content_css value="/++theme++quintagroup.theme.sunrain/css/rain.css"/>
  </layout>
 </object>
