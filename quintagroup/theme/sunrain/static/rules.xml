@@ -13,7 +13,6 @@
         <drop theme="/html/head/meta" />
         <drop css:theme="link[href$='rain.css']" if="$theme = 'sun'" />
         <drop css:theme="link[href$='sun.css']" if="$theme != 'sun'" />
-<!--        <drop css:theme="link[href$='sun.css']" />-->
         <drop css:content="link[href$='public.css']" />
         <drop css:content="link[href$='columns.css']" />
         <drop css:content="link[href$='portlets.css']" />
@@ -66,6 +65,7 @@
         <replace css:content="#portal-column-content" css:theme="#portal-column-content" />
         <strip css:content="#content > div:not(div[class]):not(div[id])" />
         <drop css:content="img[alt='Image'][src$='image.png']" />
+        <drop css:content="#plone-contentmenu-factories li a img" />
 
         <!-- Columns -->
         <replace css:content="#portal-column-one" css:theme="#portal-column-one" />

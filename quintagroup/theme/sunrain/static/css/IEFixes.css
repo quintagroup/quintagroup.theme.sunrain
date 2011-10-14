@@ -30,3 +30,14 @@
 .ploneCalendar caption {
   display:none;
   }
+/* Adding required bullet */
+.fieldRequired {
+  z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterBegin', '<span class="required-bullet">■ </span>'));
+  }
+.required-bullet {
+  color:#f00;
+  }
+/* Removing horizontal scroll */
+.pb-ajax {
+  overflow-x:hidden;
+  }

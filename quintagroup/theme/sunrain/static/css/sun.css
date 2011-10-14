@@ -347,6 +347,12 @@ fieldset {
   clear:both;
   margin:0 0 1em;
   }
+div.field.error {
+  background-color:#fdc;
+  border:1px solid red;
+  margin:1em 0;
+  padding:0.5em;
+  }
 .formControls {
   margin:1em 0;
   }
@@ -1264,6 +1270,13 @@ form.searchPage input.searchButton {
   }
 
 /*---------- EDITING ----------*/
+.fieldRequired {
+  color:#fff;
+  }
+.fieldRequired:before {
+  color:#f00;
+  content:"■ ";
+  }
 .formPanel {
   padding:1em 2px;
   }
@@ -1423,8 +1436,9 @@ ul.configlets li a {
   background-color:red;
   color:#fff;
   }
-#content li.formTab a.required span {
-  padding-right:1em;
+#content li.formTab a.required span:after {
+  color:#f00;
+  content:" ■";
   }
 #content fieldset.formPanel {
   border:none;
@@ -1941,9 +1955,6 @@ table.grid th {
   background:url(../images/icons-sprite.png) no-repeat 1px -1199px;
   display:block;
   padding-left:17px;
-  }
-#plone-contentmenu-factories li a img {
-  display:none;
   }
 #plone-contentmenu-factories li a:hover {
   background-color:#fff;
