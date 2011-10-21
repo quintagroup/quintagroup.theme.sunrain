@@ -1,7 +1,7 @@
 Changelog
 ---------
 
-6.0 - September 14, 2011
+6.0 - October 21, 2011
 
 * theme package converted into diazo theme
 

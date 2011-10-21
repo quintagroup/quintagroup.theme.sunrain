@@ -26,9 +26,7 @@ Features
 * Search Box. New approach to site search display is implemented in this theme. In particular, searchSection is hidden during
   common page view. Simply hover the cursor to the search box area and the searchSection appears.
 
-* SunRain Plone Theme changes default Plone look using tableless layout.
-
-* Improved thumbnail display view.
+* Improved thumbnail display view (switch to Thumbnail view)
 
 **Additional Features**
 
@@ -43,7 +41,11 @@ Features, that require additional packages installation:
 
 * blogging support require either Products.Quills or blog.star product installation.
 
-SunRain Plone Theme is available at http://pypi.python.org/pypi/quintagroup.theme.sunrain
+Dependencies
+============
+
+* plone.app.theming
+* plone.app.themingplugins
 
 Recommended
 ===========
@@ -51,6 +53,8 @@ Recommended
 SuinRain diazo theme was tested with:
 
 * Plone 4.1
+* plone.app.theming 1.0b8 
+* plone.app.themingplugins 1.0b1
 * Products.Carousel 2.1b3
 * Products.ContentWellPortlets 4.0
 
