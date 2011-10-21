@@ -17,6 +17,7 @@
         <drop css:content="link[href$='columns.css']" />
         <drop css:content="link[href$='portlets.css']" />
         <drop css:content="link[href$='discussion.css']" />
+        <drop css:content="link[href$='ploneKss.css']" />
         <drop css:content="link[href*='base-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
         <after content="/html/head/meta" theme-children="/html/head" />

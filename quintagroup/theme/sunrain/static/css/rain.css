@@ -327,12 +327,12 @@ li.formTab a:hover {
   
 /* Image alignment classes */
 .image-left {
-  clear:both;
+  clear:left;
   float:left;
   margin:0.5em 1em 0.5em 0;
   }
 .image-right {
-  clear:both;
+  clear:right;
   float:right;
   margin:0.5em 0 0.5em 1em;
   }
@@ -341,6 +341,15 @@ li.formTab a:hover {
   }
 .image-caption {
   margin:0; 
+  }
+.newsImageContainer {
+  float:right;
+  margin:0 0 0.5em 1em;
+  }
+.tileImage {
+  border:1px solid #000;
+  float:right;
+  margin:0 0 0.5em 0.5em;
   }
 
 /*----- Forms -----*/
@@ -1275,10 +1284,6 @@ form.searchPage input.searchButton {
 .formPanel {
   padding:1em 2px;
   }
-.field {
-  clear:both;
-  margin-bottom:1em;
-  }
 .formPanel textarea {
   width:100%;
   }
@@ -1316,6 +1321,70 @@ ul.configlets li {
 ul.configlets li a {
   text-decoration:none !important;
   }
+#content ul.configletDetails {
+  margin:0 1em 1em 4em;
+  list-style:none;
+  }
+#content ul.configletDetails li {
+  margin-bottom:1em;
+  display:inline;
+  }
+#content ul.configletDetails li.configletDescription {
+  display:block;
+  color:#76797c;
+  margin:0;
+  }
+#kss-spinner {
+  background-position:50% 50%;
+  display:none;
+  height:20px;
+  left:50%;
+  margin:-10px 0 0 -10px;
+  position:fixed;
+  top:50%;
+  width:20px;
+  }
+.formlibInlineEditable,
+.inlineEditable {
+  display:block;
+  padding:1px;
+  }
+body.kssActive .inlineEditable:hover,
+body.kssActive .formlibInlineEditable:hover {
+  border:1px solid #ddd;
+  border-color:#666 #ddd #ddd #666;
+  cursor:text;
+  padding:0;
+  }
+body.kssActive .inlineEditable a:hover,
+body.kssActive .formlibInlineEditable a:hover {
+  cursor:pointer;
+  }
+body.kssActive .formlibInlineForm:hover,
+body.kssActive .formlibInlineForm a:hover {
+  border:0;
+  cursor:default;
+  padding:1px;
+  }
+.inlineForm .formHelp,
+.inlineForm .fieldRequired,
+.inlineForm label {
+  display:none;
+  }
+/* In inline selection widgets the label *must* be displayed, as
+   otherwise you only see identical radio buttons without text. */
+.inlineForm .ArchetypesSelectionWidget label {
+  display: inline;
+  }
+.inlineForm #archetypes-fieldname-title input,
+.inlineForm #archetypes-fieldname-title {
+  font-size: 100%;
+  }
+/* Workaround for abnormally large buttons in the h1 tag */
+h1 div.formControls input {
+  font-size:55% !important;
+  }
+
 
 /*----- Edit Bar -----*/
 #edit-bar {
@@ -2105,7 +2174,7 @@ input.context,
   }
 .image-left {
   border:0.4pt solid #000;
-  clear:both;
+  clear:left;
   float:left;
   margin:0.5em 1em 0.5em 0;
   }
@@ -2114,7 +2183,7 @@ input.context,
   }
 .image-right {
   border:0.4pt solid #000;
-  clear:both;
+  clear:right;
   float:right;
   margin:0.5em;
   }
