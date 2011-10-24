@@ -463,14 +463,13 @@ input.inputLabelActive {
   display:block;
   }
 .searchSection input {
-  background-color:#fff;
   height:14px;
   margin-right:4px;
-  vertical-align:bottom;
+  vertical-align:middle;
   width:14px;
   }
 .searchSection label {
-  vertical-align:top;
+  vertical-align:middle;
   }
 .searchSection label:hover {
   color:#fff;
