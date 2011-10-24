@@ -283,6 +283,7 @@ li.formTab a:hover {
   margin:1em -0.9em -2em;
   }
 .documentDescription {
+  font-weight:bold;
   margin:0 0 1em;
   }
 #content-history div.historyComment {
@@ -446,7 +447,7 @@ input.inputLabelActive {
   width:44px;
   }
 .searchSection {
-  color:#663300;
+  color:#630;
   display:none;
   font-size:0.92em;
   margin:4px 11px 0;
@@ -455,17 +456,16 @@ input.inputLabelActive {
   display:block;
   }
 .searchSection input {
-  background-color:#fff;
   height:14px;
   margin-right:4px;
-  vertical-align:bottom;
+  vertical-align:middle;
   width:14px;
   }
 .searchSection label {
-  vertical-align:top;
+  vertical-align:middle;
   }
 .searchSection label:hover {
-  color:#663300;
+  color:#630;
   }
 
 /*---------- LIVESEARCH ----------*/
@@ -1039,25 +1039,27 @@ dl.portlet.portletCalendar dd {
 
 /*---------- PORTLET SEARCH ----------*/
 .portletSearch .LSBox {
-  background:transparent;
+  padding:0 4px 0 5px;
   }
-.portletSearch .portlet-search-gadget {
-  border-color:#663300;
-  border-style:solid;
-  border-width:1px 0 1px 1px;
-  float:left;
-  height:1.27em;
-  padding:3px 0 0 3px;
+.portletSearch .portlet-search-gadget,
+.portletSearch .portlet-search-gadget-nols {
+  background-color:#fff;
+  border:1px solid #630;
+  margin:0 0 0 -5px;
+  padding:2px 3px 3px;
+  vertical-align:top;
   width:65%;
   }
 .portletSearch .searchButton {
-  background:none #663300;
+  background:#630;
   border:0;
   color:#fff;
   font-weight:bold;
-  height:1.67em;
-  margin:0 0 0 -5px !important;
+  height:22px;
+  margin:0 -4px 0 0;
   overflow:visible;
+  padding:0 4px;
+  vertical-align:top;
   width:35%;
   }
 .portletSearch .LSResult {
