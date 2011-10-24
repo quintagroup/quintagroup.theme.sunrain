@@ -1145,7 +1145,7 @@ dl.portlet.portletCalendar dd {
   margin:0.5em -16px 0;
   }
 #content-weblog .weblog-footer a {
-  background:url(../images/coments_ico.png) no-repeat 0 4px;
+  background:url(../images/comments_ico.png) no-repeat 0 4px;
   color:#929aa6;
   font-size:0.9em;
   line-height:1.2em;
@@ -1228,7 +1228,7 @@ dl.portlet.portletCalendar dd {
   position:absolute;
   }
 #blog-listing .comment-link a {
-  background:url(../images/coments_ico.png) no-repeat 0 4px;
+  background:url(../images/comments_ico.png) no-repeat 0 4px;
   color:#929AA6;
   font-size:0.9em;
   line-height:1.2em;
