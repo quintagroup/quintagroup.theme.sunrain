@@ -274,11 +274,6 @@ li.formTab a.selected {
 li.formTab a:hover {
   background:#ffffcc;
   }
-.standalone,
-.documentEditable * .standalone {
-  color:#332c34;
-  padding:0 3px;
-  }
 .discussion {
   background-color:#fff;
   margin:1em -1em -2em;
@@ -373,10 +368,14 @@ div.field.error {
   padding:0 3px;
   }
 .standalone {
+  color:#332c34;
   margin-right:4px;
   padding:0 3px;
   }
-
+.destructive {
+  margin-right:4px;
+  padding:0 3px;
+  }
 #visual-portal-wrapper {
   margin:0 auto;
   width:1000px;
@@ -1122,7 +1121,8 @@ dl.portlet.portletCalendar dd {
   margin:0 -16px;
   }
 #content-weblog .weblog-entry {
-  margin-bottom:30px;
+  margin-top:10px;
+  margin-bottom:35px;
   }
 #content-weblog .weblog-view-entry-title {
   font-size:1.5em;
@@ -1158,22 +1158,23 @@ dl.portlet.portletCalendar dd {
   }
 
 /*---------- COLLECTIVE BLOG VIEW ----------*/
-.section-blogstar #content {
+.template-blog_view #content {
   padding:1em 16px 0 !important;
   margin-bottom:-2em;
   }
-.section-blogstar .documentEditable #content {
+.template-blog_view .documentEditable #content {
   margin-bottom:0;
   }
-.section-blogstar .listingBar {
+.template-blog_view .listingBar {
   margin:0 -16px;
   }
 #blog-listing .blog-item {
   margin-top:1.5em;
+  margin-bottom:85px;
   position:relative;
   }
 #blog-listing #parent-fieldname-text {
-  margin-bottom:30px;
+  padding-bottom:30px;
   }
 #blog-listing #plone-document-byline {
   display:inline-block;
@@ -1205,8 +1206,12 @@ dl.portlet.portletCalendar dd {
   font-weight:bold;
   }
 #blog-listing .documentActions {
-  margin:0 -16px 0;
-  padding:1px 0 20px 0;
+  height:23px;
+  margin:0 -16px;
+  padding:1px 16px 20px;
+  position:absolute;
+  right:0;
+  width:100%;
   }
 #blog-listing .documentActions ul {
   border:0;
@@ -1223,8 +1228,11 @@ dl.portlet.portletCalendar dd {
   line-height:1.2em;
   }
 #blog-listing .comment-link {
-  bottom:12px;
-  position:absolute;
+  background:#fff;
+  margin:0 -16px;
+  padding:6px 16px 16px;
+  position: absolute;
+  z-index:1;
   }
 #blog-listing .comment-link a {
   background:url(../images/coments_ico.png) no-repeat 0 4px;
