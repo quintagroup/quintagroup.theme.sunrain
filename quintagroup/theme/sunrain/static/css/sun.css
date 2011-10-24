@@ -1170,7 +1170,7 @@ dl.portlet.portletCalendar dd {
   }
 #blog-listing .blog-item {
   margin-top:1.5em;
-  margin-bottom:85px;
+  margin-bottom:55px;
   position:relative;
   }
 #blog-listing #parent-fieldname-text {
@@ -1228,11 +1228,8 @@ dl.portlet.portletCalendar dd {
   line-height:1.2em;
   }
 #blog-listing .comment-link {
-  background:#fff;
-  margin:0 -16px;
-  padding:6px 16px 16px;
-  position: absolute;
-  z-index:1;
+  padding-top:6px;
+  position:absolute;
   }
 #blog-listing .comment-link a {
   background:url(../images/coments_ico.png) no-repeat 0 4px;
