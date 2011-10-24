@@ -15,7 +15,10 @@ Features
  In 'Parameter expressions' field change ``theme = string:rain`` for ``theme = string:sun`` or vice versa.
 
 * SunRain theme has 'subscribe' viewlet integrated, that adds 4 actions 'Share on Twitter', 'Share on Facebook', 'Send this'
-  and 'Subscribe to RSS'. They can be edited via ZMI portal_actions -> subscribe.
+  and 'Subscribe to RSS'. Their links can be edited via ZMI portal_actions -> subscribe. 
+  
+  Icons can be edited via file system at /src/quintagroup.theme.sunrain/quintagroup/theme/sunrain/static/images folder: 
+  replace twitter.png, facebook.png, rss.png and email.png icons with new ones. Restart instance.
 
 * Slogan. SunRain Theme uses customizable slogan. To change portal slogan go to ZMI, open 'Properties' tab and type in
   your new slogan into 'description' field.
