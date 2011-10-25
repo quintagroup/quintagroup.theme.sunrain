@@ -41,10 +41,11 @@
   overflow-x:hidden;
   }
 
-#theme-globalnav li ul li {
-  background-color:#fff;
-  zoom:1;
+#theme-globalnav li ul ul {
+  border-left:1px solid #fff;
+  left:174px;
   }
-#theme-globalnav ul li:hover > a.hasChildrens {
-  background:url(../images/home_sprite.png) no-repeat 160px -233px #f3553b;
+#theme-globalnav li ul li {
+  margin:0;
+  padding:0;
   }
