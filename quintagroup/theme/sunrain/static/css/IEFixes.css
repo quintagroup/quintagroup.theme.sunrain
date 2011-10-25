@@ -1,5 +1,11 @@
-#theme-globalnav {
-  zoom: 1;
+#theme-globalnav,
+.portletSearch,
+#portal-personaltools-wrapper {
+  zoom:1;
+  }
+#theme-globalnav > li {
+  display:inline;
+  zoom:1;
   }
 #portal-searchbox .searchButton {
   overflow:hidden;
@@ -7,12 +13,6 @@
   }
 #livesearchLegend {
   margin-left:-7px;
-  }
-.portletSearch {
-  zoom:1;
-  }
-#portal-personaltools-wrapper {
-  z-index:1;
   }
 .documentActions,
 .listingBar {
@@ -39,4 +39,12 @@
 /* Removing horizontal scroll */
 .pb-ajax {
   overflow-x:hidden;
+  }
+
+#theme-globalnav li ul li {
+  background-color:#fff;
+  zoom:1;
+  }
+#theme-globalnav ul li:hover > a.hasChildrens {
+  background:url(../images/home_sprite.png) no-repeat 160px -233px #f3553b;
   }

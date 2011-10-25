@@ -585,8 +585,8 @@ input.inputLabelActive {
   white-space:normal;
   }
 #theme-globalnav > li {
-  display:inline;
-  margin-right:0.5em;
+  display:inline-block;
+  margin:0 0.5em 0 0;
   position:relative;
   white-space:nowrap;
   }
@@ -655,16 +655,13 @@ input.inputLabelActive {
   -moz-border-radius:6px;
   border-radius:6px;
   left:175px;
-  margin-top: -5px;
-  top:0;
+  top:-5px;
   }
 #theme-globalnav ul li a.hasChildrens {
-  background-image:url(../images/home_sprite.png);
-  background-position:160px -233px;
-  background-repeat:no-repeat;
+  background:url(../images/home_sprite.png) no-repeat 160px -233px;
   }
 #theme-globalnav ul li:hover > a.hasChildrens {
-  background-position:160px -109px; 
+  background:url(../images/home_sprite.png) no-repeat 160px -109px #f3553b;
   }
 
 /*---------- PORTAL PERSONAL TOOLS ----------*/
@@ -1155,8 +1152,7 @@ dl.portlet.portletCalendar dd {
 
 /*---------- COLLECTIVE BLOG VIEW ----------*/
 .template-blog_view #content {
-  padding:1em 16px 0 !important;
-  margin-bottom:-2em;
+  padding:1em 16px 0;
   }
 .template-blog_view .documentEditable #content {
   margin-bottom:0;
@@ -1165,8 +1161,7 @@ dl.portlet.portletCalendar dd {
   margin:0 -16px;
   }
 #blog-listing .blog-item {
-  margin-top:1.5em;
-  margin-bottom:55px;
+  padding:1em 0 0;
   position:relative;
   }
 #blog-listing #parent-fieldname-text {
@@ -1202,12 +1197,9 @@ dl.portlet.portletCalendar dd {
   font-weight:bold;
   }
 #blog-listing .documentActions {
-  height:23px;
+  min-height:23px;
   margin:0 -16px;
   padding:1px 16px 20px;
-  position:absolute;
-  right:0;
-  width:100%;
   }
 #blog-listing .documentActions ul {
   border:0;
@@ -1224,7 +1216,7 @@ dl.portlet.portletCalendar dd {
   line-height:1.2em;
   }
 #blog-listing .comment-link {
-  padding-top:6px;
+  bottom:16px;
   position:absolute;
   }
 #blog-listing .comment-link a {
@@ -2176,7 +2168,9 @@ input.standalone,
 .draggingHook,
 #foldercontents-order-column,
 input.context,
-.visualNoPrint {
+.visualNoPrint,
+#portal-slogan,
+#subscribe-links {
   display:none;
   }
 .image-left {
