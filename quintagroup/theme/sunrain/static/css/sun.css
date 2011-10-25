@@ -1833,7 +1833,7 @@ table.grid th {
   }
 .listingBar .previous a {
   border-bottom:8px solid transparent;
-  border-right:8px solid #929aa6;
+  border-right:8px solid #630;
   border-top:8px solid transparent;
   display:inline-block;
   height:0;
@@ -1843,7 +1843,7 @@ table.grid th {
   }
 .listingBar .next a {
   border-bottom:8px solid transparent;
-  border-left:8px solid #929aa6;
+  border-left:8px solid #630;
   border-top:8px solid transparent;
   display:inline-block;
   height:0;
