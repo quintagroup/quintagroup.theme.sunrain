@@ -151,7 +151,7 @@ div.position-5\3a 6 {margin-left:    -15.83%;} /* .position-5:6 */
 body {
   background-color:#fff;
   color:#332c34;
-  font:12px Tahoma,Geneva,sans-serif;
+  font:75% Tahoma,Geneva,sans-serif;
   }
 a:link {
   color:#5981d2;
@@ -1911,6 +1911,14 @@ table.grid th {
   bottom:0;
   min-height:50%;
   position:absolute;
+  }
+
+/*----- Accessibility elements, applied by JS -----*/
+body.largeText {
+  font-size:88%;
+  }
+body.smallText {
+  font-size:69%;
   }
 
 /*---------- COMMENTING ----------*/
