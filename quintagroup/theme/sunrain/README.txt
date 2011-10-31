@@ -23,11 +23,10 @@ Features
 * Slogan. SunRain Theme uses customizable slogan. To change portal slogan go to ZMI, open 'Properties' tab and type in
   your new slogan into 'description' field.
 
-* Logo. SunRain diazo Theme uses default Plone 4 logo. To replace it - go to ZMI -> portal_skins -> sunburst_images and 
-  customize 'logo.png' image.
+* Logo. SunRain diazo Theme uses default Plone 4 logo. To replace it - in ZMI customize portal_skins -> sunburst_images -> logo.png image.
 
-* Search Box. New approach to site search display is implemented in this theme. In particular, searchSection is hidden during
-  common page view. Simply hover the cursor to the search box area and the searchSection appears.
+* Search Box. New approach to site search display is implemented in this theme: searchSection is hidden during common page 
+  view. Simply hover the cursor to the search box area and the searchSection appears.
 
 * Improved thumbnail display view (switch to Thumbnail view)
 
@@ -58,16 +57,16 @@ SuinRain diazo theme was tested with:
 * Plone 4.1
 * plone.app.theming 1.0b8 
 * plone.app.themingplugins 1.0b1
-* Products.Carousel 2.1b3
+* Products.Carousel 2.1
 * Products.ContentWellPortlets 4.0
 
 Besides, special styles were added to the theme for correct theme display with the following products activated:
 
-* quintagroup.dropdownmenu 1.2.4
+* quintagroup.dropdownmenu 1.2.5
 * Products.LinguaPlone 4.0.4
 * quintagroup.portlet.cumulus 1.1.0
-* quintagroup.portlet.static 0.4
-* Products.Quills 1.8a1
+* quintagroup.portlet.static 0.5
+* Products.Quills 1.8a
 * blog.star 1.0
 
 Home Directory
