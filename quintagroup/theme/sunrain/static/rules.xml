@@ -22,6 +22,7 @@
         <drop css:content="link[href*='base-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
         <after content="/html/head/meta" theme-children="/html/head" />
+        <after content="/html/head/base" theme-children="/html/head" />
         <replace theme='/html/head/title' content='/html/head/title' />
 
         <!-- Copy style, script and link tags in the order they appear in the content -->
