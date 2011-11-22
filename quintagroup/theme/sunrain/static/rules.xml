@@ -19,6 +19,7 @@
         <drop css:content="link[href$='discussion.css']" />
         <drop css:content="link[href$='ploneKss.css']" />
         <drop css:content="link[href$='print.css']" />
+        <drop css:content="link[href$='mobile.css']" />
         <drop css:content="link[href*='base-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
         <after content="/html/head/meta" theme-children="/html/head" />

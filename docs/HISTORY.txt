@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.0.2 - November 22, 2011
+
+* drop mobile.css
+
 6.0.1 - November 02, 2011
 
 * added base tag
