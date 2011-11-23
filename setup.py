@@ -14,7 +14,7 @@ tests_require=['zope.testing']
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
-      description="Free Diazo Theme for Plone",
+      description="Free Diazo Theme for Plone 4.1",
       long_description=open(os.path.join("quintagroup", "theme", "sunrain", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),    
@@ -26,7 +26,7 @@ setup(name='quintagroup.theme.sunrain',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
-      keywords='web zope plone theme quintagroup',
+      keywords='web zope plone theme diazo quintagroup',
       author='Quintagroup',
       author_email='skins@quintagroup.com',
       url='http://skins.quintagroup.com/sunrain',
