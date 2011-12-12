@@ -8,13 +8,13 @@ from setuptools import setup, find_packages
 def read(*rnames):
     return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
 
-version = '6.0.2'
+version = '6.0.3'
 
 tests_require=['zope.testing']
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
-      description="Free Diazo Theme for Plone 4.1",
+      description="Free Diazo Theme for Plone",
       long_description=open(os.path.join("quintagroup", "theme", "sunrain", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),    
@@ -26,7 +26,7 @@ setup(name='quintagroup.theme.sunrain',
         'Topic :: Software Development :: Libraries :: Python Modules',
         'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
-      keywords='web zope plone theme diazo quintagroup',
+      keywords='web zope plone theme quintagroup',
       author='Quintagroup',
       author_email='skins@quintagroup.com',
       url='http://skins.quintagroup.com/sunrain',
