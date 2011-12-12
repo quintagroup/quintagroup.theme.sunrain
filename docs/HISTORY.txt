@@ -3,6 +3,7 @@ Changelog
 6.0.3 - Deember 12, 2011
 
 * added new functionality: change backround-image for the header
+* added functionality Products.ContentWellPortlets 4.1.0
 
 6.0.2 - November 22, 2011
 

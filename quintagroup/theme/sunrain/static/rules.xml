@@ -65,6 +65,9 @@
         <drop css:content="#portal-breadcrumbs" /> 
         <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw"/>
 
+        <after css:theme="#theme-globalnav" css:content="#portlets-in-header" />
+        <after css:theme="#theme-globalnav" css:content=".manageInHeaderPortletsLink" />
+
         <!-- Document Content -->
         <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
         <replace css:content="#portal-column-content" css:theme="#portal-column-content" />
