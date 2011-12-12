@@ -1,4 +1,4 @@
-SunRain free diazo theme for Plone 4.
+SunRain free diazo theme for Plone 4.1.
     
 Features
 --------
@@ -27,6 +27,9 @@ Features
 
 * Search Box. New approach to site search display is implemented in this theme: searchSection is hidden during common page 
   view. Simply hover the cursor to the search box area and the searchSection appears.
+
+* Top image. SunRain diazo theme has replaceable header image for front and inner site pages. To replace default image - upload image with
+  ``topimage`` shortname into site root or any site section. Recommended image size: 1000*104px.
 
 * Improved thumbnail display view (switch to Thumbnail view)
 
@@ -58,12 +61,12 @@ SuinRain diazo theme was tested with:
 * plone.app.theming 1.0b8 
 * plone.app.themingplugins 1.0b1
 * Products.Carousel 2.1
-* Products.ContentWellPortlets 4.0
+* Products.ContentWellPortlets 4.1.0
 
 Besides, special styles were added to the theme for correct theme display with the following products activated:
 
 * quintagroup.dropdownmenu 1.2.5
-* Products.LinguaPlone 4.0.4
+* Products.LinguaPlone 4.1.1
 * quintagroup.portlet.cumulus 1.1.0
 * quintagroup.portlet.static 0.5
 * Products.Quills 1.8a
