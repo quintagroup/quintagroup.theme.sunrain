@@ -2,7 +2,8 @@
 <rules
     xmlns="http://namespaces.plone.org/diazo"
     xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
+    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+    xmlns:xi="http://www.w3.org/2001/XInclude">
 
     <!-- The default theme, used for standard Plone web pages -->
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
@@ -89,5 +90,5 @@
         <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="/@@statistics" />
 
     </rules>
-
+    <xi:include href="tune.xml" />
 </rules>
