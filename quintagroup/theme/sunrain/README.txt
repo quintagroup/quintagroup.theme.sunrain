@@ -14,6 +14,9 @@ Features
  To change between 'Sun' and 'Rain' views - go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.
  In 'Parameter expressions' field change ``theme = string:rain`` for ``theme = string:sun`` or vice versa.
 
+* Top image. SunRain diazo theme has replaceable header image for front and inner site pages. To replace default image - upload image with
+  ``topimage`` shortname into site root or any site section. Recommended image size: 1000*104px.
+
 * SunRain theme has 'subscribe' viewlet integrated, that adds 4 actions 'Share on Twitter', 'Share on Facebook', 'Send this'
   and 'Subscribe to RSS'. Their links can be edited via ZMI portal_actions -> subscribe. 
   
@@ -28,10 +31,9 @@ Features
 * Search Box. New approach to site search display is implemented in this theme: searchSection is hidden during common page 
   view. Simply hover the cursor to the search box area and the searchSection appears.
 
-* Top image. SunRain diazo theme has replaceable header image for front and inner site pages. To replace default image - upload image with
-  ``topimage`` shortname into site root or any site section. Recommended image size: 1000*104px.
-
 * Improved thumbnail display view (switch to Thumbnail view)
+
+* Editable footer. Customize: portal_view_customizations -> plone.footer
 
 **Additional Features**
 
