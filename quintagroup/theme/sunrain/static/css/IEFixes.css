@@ -40,7 +40,12 @@
 .pb-ajax {
   overflow-x:hidden;
   }
-
+.collapsible .collapser.collapsed {
+  z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('afterEnd', '&#9658;'));
+  }
+.collapsible .collapser.expanded {
+  z-index: expression(runtimeStyle.zIndex = 1, insertAdjacentHTML('beforeEnd', '&#9660;'));
+  }
 #theme-globalnav li ul ul {
   border-left:1px solid #fff;
   left:174px;

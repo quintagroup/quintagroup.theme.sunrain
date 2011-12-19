@@ -201,7 +201,11 @@ pre {
   overflow-x:auto;
   }
 input {
-  font-size:1em;
+  font:1em Arial, Helvetica, sans-serif;
+  vertical-align:middle;
+  }
+input[type="checkbox"] {
+  margin-right:3px;
   }
 #content {
   background-color:#f0f2f2;
@@ -301,10 +305,18 @@ li.formTab a:hover {
   }
 
 /*----- Plone Elements -----*/
+.visualHighlight {
+  background-color:#ffb;
+  }
 .pullquote {
   border-left:5px solid #222;
   margin:0 0 1em;
   padding:0 0 0 5px;
+  }
+.callout {
+  background-color:#eee;
+  border-left:1em solid #ccc;
+  padding:1em;
   }
 .hiddenStructure {
   background:none;
@@ -432,7 +444,7 @@ div.field.error {
 .LSBox {
   position:relative;
   }
-#searchGadget {
+.searchField {
   background:url(../images/home_sprite.png) no-repeat 0 0;
   border:0;
   font-size:1em;
@@ -524,6 +536,12 @@ input.inputLabelActive {
   font-size:85%;
   font-weight:normal;
   margin-left:2.5em;
+  }
+.collapsible .collapser.collapsed:after {
+  content:" ▶"
+  }
+.collapsible .collapser.expanded:after {
+  content:" ▼"
   }
 
 /*---------- PORTAL LOGO ----------*/
@@ -1272,6 +1290,20 @@ form.searchPage input.searchButton {
   padding:1px 10px;
   }
 
+
+/*----- Events -----*/
+.eventDetails {
+  clear:right;
+  float:right;
+  margin:0 0 0.5em 1em;
+  }
+
+/*----- Search Results -----*/
+.highlightedSearchTerm {
+  background-color:#ff9;
+  padding:0 2px;
+  }
+
 /*---------- EDITING ----------*/
 .fieldRequired {
   color:#fff;
@@ -1292,6 +1324,7 @@ form.searchPage input.searchButton {
   }
 #description {
   font-family:Arial, Helvetica, sans-serif;
+  width:100%;
   }
 .formHelp {
   color:#555;

@@ -1,5 +1,8 @@
 Changelog
 ---------
+6.0.4 - Deember 12, 2011
+
+* Fixes style for searchbox
 
 6.0.3 - Deember 12, 2011
 
