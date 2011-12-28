@@ -23,8 +23,8 @@ Features
   Icons can be edited via file system at /src/quintagroup.theme.sunrain/quintagroup/theme/sunrain/static/images folder: 
   replace twitter.png, facebook.png, rss.png and email.png icons with new ones. Restart instance.
 
-* Slogan. SunRain Theme uses customizable slogan. To change portal slogan go to ZMI, open 'Properties' tab and type in
-  your new slogan into 'description' field.
+* Slogan. SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.
+  In 'Parameter expressions' field change 'Type your slogan here' slogan in ``slogan = context/slogan | string: Type your slogan here`` line.
 
 * Logo. SunRain diazo Theme uses default Plone 4 logo. To replace it - in ZMI customize portal_skins -> sunburst_images -> logo.png image.
 
@@ -60,7 +60,7 @@ Recommended
 SuinRain diazo theme was tested with:
 
 * Plone 4.1
-* plone.app.theming 1.0b8 
+* plone.app.theming 1.0b9
 * plone.app.themingplugins 1.0b1
 * Products.Carousel 2.1
 * Products.ContentWellPortlets 4.1.0

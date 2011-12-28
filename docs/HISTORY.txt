@@ -1,9 +1,9 @@
 Changelog
 ---------
 
-6.0.5 - December 28, 2011
+6.0.5 - December 29, 2011
 
-* changed customization slogan
+* changed slogan customization
 
 6.0.4 - December 26, 2011
 

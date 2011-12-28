@@ -1,9 +1,20 @@
 Installation
 ------------
 
-To install diazo sunrain theme on Plone 4 - in the buildout.cfg file of your instance:
+quintagroup.theme.sunrain can be installed in any of the following ways. 
 
-* Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
+Installation via diazo panel
+============================
+
+* Download zip file at http://plone.org/products/sunrain-plone-theme/releases/6.0.5/sunrain.zip
+* Import the theme at the 'Diazo theme' control panel
+
+Installation via buildout
+=========================
+
+In the buildout.cfg file of your instance:
+
+* Add ``quintagroup.theme.sunrain`` to the list of eggs to install::
 
     [buildout]
     ...
