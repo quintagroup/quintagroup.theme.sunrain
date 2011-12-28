@@ -41,7 +41,9 @@
         <replace css:content="#portal-logo" css:theme="#portal-logo" />
 
         <!-- Portal Slogan -->
-        <replace css:theme="#portal-slogan" css:content="#portal-slogan" href="/@@portal_slogan" />
+        <replace css:theme="#portal-slogan">
+          <span id="portal-slogan"><xsl:value-of select="$slogan"/></span>
+        </replace>
 
         <!-- Subscribe Links -->
         <replace css:theme="#subscribe-links" css:content="#subscribe-links" href="/@@subscribe" />
@@ -87,11 +89,11 @@
         
         <replace css:theme="#portal-footer" css:content="#portal-footer" />
 
-        <replace css:theme="#portal-colophon" css:content="#portal-colophon" />
-
         <after css:content="#kss-spinner" css:theme-children="#visual-portal-wrapper" />
 
-        <replace css:theme="#plone-statistics" css:content-children="#plone-statistics" href="/@@statistics" />
+        <replace css:theme="#plone-statistics">
+            <xsl:value-of select="$stat" disable-output-escaping="yes" /> 
+        </replace>
 
     </rules>
     <xi:include href="tune.xml" />

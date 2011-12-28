@@ -781,7 +781,7 @@ input.inputLabelActive {
   padding:0 0 1em;
   text-align:center;
   }
-#portal-colophon ul li a {
+#portal-colophon a {
   border-bottom:1px solid #ccc;
   color:#666;
   text-decoration:none;
@@ -1055,8 +1055,9 @@ dl.portlet.portletCalendar dd {
   }
 .portletSearch .portlet-search-gadget,
 .portletSearch .portlet-search-gadget-nols {
-  background-color:#fff;
+  background:#fff;
   border:1px solid #8cacbb;
+  height:15px;
   margin:0 0 0 -5px;
   padding:2px 3px 3px;
   vertical-align:top;
