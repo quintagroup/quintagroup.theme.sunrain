@@ -193,13 +193,6 @@ pre {
   padding:1em;
   overflow-x:auto;
   }
-input {
-  font:1em Arial, Helvetica, sans-serif;
-  vertical-align:middle;
-  }
-input[type="checkbox"] {
-  margin-right:3px;
-  }
 #content {
   background-color:#fffff0;
   clear:both;
@@ -354,6 +347,21 @@ li.formTab a:hover {
   }
 
 /*----- Forms -----*/
+input {
+  font:1em Arial, Helvetica, sans-serif;
+  vertical-align:middle;
+  }
+input[type="checkbox"],
+input[type="radio"] {
+  margin-right:3px;
+  }
+.label {
+  font-weight:bold;
+  }
+label {
+  font-weight:bold;
+  vertical-align:middle;
+  }
 fieldset {
   border-top:1px solid #ccc;
   line-height:1.5em;
@@ -361,7 +369,6 @@ fieldset {
   padding:1em 0;
   }
 .field {
-  clear:both;
   margin:0 0 1em;
   }
 div.field.error {

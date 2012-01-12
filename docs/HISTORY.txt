@@ -1,5 +1,8 @@
 Changelog
 ---------
+6.0.6 - January 12, 2012
+
+- Products.PloneFormGen compatibility added
 
 6.0.5 - December 29, 2011
 

@@ -5,12 +5,7 @@ This module contains the tool of quintagroup.theme.sunrain
 import os
 from setuptools import setup, find_packages
 
-def read(*rnames):
-    return open(os.path.join(os.path.dirname(__file__), *rnames)).read()
-
-version = '6.0.5'
-
-tests_require=['zope.testing']
+version = '6.0.6'
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
@@ -39,9 +34,6 @@ setup(name='quintagroup.theme.sunrain',
                         'plone.app.theming',
                         'plone.app.themingplugins',
                         ],
-      tests_require=tests_require,
-      extras_require=dict(tests=tests_require),
-      test_suite = 'quintagroup.theme.sunrain.tests',
       entry_points="""
       # -*- Entry points: -*-
       [z3c.autoinclude.plugin]
