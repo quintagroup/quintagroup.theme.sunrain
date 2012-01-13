@@ -6,7 +6,7 @@ quintagroup.theme.sunrain can be installed in any of the following ways.
 Installation via diazo panel
 ============================
 
-* Download zip file at http://plone.org/products/sunrain-plone-theme/releases/6.0.5/sunrain.zip
+* Download zip file at http://plone.org/products/sunrain-plone-theme/releases/6.0.6/sunrain.zip
 * Import the theme at the 'Diazo theme' control panel
 
 Installation via buildout
