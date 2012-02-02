@@ -3,22 +3,22 @@ SunRain free diazo theme for Plone 4.1.
 Features
 --------
 
-**Different Views**
+**Different views**
 
- SunRain Theme can be presented in two different views: 'Rain' - defined as a default view:
+ In SunRain Theme you can change view from: 'Rain' - defined as a default view:
 
  .. figure:: http://quintagroup.com/services/plone-development/skins/images/rain.png/
 
- and 'Sun':
+ to 'Sun':
 
  .. figure:: http://quintagroup.com/services/plone-development/skins/images/sun.png/
 
  To change between 'Sun' and 'Rain' views - go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.
- In 'Parameter expressions' field change ``theme = string:rain`` for ``theme = string:sun`` or vice versa.
+ In 'Parameter expressions' textarea change ``theme = string:rain`` parameter for ``theme = string:sun`` or vice versa.
 
 **Top image**
  
- SunRain diazo theme has replaceable header image for front and inner site pages. To replace default image - upload image with ``topimage`` shortname into site root or any site section. Recommended image size: 1000*104px.
+ SunRain diazo theme has replaceable header image for front and inner site pages. To replace default image, upload image with ``topimage`` shortname into site root or any site section. Recommended image size: 1000*104px.
 
 **Subscribe**
 
@@ -28,11 +28,11 @@ Features
 
 **Slogan**
 
- SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab. In 'Parameter expressions' field change 'Type your slogan here' slogan in ``slogan = context/slogan | string: Type your slogan here`` line.
+ SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab. In 'Parameter expressions' textarea change slogan in ``slogan = context/slogan | string: Type your slogan here`` line.
 
-**Logo**
+**Customizable Logo**
 
- SunRain diazo Theme uses default Plone 4 logo. To replace it - in ZMI customize portal_skins -> sunburst_images -> logo.png image.
+ SunRain diazo Theme comes with default Plone logo.  You can replace it with your own as you would do it in default Plone: in ZMI customize  portal_skins -> sunburst_images -> logo.png.
 
 **Search Box**
 
@@ -40,34 +40,35 @@ Features
 
 **Improved thumbnail display view**
 
- Switch to Thumbnail view
+ To see the changes go to Display dropdown menu and click on Thumbnail view. 
 
 **Editable footer** 
 
  Customize: portal_view_customizations -> plone.footer
 
 **Supported Add-Ons**
+
   Additional features can be activated:
 
 * ``Products.Carousel``
-   Adds adjusted styling to Carousel. Adds rotating Carousel banner feature.
-
-* ``quintagroup.dropdownmenu``
-   Adds adjusted styling dropdown menu
-
-* ``Products.LinguaPlone``
-   Adds multilingual functionality. Adjusted styling for language selectors.
-
-* ``Products.PloneFormGen``
-   Adds TTW Form Generator feature.
+   Adds rotating Carousel banner feature.
 
 * ``Products.ContentWellPortlets``
    Allows adding portlets in the header, footer and content area.
 
-* ``quintagroup.portlet.static``
-   When activated, SunRain theme will have specially-styled text  portlets: 'Green Item' and 'Grey Item'. To add them - select 'Static Stylish Portlet' from 'Add portlet...' drop down  menu. Provide portlet text into Text area, enable 'Omit portlet border' option, and select 'Green Item' or 'Grey Item' style from 'Portlet style' menu.
+* ``Products.PloneFormGen``
+   Adds TTW Form Generator feature.
 
-   Static Stylish portlets include special styling for links (e.g. 'More...' link). To enable it - select a piece of text and set 'Link Item' style for it (Styles drop-down menu on TinyMCE toolbar).
+* ``quintagroup.dropdownmenu``
+   Adds adjusted stylings to dropdown menu.
+
+* ``Products.LinguaPlone``
+   Adds multilingual functionality. Adjusted stylings for language selectors.
+
+* ``quintagroup.portlet.static``
+   When activated, SunRain theme will have specially-styled text  portlets: 'Green Item' and 'Grey Item'. To add them, select 'Static Stylish Portlet' from 'Add portlet...' dropdown  menu. Provide portlet text into Text area, enable 'Omit portlet border' option, and select 'Green Item' or 'Grey Item' style from 'Portlet style' menu.
+
+   Static Stylish portlets include special styling for links (e.g. 'More...' link). To enable it, select a piece of text and set 'Link Item' style for it (Styles dropdown menu on TinyMCE toolbar).
 
 * ``Products.Quills or blog.star``
    Blogging support.
@@ -89,15 +90,15 @@ Theme was tested with:
 * Plone 4.1
 * plone.app.theming 1.0b9
 * plone.app.themingplugins 1.0b1
-* quintagroup.portlet.cumulus 1.1.0
+* Products.Carousel 2.1
+* Products.ContentWellPortlets 4.1.0
+* Products.PloneFormGen 1.7.0
+* quintagroup.dropdownmenu 1.2.5
+* Products.LinguaPlone 4.1.1
 * quintagroup.portlet.static 0.5
 * Products.Quills 1.8a
 * blog.star 1.0
-* Products.Carousel 2.1
-* quintagroup.dropdownmenu 1.2.5
-* Products.LinguaPlone 4.1.1
-* Products.PloneFormGen 1.7.0
-* Products.ContentWellPortlets 4.1.0
+* quintagroup.portlet.cumulus 1.1.0
 
 Home Directory
 ==============
