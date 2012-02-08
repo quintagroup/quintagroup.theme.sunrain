@@ -25,10 +25,15 @@ Features
  SunRain theme has 'subscribe' viewlet integrated, that adds 4 actions 'Share on Twitter', 'Share on Facebook', 'Send this' and 'Subscribe to RSS'. Their links can be edited via ZMI portal_actions -> subscribe. 
   
  Icons can be edited via file system at /src/quintagroup.theme.sunrain/quintagroup/theme/sunrain/static/images folder:  replace twitter.png, facebook.png, rss.png and email.png icons with new ones. Restart instance.
+ 
+  Note, if you only downloaded ``sunrain.zip``, you will not be able to edit links. To do this, go to sunrain folder and open index.html with any editor to make the changes.
 
-**Slogan**
+**Editable Slogan**
 
- SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab. In 'Parameter expressions' textarea change slogan in ``slogan = context/slogan | string: Type your slogan here`` line.
+ SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Zope Management Interface' settings, open 'Properties' tab. In 'slogan' field type in your new slogan. If the parameter has no value, than the slogan will not be displayed on the website.
+
+  Note, if you only downloaded ``sunrain.zip``, you will not be able to edit slogan. To do this, you should go to 'Site Setup' -> 'Zope Management Interface' settings and open 'Properties' tab. Add new property 'slogan', type 'string', value 'your slogan' and save.
+
 
 **Customizable Logo**
 
@@ -69,6 +74,11 @@ Features
    When activated, SunRain theme will have specially-styled text  portlets: 'Green Item' and 'Grey Item'. To add them, select 'Static Stylish Portlet' from 'Add portlet...' dropdown  menu. Provide portlet text into Text area, enable 'Omit portlet border' option, and select 'Green Item' or 'Grey Item' style from 'Portlet style' menu.
 
    Static Stylish portlets include special styling for links (e.g. 'More...' link). To enable it, select a piece of text and set 'Link Item' style for it (Styles dropdown menu on TinyMCE toolbar).
+
+    Note, if you only downloaded ``sunrain.zip``, you will not be able to apply 'Green Item' or 'Grey Item' style from 'Portlet style'  to your portlets. To do this, you should go to 'Site Setup' -> 'Add-on Configuration' -> Static Stylish portlet. Click on 'Add Dropdown select', enter title 'Green Item' or 'Grey Item', value 'portletGreyItem' or 'portletGreenItem' accordingly and save.
+
+    To apply special styling for links, you should go to 'Site Setup' -> 'TinyMCE Visual Editor'. In 'Styles' textarea add 'Link Item|a|portletLinkItem' and save. 
+
 
 * ``Products.Quills or blog.star``
    Blogging support.
