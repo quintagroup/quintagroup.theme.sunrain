@@ -1,12 +1,13 @@
 Changelog
 ---------
-6.0.7 - February 08, 2012
+6.0.7 - March 07, 2012
 
-- fixed change slogan [naivok]
+* changed the order of inserting ploneCustom.css [naivok]
+* deleted actions.xml [naivok]
 
 6.0.6 - January 12, 2012
 
-- Products.PloneFormGen compatibility added [naivok]
+* Products.PloneFormGen compatibility added [naivok]
 
 6.0.5 - December 29, 2011
 

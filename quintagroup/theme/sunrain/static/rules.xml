@@ -8,6 +8,12 @@
     <!-- The default theme, used for standard Plone web pages -->
     <theme href="index.html" css:if-content="#visual-portal-wrapper" />
     <notheme if-path="@@manage-viewlets" />
+    <xsl:template css:match="#portal-colophon">
+        <div id="portal-colophon">
+            <p class="credits"><a href="http://skins.quintagroup.com/sunrain">SunRain Plone Theme</a> by <a href="http://quintagroup.com">Quintagroup</a> © 2005-2012.</p>
+            <xsl:value-of select="." />
+        </div>
+    </xsl:template>
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
         <!-- Add meta tags -->
@@ -23,12 +29,14 @@
         <drop css:content="link[href$='mobile.css']" />
         <drop css:content="link[href*='base-cachekey']" />
         <drop css:content="link[href$='favicon.ico']" />
-        <after content="/html/head/meta" theme-children="/html/head" />
-        <after content="/html/head/base" theme-children="/html/head" />
+        <before content="/html/head/meta" theme="/html/head/title" />
+        <before content="/html/head/base" theme="/html/head/title" />
         <replace theme='/html/head/title' content='/html/head/title' />
 
         <!-- Copy style, script and link tags in the order they appear in the content -->
-        <before content="/html/head/style | /html/head/script | /html/head/link" theme-children="/html/head" />
+        <after css:content="head link:not([href*='ploneCustom'])" theme="/html/head/title" />
+        <after content="/html/head/style | /html/head/script" theme="/html/head/title" />
+        <after css:content="head link[href*='ploneCustom']" theme-children="/html/head" />
 
         <!-- Copy over the id/class attributes on the body tag.
              This is important for per-section styling -->
@@ -49,7 +57,8 @@
         <replace css:theme="#subscribe-links" css:content="#subscribe-links" href="/@@subscribe" />
 
         <!-- Site actions -->
-        <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" />
+        <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" method="raw" />
+        <drop css:content="#portal-siteactions" /> 
 
         <!-- Portal languageselector -->
         <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
@@ -82,17 +91,7 @@
         <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
 
         <!-- Footer -->
-        <before css:theme="#portal-footer" css:content="#portlets-footer" />
-        
-        <before css:theme="#portal-footer" css:content=".manageFooterPortletsLink" />
-        
-        <replace css:theme="#portal-footer" css:content="#portal-footer" />
-
-        <after css:content="#kss-spinner" css:theme-children="#visual-portal-wrapper" />
-
-        <replace css:theme="#plone-statistics">
-            <xsl:value-of select="$stat" disable-output-escaping="yes" /> 
-        </replace>
+        <replace content="//div[@id = 'portal-columns']/following-sibling::*[@class='row'][position() = 1]" css:theme=".footer" />
 
     </rules>
     <xi:include href="tune.xml" />

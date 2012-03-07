@@ -20,20 +20,21 @@ Features
  
  SunRain diazo theme has replaceable header image for front and inner site pages. To replace default image, upload image with ``topimage`` shortname into site root or any site section. Recommended image size: 1000*104px.
 
-**Subscribe**
-
- SunRain theme has 'subscribe' viewlet integrated, that adds 4 actions 'Share on Twitter', 'Share on Facebook', 'Send this' and 'Subscribe to RSS'. Their links can be edited via ZMI portal_actions -> subscribe. 
-  
- Icons can be edited via file system at /src/quintagroup.theme.sunrain/quintagroup/theme/sunrain/static/images folder:  replace twitter.png, facebook.png, rss.png and email.png icons with new ones. Restart instance.
- 
-  Note, if you only downloaded ``sunrain.zip``, you will not be able to edit links. To do this, go to sunrain folder and open index.html with any editor to make the changes.
-
 **Editable Slogan**
 
- SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Zope Management Interface' settings, open 'Properties' tab. In 'slogan' field type in your new slogan. If the parameter has no value, than the slogan will not be displayed on the website.
+ SunRain Theme uses customizable slogan. To change it, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.
+ 
+ In 'Parameter expressions' field change 'Type your slogan here' slogan in ``slogan = context/slogan | string:Type your slogan here`` line.
 
-  Note, if you only downloaded ``sunrain.zip``, you will not be able to edit slogan. To do this, you should go to 'Site Setup' -> 'Zope Management Interface' settings and open 'Properties' tab. Add new property 'slogan', type 'string', value 'your slogan' and save.
+ If you need your slogan to be displayed in non-ASCII characters, go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.  In 'Parameter expressions' change the following field  
+ 
+ ``slogan = string:Type your slogan here`` 
 
+ to 
+
+ ``slogan = python:path('context/slogan|string:').decode('utf-8', 'ignore')``
+ 
+ and in 'Site Setup' -> 'Zope Management Interface' settings -> 'Properties' tab add a new property 'slogan', type 'string', value 'your slogan' and save.
 
 **Customizable Logo**
 
@@ -45,13 +46,13 @@ Features
 
 **Improved thumbnail display view**
 
- To see the changes go to Display dropdown menu and click on Thumbnail view. 
+ To see the changes go to Display drop-down menu and click on Thumbnail view. 
 
 **Editable footer** 
 
  Customize: portal_view_customizations -> plone.footer
 
-**Supported Add-Ons**
+**Theme Extensions**
 
   Additional features can be activated:
 
@@ -70,6 +71,14 @@ Features
 * ``Products.LinguaPlone``
    Adds multilingual functionality. Adjusted stylings for language selectors.
 
+* ``quintagroup.sunrain.policy``
+   Adds four actions for subscription: 'Share on Twitter', 'Share on Facebook', 'Send this' and 'Subscribe to RSS'.
+   Their links can be edited via ZMI portal_actions -> subscribe. 
+
+   Icons can be edited via file system at '/src/quintagroup.theme.sunrain/quintagroup/theme/sunrain/static/images' folder:  replace twitter.png, facebook.png, rss.png and email.png icons with the new ones. Restart instance.
+ 
+    Note, if you only downloaded ``sunrain.zip``, you will not be able to edit links. To do this, go to sunrain folder and open index.html with any editor to make the changes.
+
 * ``quintagroup.portlet.static``
    When activated, SunRain theme will have specially-styled text  portlets: 'Green Item' and 'Grey Item'. To add them, select 'Static Stylish Portlet' from 'Add portlet...' dropdown  menu. Provide portlet text into Text area, enable 'Omit portlet border' option, and select 'Green Item' or 'Grey Item' style from 'Portlet style' menu.
 
@@ -78,7 +87,6 @@ Features
     Note, if you only downloaded ``sunrain.zip``, you will not be able to apply 'Green Item' or 'Grey Item' style from 'Portlet style'  to your portlets. To do this, you should go to 'Site Setup' -> 'Add-on Configuration' -> Static Stylish portlet. Click on 'Add Dropdown select', enter title 'Green Item' or 'Grey Item', value 'portletGreyItem' or 'portletGreenItem' accordingly and save.
 
     To apply special styling for links, you should go to 'Site Setup' -> 'TinyMCE Visual Editor'. In 'Styles' textarea add 'Link Item|a|portletLinkItem' and save. 
-
 
 * ``Products.Quills or blog.star``
    Blogging support.
