@@ -4,6 +4,7 @@ Changelog
 
 * changed the order of inserting ploneCustom.css [naivok]
 * deleted actions.xml [naivok]
+* updated the way the footer is inserted [naivok]
 
 6.0.6 - January 12, 2012
 
