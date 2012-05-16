@@ -1,5 +1,5 @@
 SunRain free diazo theme for Plone 4.1.
-    
+
 Features
 --------
 
@@ -15,6 +15,10 @@ Features
 
  To change between 'Sun' and 'Rain' views - go to 'Site Setup' -> 'Diazo theme' settings, open 'Advanced settings' tab.
  In 'Parameter expressions' textarea change ``theme = string:rain`` parameter for ``theme = string:sun`` or vice versa.
+
+**Responsive Web Design**
+
+ Among the most interesting features integrated into SunRain Theme you can find responsive web design that allows for easy viewing on mobile devices and tablets. If the device screen size is smaller than 5 inches the website will start to automatically resize and reposition the content to accommodate for the changes. 
 
 **Top image**
  
@@ -76,7 +80,7 @@ Features
    Their links can be edited via ZMI portal_actions -> subscribe. 
 
    Icons can be edited via file system at '/src/quintagroup.theme.sunrain/quintagroup/theme/sunrain/static/images' folder:  replace twitter.png, facebook.png, rss.png and email.png icons with the new ones. Restart instance.
- 
+
     Note, if you only downloaded ``sunrain.zip``, you will not be able to edit links. To do this, go to sunrain folder and open index.html with any editor to make the changes.
 
 * ``quintagroup.portlet.static``
@@ -113,6 +117,7 @@ Theme was tested with:
 * Products.PloneFormGen 1.7.0
 * quintagroup.dropdownmenu 1.2.5
 * Products.LinguaPlone 4.1.1
+* quintagroup.sunrain.policy 1.0
 * quintagroup.portlet.static 0.5
 * Products.Quills 1.8a
 * blog.star 1.0

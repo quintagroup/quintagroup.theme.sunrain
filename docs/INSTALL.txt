@@ -64,5 +64,3 @@ If you want to customize SunRain theme please use the following installation ins
 
 Now you can customize SunRain Theme by modifying ``quintagroup.theme.sunrain`` package in ``src`` directory 
 of your buildout.
-
-

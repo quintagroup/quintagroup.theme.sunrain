@@ -1,10 +1,13 @@
 Changelog
 ---------
-6.0.7 - March 07, 2012
+
+6.0.7 - May 16, 2012
 
 * changed the order of inserting ploneCustom.css [naivok]
 * deleted actions.xml [naivok]
 * updated the way the footer is inserted [naivok]
+* added sunrain class to body [naivok]
+* added style to Responsive Web Design [naivok]
 
 6.0.6 - January 12, 2012
 

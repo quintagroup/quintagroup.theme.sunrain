@@ -163,6 +163,12 @@ ol {
 img {
   vertical-align:text-bottom;
   }
+#content img,
+.portletStaticText img {
+  height:auto;
+  max-width:100%;
+  width:auto; /*fix to IE8*/
+  }
 li {
   margin-bottom:0.5em;
   }
@@ -541,12 +547,6 @@ input.inputLabelActive {
   font-size:85%;
   font-weight:normal;
   margin-left:2.5em;
-  }
-.collapsible .collapser.collapsed:after {
-  content:" ▶"
-  }
-.collapsible .collapser.expanded:after {
-  content:" ▼"
   }
 
 /*---------- PORTAL LOGO ----------*/
@@ -2042,6 +2042,83 @@ body.smallText {
   width:100%;
   }
 
+/*----- Collapsible -----*/
+dl.collapsible {
+  border: 0.1em solid #8cacbb;
+  margin: 1em 0;
+  padding: 0;
+  }
+dl.collapsible dt.collapsibleHeader {
+  display: block;
+  float: left;
+  background: White;
+  line-height: 1.2em;
+  vertical-align: middle;
+  font-size: 90%;
+  position: relative;
+  top: -0.6em;
+  width: auto;
+  margin: 0 0 -0.6em 1em;
+  padding: 0 0.5em;
+  }
+dl.collapsible dd.collapsibleContent {
+  margin: 0;
+  padding: 0 1em 0.4em;
+  clear: left;
+  }
+
+/* for IE the following isn't needed, that's why the css2 selector is used */
+dl.collapsible dd.collapsibleContent > dl {
+  margin: 0;
+  padding: 0;
+  }
+dl.expandedInlineCollapsible dt.collapsibleHeader,
+dl.expandedBlockCollapsible dt.collapsibleHeader {
+  background: url(../images/treeExpanded.png) no-repeat 0.5em 50% #fff;
+  cursor: pointer;
+  padding: 0 0.5em 0 2em;
+  }
+dl.collapsedBlockCollapsible {
+  border: none;
+  height: 1em;
+  width: auto;
+  }
+dl.collapsedInlineCollapsible dt.collapsibleHeader,
+dl.collapsedBlockCollapsible dt.collapsibleHeader {
+  float: none;
+  position: relative;
+  margin: 0 0 0 1em;
+  padding: 0 0.5em 0 2em;
+  line-height: 1.2em;
+  cursor: pointer;
+  background: White url(../images/treeCollapsed.png) no-repeat 0.5em 50%;
+  }
+dl.collapsedInlineCollapsible dd.collapsibleContent,
+dl.collapsedBlockCollapsible dd.collapsibleContent {
+  display: none;
+  }
+dl.collapsedInlineCollapsible {
+  border: 0;
+  height: 1em;
+  width: auto;
+  display: inline;
+  }
+dl.collapsedInlineCollapsible dt.collapsibleHeader {
+  position: static;
+  float: none;
+  margin: 0;
+  padding: 0 0 0 2em;
+  line-height: 1em;
+  cursor: pointer;
+  display: inline;
+  }
+.collapsible .collapser.collapsed:after {
+  content:" ▶"
+  }
+.collapsible .collapser.expanded:after {
+  content:" ▼"
+  }
+
 /*---------- CONTENT TYPE ICONS ----------*/
 .icons-on .contenttype-folder {
   background:url(../images/icons-sprite.png) no-repeat 0 -1598px;
@@ -2146,6 +2223,135 @@ body.smallText {
 
 }
 
+@media screen and (max-width:5in) {
+body {
+  min-width:320px;
+  }
+div.row {
+  float:none;
+  }
+div.cell {
+  float:none;
+  left:auto;
+  margin-left:0 !important;
+  width:auto;
+  }
+#portal-header {
+  background-position:0 72px;
+  text-align:center;
+  }
+#portal-logo {
+  display:block;
+  margin:0.5em;
+  }
+#portal-logo img {
+  margin:0;
+  }
+#portal-slogan {
+  display:block;
+  padding:0.5em;
+  width:auto;
+  }
+#portal-siteactions {
+  float:none;
+  padding:0.5em 1em;
+  }
+#portal-personaltools-wrapper {
+  height:2em;
+  position:static;
+  }
+#portal-languageselector {
+  padding:0.5em 0;
+  }
+#theme-globalnav {
+   padding:0.5em 0;
+  }
+#theme-globalnav li {
+  margin:0 0 0 1%;
+  width:48%;
+  white-space:normal;
+  }
+#theme-globalnav li a {
+  border-radius:0;
+  display:block;
+  padding:1em;
+  }
+#theme-globalnav li ul {
+  display:none !important;
+  }
+#subscribe-links {
+  float:none;
+  }
+.subsribeWrapper {
+  text-align:center;
+  }
+#portal-breadcrumbs {
+  padding:1em;
+  }
+#portal-searchbox {
+  padding: 0.5em 0;
+  position:static;
+  }
+#portal-searchbox .LSBox {
+  display:inline-block;
+  }
+.searchSection {
+  display:none !important;
+  }
+#searchGadget {
+  font-size:2em;
+  line-height:1em;
+  }
+.LSResult {
+  left:0;
+  text-align:left;
+  top:3em;
+  }
+.livesearchContainer {
+  width:300px;
+  }
+#visual-portal-wrapper,
+#portal-column-content.cell,
+#portal-column-content .cell,
+#portal-column-one,
+#portal-column-two {
+  width:auto !important;
+  }
+#portal-footer,
+#portal-colophon {
+  padding:0.5em;
+  }
+.carousel-banners,
+.carousel-slider,
+.carousel-banner {
+  max-width:100% !important;
+  }
+.carousel-image img {
+  height:auto;
+  width:auto;
+  }
+.portletStaticText img {
+  width:100%;
+  }
+
+}
+
+@media screen and (max-width:480px) {
+.carousel-banners,
+.carousel-slider,
+.carousel-banner {
+  height:270px !important;
+  }
+}
+
+@media screen and (max-width:320px) {
+.carousel-banners,
+.carousel-slider,
+.carousel-banner {
+  height:195px !important;
+  }
+}
+
 @media print {
 
 body {
@@ -2204,8 +2410,14 @@ div.top,
 #portal-personaltools,
 #portal-breadcrumbs,
 #edit-bar,
+.carousel,
 #portal-column-one,
 #portal-column-two,
+#portlets-in-header,
+#portlets-above,
+#portlets-below,
+#portlets-footer,
+#portlets-in-header,
 #portal-languageselector,
 .contentViews,
 .contentActions,
