@@ -1,5 +1,8 @@
 Changelog
 ---------
+6.0.8 - April 24, 2012
+
+* removed unnecessary id attribute for the body [naivok]
 
 6.0.7 - May 16, 2012
 
