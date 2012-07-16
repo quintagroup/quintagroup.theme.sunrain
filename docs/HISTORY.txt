@@ -1,8 +1,9 @@
 Changelog
 ---------
-6.0.8 - April 24, 2012
+6.0.8 - July 16, 2012
 
 * removed unnecessary id attribute for the body [naivok]
+* updated Doctype for PLone 4.2 [naivok]
 
 6.0.7 - May 16, 2012
 
