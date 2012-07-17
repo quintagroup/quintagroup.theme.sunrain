@@ -119,8 +119,8 @@ Theme was tested with:
 * Products.LinguaPlone 4.1.2
 * quintagroup.sunrain.policy 1.0
 * quintagroup.portlet.static 0.7
-* Products.Quills 1.8a
-* blog.star 1.0
+* Products.Quills 1.8a1
+* blog.star 1.1
 * quintagroup.portlet.cumulus 1.1.0
 
 Home Directory
