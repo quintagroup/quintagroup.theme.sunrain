@@ -1559,7 +1559,9 @@ h1 div.formControls input {
   background-color:red;
   color:#fff;
   }
-#content li.formTab a.required span:after {
+#content li.formTab a.required span:after,
+#content-core li.formTab a.required span:after,
+div.field span.required:after {
   color:#f00;
   content:" ■";
   }

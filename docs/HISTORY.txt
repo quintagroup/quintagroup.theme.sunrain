@@ -1,5 +1,10 @@
 Changelog
 ---------
+
+6.0.9 August 09, 2012
+
+* Updated .required styles [naivok]
+
 6.0.8 - July 19, 2012
 
 * removed unnecessary id attribute for the body [naivok]
