@@ -1,9 +1,10 @@
 Changelog
 ---------
 
-6.0.9 August 09, 2012
+6.0.9 August 20, 2012
 
 * Updated .required styles [naivok]
+* quintagroup.dropdownmenu 1.2.11 compatibility added [naivok]
 
 6.0.8 - July 19, 2012
 

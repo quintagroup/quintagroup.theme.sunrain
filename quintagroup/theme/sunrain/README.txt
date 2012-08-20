@@ -1,4 +1,4 @@
-SunRain free diazo theme for Plone 4.2.
+SunRain free responsive diazo theme for Plone 4.2.
 
 Features
 --------
@@ -114,8 +114,8 @@ Theme was tested with:
 * plone.app.themingplugins 1.0b1
 * Products.Carousel 2.1
 * Products.ContentWellPortlets 4.1.0
-* Products.PloneFormGen 1.7.1
-* quintagroup.dropdownmenu 1.2.10
+* Products.PloneFormGen 1.7.2
+* quintagroup.dropdownmenu 1.2.11
 * Products.LinguaPlone 4.1.2
 * quintagroup.sunrain.policy 1.0
 * quintagroup.portlet.static 0.7

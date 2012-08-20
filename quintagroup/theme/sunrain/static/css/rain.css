@@ -2223,7 +2223,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 }
 
-@media screen and (max-width:5in) {
+@media screen and (max-width:650px) {
 body {
   min-width:320px;
   }
@@ -2263,8 +2263,23 @@ div.cell {
 #portal-languageselector {
   padding:0.5em 0;
   }
+#theme-globalnav.mobileMenuOn {
+  display:none;
+  }
+#portal-globalnav-mobile {
+  background:#fff;
+  border:1px solid #ccc;
+  display:block;
+  font-size:1.17em;
+  font-weight:bold;
+  line-height:1.65em;
+  margin:0.5em auto;
+  max-width:100%;
+  min-width:150px;
+  padding:0.4em 0.1em 0.4em 1em;
+  }
 #theme-globalnav {
-   padding:0.5em 0;
+  padding:0.5em 0;
   }
 #theme-globalnav li {
   margin:0 0 0 1%;
@@ -2344,7 +2359,7 @@ div.cell {
   }
 }
 
-@media screen and (max-width:320px) {
+@media screen and (max-width:370px) {
 .carousel-banners,
 .carousel-slider,
 .carousel-banner {
