@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.0.10 September 05, 2012
+
+- Fixed style to history [naivok]
+
 6.0.9 August 20, 2012
 
 * Updated .required styles [naivok]

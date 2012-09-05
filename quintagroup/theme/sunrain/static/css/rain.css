@@ -1725,48 +1725,48 @@ body.template-new-user #content input {
   }
 
 /*----- Content History -----*/
-#content-history .historyRecord {
+div.historyRecord {
   margin-bottom:1em;
   }
-#content-history .historyTools ul {
+div.historyTools ul {
   float:right;
   margin:0.5em 1em;
   }
-#content-history .historyTools ul li {
+div.historyTools ul li {
   display:inline;
   padding:0 0.015em;
   }
-#content-history .historyTools form {
+div.historyTools form {
   display:inline;
   }
-#content-history .historyByLine {
+.historyByLine {
   background:#ddd;
   padding:0.5em;
   }
-#content-history .historyLinks {
+div.historyLinks {
   clear:right;
   float:right;
   margin:0.5em 1em 0 0;
   }
-#content-history .historyComment {
+div.historyComment {
   border:1px solid #ddd;
   padding:0.5em 1em;
   }
-#content-history .historyComment p {
+div.historyComment p {
   margin:0;
   padding-top:1px;
   }
-#content-history a.historyComparePrevious {
-  border-top: 1px dotted #ccc;
-  display: block;
-  margin-top: 3em;
-  text-align: center;
+a.historyComparePrevious {
+  border-top:1px dotted #ccc;
+  display:block;
+  margin-top:3em;
+  text-align:center;
   }
-#content-history a.historyComparePrevious span {
-  background-color: white;
-  position: relative;
-  top: -0.75em;
-  padding: 0 0.5em;
+a.historyComparePrevious span {
+  background-color:white;
+  position:relative;
+  top:-0.75em;
+  padding:0 0.5em;
   }
 
 /*----- Data tables -----*/
@@ -2450,10 +2450,6 @@ div.top,
 #portal-footer,
 #portal-colophon,
 .skipnav,
-#kss-spinner,
-#review-history,
-#content-history,
-.listingBar,
 .link-presentation,
 input.standalone,
 .overlay,
