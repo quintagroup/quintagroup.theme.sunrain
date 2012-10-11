@@ -1322,6 +1322,37 @@ form.searchPage input.searchButton {
   float:right;
   margin:0 0 0.5em 1em;
   }
+#content .eventDetails {
+  border:1px solid #ccc;
+  margin-top:1em;
+  width:22em;
+  }
+#content .eventDetails h2 {
+  background-color:#ddd;
+  font-size:100%;
+  padding:0.5em 0.5em 0.5em 1em;
+  }
+#content .eventDetails .eventDetail {
+  clear:both;
+  }
+#content .eventDetails .eventDetail h3,
+#content .eventDetails .eventDetail div {
+  padding:2%;
+  }
+#content .eventDetails .eventDetail h3 {
+  float:left;
+  font-size:100%;
+  line-height:1.5em;
+  text-align:right;
+  width:37%;
+  }
+#content .eventDetails .eventDetail div {
+  float:left;
+  width:55%;
+  }
+.eventDetails a img + span {
+  margin-left:0.4em;
+  }
 
 /*----- Search Results -----*/
 .highlightedSearchTerm {
