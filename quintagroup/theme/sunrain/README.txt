@@ -126,7 +126,7 @@ Theme was tested with:
 Home Directory
 ==============
 
-http://skins.quintagroup.com/sunrain
+http://themes.quintagroup.com/product/sunrain
 
 Authors
 =======
