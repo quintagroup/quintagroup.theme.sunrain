@@ -9,7 +9,7 @@ version = '6.0.10'
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
-      description="Free Diazo Theme for Plone 4.2",
+      description="Free Diazo Theme for Plone",
       long_description=open(os.path.join("quintagroup", "theme", "sunrain", "README.txt")).read() + "\n\n" +
                        open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
                        open(os.path.join("docs", "HISTORY.txt")).read(),    
@@ -24,7 +24,7 @@ setup(name='quintagroup.theme.sunrain',
       keywords='web zope plone theme diazo quintagroup',
       author='Quintagroup',
       author_email='skins@quintagroup.com',
-      url='http://skins.quintagroup.com/sunrain',
+      url='http://themes.quintagroup.com/product/sunrain',
       license='GPL',
       packages=find_packages(exclude=['ez_setup']),
       namespace_packages=['quintagroup', 'quintagroup.theme',],

@@ -2256,7 +2256,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 }
 
-@media screen and (max-width:650px) {
+@media only screen and (max-width: 767px) {
 body {
   min-width:320px;
   }
