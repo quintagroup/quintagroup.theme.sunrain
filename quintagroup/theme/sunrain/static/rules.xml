@@ -95,7 +95,7 @@
         <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
 
         <!-- Footer -->
-        <replace content="//div[@id = 'portal-columns']/following-sibling::*[@class='row'][position() = 1]" css:theme="#portal-footer" />
+        <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer" />
 
     </rules>
     <xi:include href="tune.xml" />
