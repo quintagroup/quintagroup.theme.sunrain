@@ -11,8 +11,8 @@
     <notheme if="$ajax_load" />
     <xsl:template css:match="#portal-colophon">
         <div id="portal-colophon">
-            <p class="credits"><a href="http://themes.quintagroup.com/product/sunrain">SunRain Plone Theme</a> by <a href="http://quintagroup.com">Quintagroup</a> © 2005-2012.</p>
-            <xsl:value-of select="." />
+            <p class="credits"><a href="http://themes.quintagroup.com">SunRain Plone Theme</a> by <a href="http://quintagroup.com">Quintagroup</a> © 2013.</p>
+            <xsl:apply-templates />
         </div>
     </xsl:template>
     <!-- Rules applying to a standard Plone web page -->

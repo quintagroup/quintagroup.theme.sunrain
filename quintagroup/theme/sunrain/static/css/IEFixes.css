@@ -19,7 +19,8 @@
   position:relative;
   zoom:1;
   }
-#content .documentActions li {
+#content .documentActions li,
+.colophonWrapper {
   display:inline;
   }
 .photoAlbumEntry a:hover .photoAlbumEntryTitle { 

@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.1.1 January 09, 2013
+
+- Fixed footer link [naivok]
+
 6.1 November 28, 2012
 
 * Fixed style to eventDetails [naivok]

@@ -109,9 +109,9 @@ Theme was tested with:
 * Plone 4.2.2
 * plone.app.theming 1.1b1
 * plone.app.themingplugins 1.0b1
-* Products.Carousel 2.1
+* Products.Carousel 2.2
 * Products.ContentWellPortlets 4.1.0
-* Products.PloneFormGen 1.7.4
+* Products.PloneFormGen 1.7.6
 * quintagroup.dropdownmenu 1.2.11
 * Products.LinguaPlone 4.1.2
 * quintagroup.sunrain.policy 1.0
@@ -133,4 +133,4 @@ Authors
 * Borys Olekhnovych
 * Yuriy Hvozdovych
 
-Quintagroup: http://quintagroup.com, 2006-2012
+Quintagroup: http://quintagroup.com, 2013

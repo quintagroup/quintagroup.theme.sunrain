@@ -811,6 +811,9 @@ input.inputLabelActive {
   display:inline;
   padding-right:0.2em;
   }
+.colophonWrapper {
+  display:inline-block;
+  }
 
 /*---------- GENERAL PORTLETS PROPERTIES ----------*/
 .portlet {
