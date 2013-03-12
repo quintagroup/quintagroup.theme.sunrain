@@ -45,7 +45,7 @@
         <merge attributes="dir class" css:content="body" css:theme="body" />
 
         <!-- Skip Links -->
-        <before css:content="#portal-header > p.hiddenStructure" css:theme-children="#portal-header" />
+        <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />
 
         <!-- Logo -->
         <replace css:content="#portal-logo" css:theme="#portal-logo" />
@@ -67,6 +67,7 @@
 
         <!-- Global navigation -->
         <replace css:content-children='#portal-globalnav' css:theme-children='#theme-globalnav' />
+	<before css:theme="#theme-globalnav" css:content="#portal-logo+p.hiddenStructure" />
 	<after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
 	<merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
 
