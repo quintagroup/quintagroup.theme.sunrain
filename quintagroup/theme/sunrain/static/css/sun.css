@@ -352,7 +352,7 @@ li.formTab a:hover {
   float:right;
   margin:0 0 0.5em 1em;
   }
-.tileImage {
+img.tileImage {
   border:1px solid #000;
   float:right;
   margin:0 0 0.5em 0.5em;
@@ -883,8 +883,16 @@ div.portletAssignments div.portletHeader {
 .managedPortletActions {
   float:right;
   }
-.managedPortletActions a {
-  margin:0 2px;
+div.portletAssignments .managedPortletActions form {
+  display:inline;
+  }
+div.portletAssignments .managedPortletActions a,
+div.portletAssignments .managedPortletActions button {
+  background-color:transparent;
+  border:none;
+  cursor:pointer;
+  margin:0;
+  padding:0;
   }
 div.managePortletsLink,
 a.managePortletsFallback {
@@ -1427,7 +1435,7 @@ ul.configlets li a {
   color:#76797c;
   margin:0;
   }
-#kss-spinner {
+#ajax-spinner {
   background-position:50% 50%;
   display:none;
   height:20px;
@@ -1944,12 +1952,16 @@ table.grid th {
   }
 
 /*---------- DASHBOARD ----------*/
+#dashboard {
+  font-size:100%;
+  line-height:inherit;
+  }
 #dashboard-portlets1,
 #dashboard-portlets2,
 #dashboard-portlets3,
 #dashboard-portlets4 {
-  float:left;
   margin-right:1.3%;
+  padding:0;
   width:24%;
   }
 #dashboard-portlets4 {
