@@ -25,6 +25,7 @@
 	<drop css:content="link[href*='reset']" />
         <drop css:content="link[href$='public.css']" />
         <drop css:content="link[href$='columns.css']" />
+	<drop css:content="link[href$='forms.css']" />
         <drop css:content="link[href$='portlets.css']" />
         <drop css:content="link[href$='discussion.css']" />
 	<drop css:content="link[href$='controlpanel.css']" />
@@ -72,7 +73,7 @@
         <replace css:content-children='#portal-globalnav' css:theme-children='#theme-globalnav' />
 	<before css:theme="#theme-globalnav" css:content="#portal-logo+p.hiddenStructure" />
 	<after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
-	<merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
+	<merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" css:if-content="#portal-globalnav-mobile" />
 
         <!-- Portal-searchbox -->
         <replace css:content='#portal-searchbox' css:theme='#portal-searchbox' />
