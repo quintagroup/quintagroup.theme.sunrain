@@ -2396,6 +2396,13 @@ div.cell {
 .portletStaticText img {
   width:100%;
   }
+#dashboard-portlets1,
+#dashboard-portlets2,
+#dashboard-portlets3,
+#dashboard-portlets4 {
+  margin-right:0;
+  width:100%;
+  }
 
 }
 
