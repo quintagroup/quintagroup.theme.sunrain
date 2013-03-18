@@ -1,7 +1,7 @@
 Changelog
 ---------
 
-6.2 March 15, 2013
+6.2 March 18, 2013
 
 - Plone 4.3rc1 compatibility added [naivok]
 
