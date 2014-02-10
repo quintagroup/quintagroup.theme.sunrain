@@ -11,8 +11,8 @@ setup(name='quintagroup.theme.sunrain',
       version=version,
       description="Free Diazo Theme for Plone",
       long_description=open(os.path.join("quintagroup", "theme", "sunrain", "README.txt")).read() + "\n\n" +
-                       open(os.path.join("docs", "INSTALL.txt")).read() + "\n\n"+
-                       open(os.path.join("docs", "HISTORY.txt")).read(),    
+                       open(os.path.join("docs", "INSTALL.rst")).read() + "\n\n"+
+                       open(os.path.join("docs", "HISTORY.rst")).read(),    
 
       # Get more strings from http://www.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[
