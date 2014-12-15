@@ -97,10 +97,16 @@ Features
     To apply special styling for links, you should go to *Site Setup -> TinyMCE Visual Editor*. In *Styles* textarea add ``Link Item|a|portletLinkItem`` and save. 
 
 * ``Products.Quills or blog.star``
-   Blogging support.
+    Blogging support.
 
 * ``quintagroup.portlet.cumulus``
-   Adds animated Tag Cloud Feature.
+    Adds animated Tag Cloud Feature.
+
+* ``quintagroup.slidertemplates``
+    Enhanced Responsive Views for NG Collection Portlet (Carousel, Shelf, Tabs)
+
+* ``quintagroup.megamenu``  
+    Clean and professional fully responsive Mega Menu solution for Plone. This product allows Plone website to display panel added to portal top as drop-down menu for navigation tabs.
 
 Dependencies
 ============
@@ -126,6 +132,8 @@ Theme was tested with:
 * Products.Quills 1.8a1
 * blog.star 1.1
 * quintagroup.portlet.cumulus 1.1.0
+* quintagroup.megamenu 1.3
+* quintagroup.slidertemplates 1.0
 
 Home Directory
 ==============

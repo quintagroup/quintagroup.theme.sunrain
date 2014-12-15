@@ -45,7 +45,6 @@ div.cell {
   float: left;
   left: 100%;
 }
-
 /*----- WIDTH CLASSES. -----*/
 /*----- For a given cell width -----*/ 
 div.width-1  { width:  5.3125% }
@@ -635,9 +634,9 @@ input.inputLabelActive {
 #theme-globalnav li:hover a {
   background-color:#ff6046;
   }
-#theme-globalnav:hover li.selected a {
+/*#theme-globalnav:hover li.selected a {
   background-color:transparent;
-  }
+  }*/
 #theme-globalnav:hover li:hover a {
   background-color:#ff6046;
   }
@@ -651,7 +650,62 @@ input.inputLabelActive {
   border-radius:0;
   }
 
+/*------Megamenu-------*/
+
+#theme-globalnav ul#nav li a {
+  padding: 16px 16px 8px 16px;
+  color: #332c34;
+  }
+#theme-globalnav:hover ul#nav li:hover > a {
+  -moz-border-radius: 0 0 6px 6px;
+  -webkit-border-radius: 0 0 6px 6px;
+  border-radius: 0 0 6px 6px;
+  }
+#theme-globalnav:hover ul#nav li.plus > a {
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  }
+#theme-globalnav ul#nav .subs li a {
+  padding: 0;
+  }
+#theme-globalnav ul#nav .subs li .portletItem a{
+  color:#93a1bf !important;
+  text-decoration: underline;
+  }
+#theme-globalnav .subs li a {
+  background-color: transparent !important;
+  }
+#nav li ol .portletCalendar dt {
+  margin-bottom: 0;
+  } 
+
+#theme-globalnav ul#nav li .portletCalendar a {
+  width: auto;
+  display: inline-block;
+  } 
+.ploneCalendar td {
+  border: 0;
+  }
+.subs > ol {
+  margin: 0;
+  }
+#nav > li > .subs {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0 15px 20px;
+  background: none;
+  }
+#nav > li.plus > .subs {
+  background: #ddd;
+  }
+#portal-top .panels {
+  margin: 10px 0; 
+  }
+
 /*----- DropDown -----*/
+
 #theme-globalnav li ul {
   -moz-border-radius:0 6px 6px 6px;
   -webkit-border-radius:0 6px 6px 6px;
@@ -824,12 +878,18 @@ input.inputLabelActive {
 .portlet a {
   color:#332c34;
   }
-.portletHeader {
+.portletHeader,
+#nav li ol dt {
   background-color:#ccd0d6;
   font-size:1.5em;
   font-weight:normal;
   line-height:1.6em;
   padding:3px 11px;
+  color: #332c34;
+  }
+#nav li ol dt {
+  margin: 1em 0 0;
+  font-weight: bold;
   }
 .portletHeader a,
 .managedPortlet .portletHeader a {
@@ -1097,6 +1157,7 @@ dl.portlet.portletCalendar dd {
   padding:2px 3px 3px;
   vertical-align:top;
   width:65%;
+  line-height: 22px;
   }
 .portletSearch .searchButton {
   background:#8cacbb;
@@ -1948,6 +2009,9 @@ table.grid th {
   vertical-align:middle;
   width:0;
   }
+#portal-footer-wrapper {
+  padding:10px 0;
+  }
 
 /*---------- DASHBOARD ----------*/
 #dashboard {
@@ -2267,6 +2331,47 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   padding:0;
   }
 
+/* owl-carousel */
+
+#portal-top {
+  z-index: 9;
+  }
+.resp-tabs-container a,
+.owl-carousel a {
+  text-decoration: none !important;
+  }
+#content ul.resp-tabs-list li {
+  background: none;
+  }
+.resp-vtabs li.resp-tab-active {
+  border-right: 1px solid #fff;
+  }
+.owl-buttons {
+  display: none;
+  }
+#theme-globalnav li ul.resp-tabs-list {
+  width: 100%;
+  background: none;
+  }
+#theme-globalnav li .resp-vtabs ul.resp-tabs-list {
+  width: 30%;
+  }
+.portletItem .documentDescription, 
+#content .panels .documentDescription {
+  font-family: Tahoma, Geneva, sans-serif;
+  font-size: 12px;
+  line-height: 18px;
+  }
+#content ul.resp-tabs-list li.resp-tab-item.resp-tab-active {
+  background: #fff;
+  }
+.tabContainer {
+  float: none;
+  display: inline-block !important;
+  }
+#theme-globalnav ul.resp-tabs-list li {
+  padding-right: 15px;
+  }
 }
 
 @media only screen and (max-width: 767px) {
@@ -2281,6 +2386,7 @@ div.cell {
   left:auto;
   margin-left:0 !important;
   width:auto;
+  clear: both;
   }
 #portal-header {
   background-position:0 72px;
@@ -2401,7 +2507,97 @@ div.cell {
   margin-right:0;
   width:100%;
   }
+.resp-tabs-container {
+  min-height: 10px !important;
+  }
+#portal-column-one,
+#portal-column-two,
+#portal-footer-wrapper {
+  -webkit-box-sizing:border-box;
+  -moz-box-sizing:border-box;
+  box-sizing:border-box;
+  padding: 0 1em;
+  }
+#portal-column-one .portlet,
+#portal-column-two .portlet,
+#portal-footer-wrapper .portlet {
+  margin:0 0 1em 0 ;
+  }
+/*------megamenu------*/
 
+#portal-top .panels div.width-1\3a 2 {
+  width: 100%;
+  }
+#theme-globalnav.megamenu {
+  width: 100%;
+  left: 0; 
+  padding: 0;
+  }
+.nav_head {
+  background-color: #ccd0d6;
+  min-height: 50px;
+  }
+.nav_head:before {
+  top: 12px;
+  font-size: 22px;
+  color: #f3553b;
+  }
+#theme-globalnav.megamenu li,
+#nav > li > .subs {
+  width: 100%;
+  }
+#nav > li > .subs {
+  padding-bottom: 15px;
+  }
+#theme-globalnav ul#nav li a {
+  -webki-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 15px 0 15px 30px;
+  font-size: 14px;
+  width: 100%;
+  }
+#theme-globalnav:hover ul#nav li:hover > a {
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  }
+#theme-globalnav ul li.open > a {
+  background-color: #f3553b;
+  }
+#theme-globalnav.megamenu ul li {
+  clear: both;
+  padding: 0;
+  }
+button.navbar-toggle {
+  border: 0;
+  }
+.navbar-toggle .icon-bar {
+  background-color: #f3553b;
+  height: 3px;
+  }
+.navbar-toggle:hover, 
+.navbar-toggle:focus {
+  background: none;
+  }
+li.plus.open > a:after,
+li.plus > a:after {
+  content: "›";
+  font-size: 24px;
+  right: 30px;
+  top:8px;
+  }
+li.plus > a:after {
+  -webkit-transform: rotate(90deg);
+  -moz-transform: rotate(90deg);
+  transform: rotate(90deg);
+  }
+li.plus.open > a:after {
+  -webkit-transform: rotate(-90deg);
+  -moz-transform: rotate(-90deg);
+  transform: rotate(-90deg);
+  right: 34px;
+  }
 }
 
 @media screen and (max-width:480px) {
@@ -2550,6 +2746,5 @@ dl.captioned {
   border:0.4pt solid #000;
   float:right;
   margin:0 0 0.5em 0.5em;
-  }
-  
+  } 
 }

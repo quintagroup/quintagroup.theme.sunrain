@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.4 December 12, 2014
+
+- Added style for slidertemplates, megamenu products [roman.ischiv]
+
 6.2 March 18, 2013
 
 - Plone 4.3rc1 compatibility added [naivok]

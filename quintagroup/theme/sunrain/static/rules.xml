@@ -22,14 +22,14 @@
         <drop css:content="meta[name='viewport']" />
         <drop css:theme="link[href$='rain.css']" if="$theme = 'sun'" />
         <drop css:theme="link[href$='sun.css']" if="$theme != 'sun'" />
-	<drop css:content="link[href*='reset']" />
+    <drop css:content="link[href*='reset']" />
         <drop css:content="link[href$='public.css']" />
         <drop css:content="link[href$='columns.css']" />
-	<drop css:content="link[href$='forms.css']" />
+    <drop css:content="link[href$='forms.css']" />
         <drop css:content="link[href$='portlets.css']" />
         <drop css:content="link[href$='discussion.css']" />
-	<drop css:content="link[href$='controlpanel.css']" />
-	<drop css:content="link[href$='authoring.css']" />
+    <drop css:content="link[href$='controlpanel.css']" />
+    <drop css:content="link[href$='authoring.css']" />
         <drop css:content="link[href$='ploneKss.css']" />
         <drop css:content="link[href$='print.css']" />
         <drop css:content="link[href$='mobile.css']" />
@@ -70,10 +70,11 @@
         <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
 
         <!-- Global navigation -->
-        <replace css:content-children='#portal-globalnav' css:theme-children='#theme-globalnav' />
-	<before css:theme="#theme-globalnav" css:content="#portal-logo+p.hiddenStructure" />
-	<after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
-	<merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" css:if-content="#portal-globalnav-mobile" />
+        <replace css:content-children="#portal-globalnav" css:theme-children="#theme-globalnav" />
+    <before css:theme="#theme-globalnav" css:content="#portal-logo+p.hiddenStructure" />
+    <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
+    <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" css:if-content="#portal-globalnav-mobile" />
+    <after css:theme="#theme-globalnav" css:content="#portal-top .panels" css:if-content="#nav" if-path="@@manage-panels"/> 
 
         <!-- Portal-searchbox -->
         <replace css:content='#portal-searchbox' css:theme='#portal-searchbox' />
@@ -87,6 +88,7 @@
 
         <after css:theme="#theme-globalnav" css:content="#portlets-in-header" />
         <after css:theme="#theme-globalnav" css:content=".manageInHeaderPortletsLink" />
+        
 
         <!-- Document Content -->
         <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
@@ -100,8 +102,12 @@
         <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
 
         <!-- Footer -->
-        <replace css:content="#portal-footer-wrapper" css:theme="#portal-footer" />
-
+        
+        <replace css:content="#portal-footer-wrapper .panels" css:theme="#portal-footer-wrapper .panels" />
+        <replace css:content="#portal-footer" css:theme="#portal-footer" />
+        <replace css:content="#portal-colophon" css:theme="#portal-colophon" />
+        <replace css:content=".manage-panels-link" css:theme=".manage-panels-link" />
+    
     </rules>
     <xi:include href="tune.xml" />
 </rules>
