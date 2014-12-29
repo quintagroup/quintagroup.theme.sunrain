@@ -2396,6 +2396,9 @@ div.cell {
   display:block;
   margin:0.5em;
   }
+#portal-top .panels div.cell {
+  left:0;
+  }
 #portal-logo img {
   margin:0;
   }
