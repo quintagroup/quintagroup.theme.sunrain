@@ -630,13 +630,11 @@ input.inputLabelActive {
   border-radius:0 0 6px 6px;
   text-decoration: none;
   }
-#theme-globalnav li.selected a,
-#theme-globalnav li:hover a {
+#theme-globalnav li.selected > a,
+#theme-globalnav li:hover > a {
   background-color:#ff6046;
+  color: #fff;
   }
-/*#theme-globalnav:hover li.selected a {
-  background-color:transparent;
-  }*/
 #theme-globalnav:hover li:hover a {
   background-color:#ff6046;
   }
@@ -652,61 +650,71 @@ input.inputLabelActive {
 
 /*------Megamenu-------*/
 
-#theme-globalnav ul#nav li a {
-  padding: 16px 16px 8px 16px;
-  color: #332c34;
+
+#portal-megamenu .megamenu-nav:hover > li:hover > a {
+  background-color: #ff6046;
   }
-#theme-globalnav:hover ul#nav li:hover > a {
+#theme-globalnav.megamenu-nav:hover li:hover > a {
   -moz-border-radius: 0 0 6px 6px;
   -webkit-border-radius: 0 0 6px 6px;
   border-radius: 0 0 6px 6px;
   }
-#theme-globalnav:hover ul#nav li.plus > a {
+#theme-globalnav.megamenu-nav li.plus > a {
   -moz-border-radius: 0;
   -webkit-border-radius: 0;
   border-radius: 0;
   }
-#theme-globalnav ul#nav .subs li a {
+#theme-globalnav.megamenu-nav .subs li a {
   padding: 0;
   }
-#theme-globalnav ul#nav .subs li .portletItem a{
+#portal-megamenu .subs a {
+  color: #332c34;
+  }
+#theme-globalnav.megamenu-nav .subs li .portletItem a {
   color:#93a1bf !important;
   text-decoration: underline;
   }
-#theme-globalnav .subs li a {
+#theme-globalnav.megamenu-nav .subs li a {
   background-color: transparent !important;
   }
-#nav li ol .portletCalendar dt {
+#theme-globalnav.megamenu-nav .portletCalendar dt {
   margin-bottom: 0;
   } 
-
-#theme-globalnav ul#nav li .portletCalendar a {
+#theme-globalnav.megamenu-nav li .portletCalendar a {
   width: auto;
   display: inline-block;
   } 
 .ploneCalendar td {
   border: 0;
   }
-.subs > ol {
-  margin: 0;
+#theme-globalnav.megamenu-nav > li {
+  position: static;
   }
-#nav > li > .subs {
+#theme-globalnav.megamenu-nav > li > .subs {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
-  padding: 0 15px 20px;
+  padding: 15px 15px 20px;
   background: none;
-  }
-#nav > li.plus > .subs {
+  left: 0;
   background: #ddd;
   }
 #portal-top .panels {
   margin: 10px 0; 
   }
+.megamenu-nav .portletHeader {
+  background-color: #ccd0d6;
+  }
+#theme-globalnav > li {
+  white-space: normal;
+  }
+#theme-globalnav:hover li:hover .subs a {
+  background-color: transparent;
+  }
 
 /*----- DropDown -----*/
 
-#theme-globalnav li ul {
+#theme-globalnav li > ul {
   -moz-border-radius:0 6px 6px 6px;
   -webkit-border-radius:0 6px 6px 6px;
   border-radius:0 6px 6px 6px;
@@ -879,7 +887,7 @@ input.inputLabelActive {
   color:#332c34;
   }
 .portletHeader,
-#nav li ol dt {
+#theme-globalnav dt {
   background-color:#ccd0d6;
   font-size:1.5em;
   font-weight:normal;
@@ -887,7 +895,7 @@ input.inputLabelActive {
   padding:3px 11px;
   color: #332c34;
   }
-#nav li ol dt {
+#theme-globalnav dt {
   margin: 1em 0 0;
   font-weight: bold;
   }
@@ -1342,8 +1350,8 @@ dl.portlet.portletCalendar dd {
   padding:2px 0 2px 20px;
   }
 
-
 /*----- Search -----*/
+
 form.searchPage {
   text-align:left;
   }
@@ -2526,33 +2534,25 @@ div.cell {
 #portal-footer-wrapper .portlet {
   margin:0 0 1em 0 ;
   }
+
 /*------megamenu------*/
 
 #portal-top .panels div.width-1\3a 2 {
   width: 100%;
   }
-#theme-globalnav.megamenu {
-  width: 100%;
-  left: 0; 
-  padding: 0;
-  }
-.nav_head {
+.megamenu .navbar-toggle {
   background-color: #ccd0d6;
   min-height: 50px;
   }
-.nav_head:before {
-  top: 12px;
-  font-size: 22px;
-  color: #f3553b;
-  }
-#theme-globalnav.megamenu li,
-#nav > li > .subs {
+#theme-globalnav.megamenu-nav li,
+#theme-globalnav.megamenu-nav li .subs {
   width: 100%;
+  margin: 0;
   }
-#nav > li > .subs {
+#theme-globalnav.megamenu-nav > li > .subs {
   padding-bottom: 15px;
   }
-#theme-globalnav ul#nav li a {
+#theme-globalnav.megamenu-nav li > a {
   -webki-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
@@ -2560,11 +2560,16 @@ div.cell {
   font-size: 14px;
   width: 100%;
   }
-#theme-globalnav:hover ul#nav li:hover > a {
+#theme-globalnav.megamenu-nav:hover li:hover > a {
+  border-radius: 0;
+  }
+#theme-globalnav.megamenu-nav li:hover > a {
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
   }
+#portal-megamenu .plus.open > a,
+#portal-megamenu .megamenu-nav:hover > li:hover > a,
 #theme-globalnav ul li.open > a {
   background-color: #f3553b;
   }
@@ -2575,27 +2580,31 @@ div.cell {
 button.navbar-toggle {
   border: 0;
   }
-.navbar-toggle .icon-bar {
-  background-color: #f3553b;
+.megamenu .navbar-toggle .icon-bar {
   height: 3px;
+  background-color: #f3553b;
   }
-.navbar-toggle:hover, 
+.megamenu.open .navbar-toggle .icon-bar {
+  background-color: #fff;
+  }
+.megamenu.open .navbar-toggle, 
+.megamenu .navbar-toggle:hover,
 .navbar-toggle:focus {
-  background: none;
+  background: #ff6046;
   }
-li.plus.open > a:after,
-li.plus > a:after {
+.megamenu-nav .plus.open > a:after,
+.megamenu-nav .plus > a:after {
   content: "›";
   font-size: 24px;
   right: 30px;
   top:8px;
   }
-li.plus > a:after {
+.megamenu-nav .plus > a:after {
   -webkit-transform: rotate(90deg);
   -moz-transform: rotate(90deg);
   transform: rotate(90deg);
   }
-li.plus.open > a:after {
+.megamenu-nav .plus.open > a:after {
   -webkit-transform: rotate(-90deg);
   -moz-transform: rotate(-90deg);
   transform: rotate(-90deg);
