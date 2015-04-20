@@ -5,7 +5,7 @@ This module contains the tool of quintagroup.theme.sunrain
 import os
 from setuptools import setup, find_packages
 
-version = '6.5'
+version = '6.6'
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
@@ -19,7 +19,6 @@ setup(name='quintagroup.theme.sunrain',
         'Framework :: Plone',
         'Intended Audience :: Developers',
         'Topic :: Software Development :: Libraries :: Python Modules',
-        'License :: OSI Approved :: GNU General Public License (GPL)',
         ],
       keywords='web zope plone theme diazo quintagroup',
       author='Quintagroup',

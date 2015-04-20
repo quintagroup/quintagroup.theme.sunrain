@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.6 April 20, 2015
+
+- update styles for new version of quintagroup.slidertemplates and quintagroup.megamenu products[roman.ischiv]
+
 6.5 December 29, 2014
 
 - Fixed rules ffor panels in portal-top [roman.ischiv]

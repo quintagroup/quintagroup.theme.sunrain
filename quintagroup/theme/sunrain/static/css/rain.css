@@ -2363,11 +2363,33 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
   color: #332c34;
   opacity: 1;
   }
+.qg-item .item-visual {
+  margin: 0 0 1em 12px;
+  }
+.qg-item.active .image-block {
+  margin-right: 12px;
+  margin-bottom: 16px;
+  }
+.portletOWLCarousel .item, .portletShelf .item {
+  padding: 0 6px;
+  }
+#viewlet-above-content-body ~ #content-core {
+  padding-top: 15px;
+  clear: both;
+  }
+.portletCalendar dt {
+  font-weight: normal;
+  }
+.pae_calendar_tooltip a:hover {
+  color: #93a1bf;
+  }
 .itemTitle {
+  font-weight: bold !important;
   font: 14px/17px Tahoma,Geneva,sans-serif;
   }
 .portletOWLCarousel .itemTitle {
   font: 18px/28px Tahoma,Geneva,sans-serif;
+  font-weight: normal !important;
   }
 .owl-theme .owl-controls .owl-page span {
   background-color: #ccd0d6;
@@ -2392,12 +2414,23 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 .ng-collection-buttons button.qg-next {
   text-indent: -71px;
   }
-.ng-collection-buttons button.qg-prev:after {
+.ng-collection-buttons button.qg-prev:after,
+.ng-collection-buttons button.bx-prev:after {
   content: "«";
   }
-.ng-collection-buttons button.qg-next:after {
+.ng-collection-buttons button.qg-next:after,
+.ng-collection-buttons button.bx-next:after {
   content: "»";
   }
+.ng-collection-buttons button.bx-prev:after,
+.ng-collection-buttons button.bx-next:after {
+  color: #fff;
+  }
+.portletContentSlider .ng-collection-buttons button {
+  text-indent: -43px;
+  margin: 10px;
+  padding: 0.3em 0 0.4em;
+  } 
 .portletQgCarousel,
 .portletOWLCarousel,
 .portletShelf {
