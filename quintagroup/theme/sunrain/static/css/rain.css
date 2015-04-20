@@ -650,7 +650,6 @@ input.inputLabelActive {
 
 /*------Megamenu-------*/
 
-
 #portal-megamenu .megamenu-nav:hover > li:hover > a {
   background-color: #ff6046;
   }
@@ -691,13 +690,13 @@ input.inputLabelActive {
   position: static;
   }
 #theme-globalnav.megamenu-nav > li > .subs {
+  background-color: #f0f2f2;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   padding: 15px 15px 20px;
-  background: none;
   left: 0;
-  background: #ddd;
+  border-bottom: 1px solid #fff;
   }
 #portal-top .panels {
   margin: 10px 0; 
@@ -2341,6 +2340,82 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 
 /* owl-carousel */
 
+.portletContentSlider .slider-wrapper .itemBody,
+.bx-wrapper .itemBody,
+.portletOWLCarousel .portletHeader {
+  display: none;
+  }
+.portletOWLCarousel .item {
+  padding: 0 1em; 
+  }
+.portletCalendar dt {
+  background-color: #ccd0d6;
+  }
+.slider-wrapper .item,
+.slider-wrapper-outer {
+  margin: 0 0 12px;
+  }
+.pager-item {
+  margin-right: 12px;
+  }
+.ng-collection-buttons button:hover {
+  background-color: transparent;
+  color: #332c34;
+  opacity: 1;
+  }
+.itemTitle {
+  font: 14px/17px Tahoma,Geneva,sans-serif;
+  }
+.portletOWLCarousel .itemTitle {
+  font: 18px/28px Tahoma,Geneva,sans-serif;
+  }
+.owl-theme .owl-controls .owl-page span {
+  background-color: #ccd0d6;
+  }
+.owl-theme .owl-controls .owl-page.active span, 
+.owl-theme .owl-controls.clickable .owl-page:hover span {
+  background-color: #fff;
+  }
+.ng-collection-buttons button {
+  display: inline-block;
+  background-color: transparent;
+  overflow: hidden;
+  font-size: 1.5em;
+  text-indent: -73px;
+  margin-bottom: 0;
+  padding-bottom: 4px;
+  color: #332c34;
+  font-family: Tahoma, Geneva, sans-serif;
+  font-weight: bold;
+  opacity: 0.5;
+  }
+.ng-collection-buttons button.qg-next {
+  text-indent: -71px;
+  }
+.ng-collection-buttons button.qg-prev:after {
+  content: "«";
+  }
+.ng-collection-buttons button.qg-next:after {
+  content: "»";
+  }
+.portletQgCarousel,
+.portletOWLCarousel,
+.portletShelf {
+  position: relative; 
+  }
+.portletQgCarousel .portletFooter,
+.portletOWLCarousel .portletFooter,
+.portletShelf .portletFooter {
+  position: absolute;
+  right: 0;
+  bottom: 22px;
+  }
+.portletQgCarousel .portletFooter {
+  bottom: 34px;
+  }
+.portletQgCarousel a.item-visual {
+  text-decoration: none;
+  }
 #portal-top {
   z-index: 9;
   }
@@ -2380,6 +2455,7 @@ dl.collapsedInlineCollapsible dt.collapsibleHeader {
 #theme-globalnav ul.resp-tabs-list li {
   padding-right: 15px;
   }
+
 }
 
 @media only screen and (max-width: 767px) {
@@ -2404,11 +2480,14 @@ div.cell {
   display:block;
   margin:0.5em;
   }
+.panels div.cell,
 #portal-top .panels div.cell {
   left:0;
   }
 #portal-logo img {
   margin:0;
+  max-width: 100%;
+  height: auto;
   }
 #portal-slogan {
   display:block;
@@ -2493,7 +2572,7 @@ div.cell {
 #portal-column-content .cell,
 #portal-column-one,
 #portal-column-two {
-  width:auto !important;
+  width:100% !important;
   }
 #portal-footer,
 #portal-colophon {
