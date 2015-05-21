@@ -12,7 +12,7 @@
 
   <genericsetup:registerProfile
       name="default"
-      title="quintagroup theme sunrain"
+      title="Sunrain Theme"
       directory="profiles/default"
       description="Extension profile for Quintagroup Diazo theme for Plone."
       provides="Products.GenericSetup.interfaces.EXTENSION"
