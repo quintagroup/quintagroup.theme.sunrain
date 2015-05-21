@@ -1,142 +1,129 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<rules
-    xmlns="http://namespaces.plone.org/diazo"
-    xmlns:css="http://namespaces.plone.org/diazo/css"
-    xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
-    xmlns:xi="http://www.w3.org/2001/XInclude">
+<?xml version="1.0" encoding="utf-8"?>
+<rules xmlns="http://namespaces.plone.org/diazo"
+       xmlns:css="http://namespaces.plone.org/diazo/css"
+       xmlns:xhtml="http://www.w3.org/1999/xhtml"
+       xmlns:xsl="http://www.w3.org/1999/XSL/Transform"
+       xmlns:xi="http://www.w3.org/2001/XInclude">
 
-    <!-- The default theme, used for standard Plone web pages -->
-    <theme href="index.html" css:if-content="#visual-portal-wrapper" />
-    <notheme if-path="@@manage-viewlets" />
-    <notheme if="$ajax_load" />
-    <xsl:template css:match="#portal-colophon">
-        <div id="portal-colophon">
-            <p class="credits"><a href="http://themes.quintagroup.com">SunRain Plone Theme</a> by <a href="http://quintagroup.com">Quintagroup</a> © 2013.</p>
-            <xsl:apply-templates />
+  <theme href="index.html"/>
+  <notheme css:if-not-content="#visual-portal-wrapper" />
+
+  <xsl:template match="input[contains(@class, 'searchButton')]">
+      <div class="fa fa-search">
+          <xsl:element name="input">
+              <xsl:copy-of select="@*" />
+              <xsl:apply-templates />
+          </xsl:element>
+      </div>
+  </xsl:template> 
+
+  <after theme-children="/html/head/style" if="$top_image != ''">
+    #content-header {
+      background-image:url(<xsl:value-of select="$top_image" />);
+      }
+  </after>
+
+  <rules if-content="//*[@id='portal-top']">
+    <!-- Attributes -->
+    <copy attributes="*" theme="/html" content="/html"/>
+    <!-- Base tag -->
+    <before theme="/html/head/title" content="/html/head/base"/>
+    <!-- Title -->
+    <replace theme="/html/head/title" content="/html/head/title" />
+    <!-- Pull in Plone Meta -->
+    <after theme-children="/html/head" content="/html/head/meta" />
+    <!-- dont use Plone icons, use the theme -->
+    <drop css:content="head link[rel='apple-touch-icon']" />
+    <drop css:content="head link[rel='shortcut icon']" />
+    <!-- CSS -->
+    <after theme-children="/html/head" content="/html/head/link" />
+    <!-- Script -->
+    <after theme-children="/html/head" content="/html/head/script" />
+    <drop css:theme="link[href$='rain.css']" if="$theme = 'sun'" />
+    <drop css:theme="link[href$='sun.css']" if="$theme != 'sun'" />
+  </rules>
+
+  <!-- Copy over the id/class attributes on the body tag.
+       This is important for per-section styling -->
+  <copy attributes="*" css:content="body" css:theme="body" />
+
+  <!-- move global nav -->
+  <replace css:theme-children="#mainnavigation" css:content-children="#portal-mainnavigation" method="raw" />
+
+  <!-- hero unit on homepage only -->
+  <drop css:if-not-content="body.template-document_view.section-front-page"
+        css:theme="div.principal" />
+
+  <!-- full-width breadcrumb -->
+  <replace css:theme="#above-content" css:content="#viewlet-above-content"/>
+
+  <!-- Central column -->
+  <replace css:theme="#content-container" method="raw">
+
+      <xsl:variable name="central">
+        <xsl:if test="//aside[@id='portal-column-one'] and //aside[@id='portal-column-two']">col-xs-12 col-sm-6</xsl:if>
+        <xsl:if test="//aside[@id='portal-column-two'] and not(//aside[@id='portal-column-one'])">col-xs-12 col-sm-9</xsl:if>
+        <xsl:if test="//aside[@id='portal-column-one'] and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-9</xsl:if>
+        <xsl:if test="not(//aside[@id='portal-column-one']) and not(//aside[@id='portal-column-two'])">col-xs-12 col-sm-12</xsl:if>
+      </xsl:variable>
+
+      <div class="{$central}">
+<!--           <p class="pull-right visible-xs">
+            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
+          </p> -->
+          <div class="row">
+            <div class="col-xs-12 col-sm-12">
+               <xsl:copy-of select="//article[@id='content']"/>
+               <!-- Just in case for legacy templates -->
+               <xsl:copy-of select="//div[@id='content']"/>
+            </div>
+          </div>
+          <footer class="row">
+            <div class="col-xs-12 col-sm-12">
+             <xsl:copy-of select="//div[@id='viewlet-below-content']"/>
+            </div>
+          </footer>
+      </div><!--/row-->
+  </replace>
+
+  <!-- Alert message -->
+  <replace css:theme-children="#global_statusmessage" css:content-children="#global_statusmessage" />
+
+  <!-- Left column -->
+  <rules if-content="//*[@id='portal-column-one']">
+    <replace css:theme="#column1-container">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar">
+          <aside id="portal-column-one">
+             <xsl:copy-of select="//*[@id='portal-column-one']/*"/>
+          </aside>
         </div>
-    </xsl:template>
-    <!-- Rules applying to a standard Plone web page -->
-    <rules css:if-content="#visual-portal-wrapper">
-        <!-- Add meta tags -->
-        <drop css:theme="meta[http-equiv='Content-Type']" />
-        <drop css:content="meta[name='viewport']" />
-        <drop css:theme="link[href$='rain.css']" if="$theme = 'sun'" />
-        <drop css:theme="link[href$='sun.css']" if="$theme != 'sun'" />
-        <drop css:content="link[href*='reset']" />
-        <drop css:content="link[href$='public.css']" />
-        <drop css:content="link[href$='columns.css']" />
-        <drop css:content="link[href$='forms.css']" />
-        <drop css:content="link[href$='portlets.css']" />
-        <drop css:content="link[href$='discussion.css']" />
-        <drop css:content="link[href$='controlpanel.css']" />
-        <drop css:content="link[href$='authoring.css']" />
-        <drop css:content="link[href$='ploneKss.css']" />
-        <drop css:content="link[href$='print.css']" />
-        <drop css:content="link[href$='mobile.css']" />
-        <drop css:content="link[href*='base']" />
-        <drop css:content="link[href$='favicon.ico']" />
-        <before content="/html/head/meta" css:theme="meta[name='viewport']" />
-        <before content="/html/head/base" theme="/html/head/title" />
-        <replace theme='/html/head/title' content='/html/head/title' />
+    </replace>
+  </rules>
 
-        <!-- Copy style, script and link tags in the order they appear in the content -->
-        <after css:content="head link:not([href*='ploneCustom'])" theme="/html/head/title" />
-        <after content="/html/head/style | /html/head/script" theme="/html/head/title" />
-        <after css:content="head link[href*='ploneCustom']" theme-children="/html/head" />
+  <!-- Right column -->
+  <rules if-content="//*[@id='portal-column-two']">
+    <replace css:theme="#column2-container">
+        <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="complementary">
+          <aside id="portal-column-two">
+             <xsl:copy-of select="//*[@id='portal-column-two']/*"/>
+          </aside>
+        </div>
+    </replace>
+  </rules>
 
-        <!-- Copy over the id/class attributes on the body tag.
-             This is important for per-section styling -->
-        <merge attributes="dir class" css:content="body" css:theme="body" />
+  <!-- Content header -->
 
-        <!-- Skip Links -->
-        <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />
+  <replace css:theme="#portal-logo" css:content="#portal-logo" />
+  <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
+  <replace css:theme="#portal-languageselector" css:content="#portal-languageselector" />
+  <replace css:theme="#portal-anontools" css:content="#portal-anontools" />
+  <replace css:theme="#portal-slogan">
+    <span id="portal-slogan"><xsl:value-of select="$slogan"/></span>
+  </replace>
 
-        <!-- Logo -->
-        <replace css:content="#portal-logo" css:theme="#portal-logo" />
+  <replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />
 
-        <!-- Portal Slogan -->
-        <replace css:theme="#portal-slogan">
-          <span id="portal-slogan"><xsl:value-of select="$slogan"/></span>
-        </replace>
-
-        <!-- Subscribe Links -->
-        <replace css:theme="#subscribe-links" css:content="#subscribe-links" href="/@@subscribe" />
-
-        <!-- Site actions -->
-        <replace css:content="#portal-siteactions" css:theme="#portal-siteactions" method="raw" />
-        <drop css:content="#portal-siteactions" /> 
-
-        <!-- Portal languageselector -->
-        <replace css:content="#portal-languageselector" css:theme="#portal-languageselector" />
-
-        <!-- Global navigation -->
-
-        <before css:theme="#portal-breadcrumbs" css:content="#portal-top .panels" />
-        <rules css:if-content="#portal-megamenu">
-            <replace css:content="#portal-globalnav">
-                <xsl:copy>
-                    <xsl:copy-of select="attribute::*[not(name()='id')]" />
-                    <xsl:attribute name="id">theme-globalnav</xsl:attribute>
-                    <xsl:apply-templates />
-                </xsl:copy>
-            </replace>
-            <replace  css:theme="#theme-globalnav" css:content="#portal-megamenu"/>
-            <drop css:content="#portal-top .panels .panel-0" if-not-path="@@manage-panels" if-not="$home_page"/>
-            <drop content="//div[@id='portal-megamenu']//div[not(contains(@class, 'panel-0')) and (contains(@class, 'panel-'))]" />
-        </rules>
-        <rules css:if-not-content="#portal-megamenu">
-            <replace css:content="#portal-globalnav > li > a">
-                <xsl:element name="a">
-                    <xsl:attribute name="href"><xsl:value-of select="@href" /></xsl:attribute>
-                    <xsl:attribute name="title"><xsl:value-of select="@title" /></xsl:attribute>
-                    <xsl:attribute name="class"><xsl:value-of select="@class" /></xsl:attribute>
-                    <xsl:choose>
-                        <xsl:when test="child::span">
-                            <xsl:apply-templates select="node()"/>
-                        </xsl:when>
-                        <xsl:otherwise>
-                            <span><xsl:apply-templates select="node()"/></span>
-                        </xsl:otherwise>
-                    </xsl:choose>
-                </xsl:element>
-            </replace>
-            <replace css:content-children="#portal-globalnav" css:theme-children="#theme-globalnav" />
-            <merge attributes="class" css:content="#portal-globalnav" css:theme="#theme-globalnav" />
-            <after css:theme="#theme-globalnav" css:content="#portal-globalnav-mobile" />
-        </rules>
-
-        <!-- Portal-searchbox -->
-        <replace css:content='#portal-searchbox' css:theme='#portal-searchbox' />
-
-        <!-- Portal-Personaltools -->
-        <replace css:content="#portal-personaltools-wrapper" css:theme="#portal-personaltools-wrapper"/>
-
-         <!-- Breadcrumbs -->
-        <drop css:content="#portal-breadcrumbs" /> 
-        <replace css:content="#portal-breadcrumbs" css:theme="#portal-breadcrumbs" method="raw"/>
-
-        <after css:theme="#theme-globalnav" css:content="#portlets-in-header" />
-        <after css:theme="#theme-globalnav" css:content=".manageInHeaderPortletsLink" />
-        
-
-        <!-- Document Content -->
-        <strip css:content="#portal-column-content > div:not(#viewlet-above-content):not(#viewlet-below-content)" if-content="//div[@id='portal-column-content']/div/div[@id='content']" />
-        <replace css:content="#portal-column-content" css:theme="#portal-column-content" />
-        <drop css:content="img[alt='Image'][src$='image.png']" />
-        <drop css:content="img[alt='File'][src$='image.png']" /> 
-        <drop css:content="#plone-contentmenu-factories li a img" />
-
-        <!-- Columns -->
-        <replace css:content="#portal-column-one" css:theme="#portal-column-one" />
-        <replace css:content="#portal-column-two" css:theme="#portal-column-two" />
-
-        <!-- Footer -->
-        
-        <replace css:content="#portal-footer-wrapper .panels" css:theme="#portal-footer-wrapper .panels" />
-        <replace css:content="#portal-footer" css:theme="#portal-footer" />
-        <replace css:content="#portal-colophon" css:theme="#portal-colophon" />
-        <replace css:content=".manage-panels-link" css:theme=".manage-panels-link" />
-    
-    </rules>
-    <xi:include href="tune.xml" />
+  <!-- toolbar -->
+  <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated"/>
+  <replace css:theme="#anonymous-actions" css:content-children="#portal-personaltools-wrapper" css:if-not-content=".ajax_load" css:if-content=".userrole-anonymous"/>
 </rules>

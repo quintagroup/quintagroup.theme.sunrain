@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.0 May 21, 2015
+
+- Initial release for Plone 5[roman.ischiv]
+
 6.6 April 20, 2015
 
 - update styles for new version of quintagroup.slidertemplates and quintagroup.megamenu products[roman.ischiv]
