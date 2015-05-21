@@ -14,11 +14,11 @@ Features
 
 In SunRain Theme you can change view from: *Rain* - defined as a default view:
 
-.. figure:: http://quintagroup.com/services/plone-development/skins/images/sunrain-rain.png/
+.. figure:: http://quintagroup.com/services/plone-development/skins/images/rain-sunrain.png/
 
  to *Sun*:
 
-.. figure:: http://quintagroup.com/services/plone-development/skins/images/sunrain-sun.png/
+.. figure:: http://quintagroup.com/services/plone-development/skins/images/sun-sunrain.png/
 
 To change between *Sun* and *Rain* views - go to *ploneadmin* menu in the side toolbar, then choose *Site Setup -> Theming*, open *Advanced settings* tab.  In *Parameter expressions* textarea change ``theme = string:rain`` parameter for ``theme = string:sun`` or vice versa.
 
