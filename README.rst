@@ -7,6 +7,16 @@ Screenshot
    :alt: SunRain Plone Theme Screenshot
    :align: center
 
+Installation
+------------
+
+Starting from the 7.0 release this theme is adopted for **Plone 5**. If you want to use it with **Plone 4**, please pin theme’s version - **6.x** (according to the latest release before 7.0 - e.g. 6.6)::
+
+  [versions]
+  quintagroup.theme.sunrain = 6.6
+  
+For 6.x version details see https://github.com/quintagroup/quintagroup.theme.sunrain/releases.
+
 Features
 --------
 
