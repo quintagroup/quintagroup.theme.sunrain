@@ -79,25 +79,12 @@ Insert your preferred URLs into *href*. Add only those social media icons you ne
 
 Customize template: *ZMI -> portal_skins -> plone_templates -> footer*. To change colophon "Powered by Plone & Python": go to *ZMI -> portal_skins -> plone_templates -> colophon*. Or you can delete either of them via *More options -> Plone Footerportlets -> footer/colophon*.
 
-**Theme Extensions**
-
-Additional features can be activated:
-
-* ``collective.easyform``
-   Adds TTW Form Generator.
-
-* ``plone.app.multilingual``
-   Adds multilingual functionality with adjusted styling for language selectors.
-
 Recommended
 ===========
 
 Theme was tested with:
 
 * Plone 5.0b1
-* collective.easyform 1.0a2
-* plone.app.multilingual 3.0.0
-
 
 Home Directory
 ==============
