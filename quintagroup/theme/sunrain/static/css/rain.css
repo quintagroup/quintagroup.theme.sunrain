@@ -175,6 +175,22 @@ body.plone-toolbar-top-default {
   vertical-align: middle;
   width: 370px;
   }
+#portal-header #portal-languageselector {
+  float: right;
+  clear: none;
+  background: #FF6046;
+  bottom: -24px;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  z-index: 999;
+  }
+#portal-header #portal-languageselector li {
+  margin: 0 10px 5px;
+  }
+#portal-header #portal-languageselector li a {
+  color: #fff;
+  }
 
 /*---------- SEARCH ----------*/
 

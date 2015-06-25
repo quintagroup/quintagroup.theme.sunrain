@@ -200,6 +200,22 @@ body.plone-toolbar-top-default {
 .portlet .portletContent {
   font-size: 12px;
   }
+#portal-header #portal-languageselector {
+  float: right;
+  clear: none;
+  background: #60323B;
+  bottom: -24px;
+  position: absolute;
+  right: 0;
+  margin: 0;
+  z-index: 999;
+  }
+#portal-header #portal-languageselector li {
+  margin: 0 10px 5px;
+  }
+#portal-header #portal-languageselector li a {
+  color: #fff;
+  }
   
 /*---------- SEARCH ----------*/
 
