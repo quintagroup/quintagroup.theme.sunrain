@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.2 June 25, 2015
+
+- Fixed doazo rules for multilingual [roman.ischiv]
+
 7.1 June 25, 2015
 
 - Styled multilingual for theme [roman.ischiv]

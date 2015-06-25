@@ -201,14 +201,13 @@ body.plone-toolbar-top-default {
   font-size: 12px;
   }
 #portal-header #portal-languageselector {
-  float: right;
-  clear: none;
-  background: #60323B;
-  bottom: -33px;
-  position: absolute;
+  background: #663300;
+  position: relative;
   right: 0;
-  margin: 0;
-  z-index: 9;
+  margin: 9px 0 0 0;
+  z-index: 999;
+  right: 0;
+  clear: both;
   }
 #portal-header #portal-languageselector li {
   margin: 0 10px 5px;
@@ -223,11 +222,10 @@ body.plone-toolbar-top-default {
   position: relative;
   }
 #portal-header #portal-searchbox {
-  position: absolute;
+  position: relative;
   clear: none;
-  float: none;
+  float: right;
   right: 0;
-  margin: -11px 0 0;
   width: 220px;
   padding: 0;
   }
@@ -244,7 +242,8 @@ body.plone-toolbar-top-default {
 #portal-header #portal-searchbox [type="submit"] {
   background: none;
   border: 0;
-  position: absolute;
+  float: right;
+  position: relative;
   width: 15px;  
   text-indent: -99999px;
   }
@@ -727,6 +726,7 @@ button:hover, .standalone:focus, .context:focus,
   width: 250px;
   margin: 0 auto;
   clear: both;
+  float: none;
   }
 #portal-header #portal-anontools {
   margin-top: 10px;
@@ -800,12 +800,10 @@ body.plone-toolbar-left-default {
   }
 #portal-header #portal-languageselector {
   float: none;
-  background: #FF6046;
   bottom: 0;
   position: relative;
   right: 0;
   margin: 0;
-  z-index: 999;
   margin: 15px auto 0;
   display: block;
   }
