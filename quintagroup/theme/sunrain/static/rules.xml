@@ -116,7 +116,7 @@
   <replace css:theme="#portal-logo" css:content="#portal-logo" />
   <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
   <replace css:theme="#portal-languageselector" css:content="#portal-languageselector" />
-  <replace css:theme="#portal-anontools" css:content="#portal-anontools" />
+<!--   <replace css:theme="#portal-anontools" css:content="#portal-anontools" /> -->
   <replace css:theme="#portal-slogan">
     <span id="portal-slogan"><xsl:value-of select="$slogan"/></span>
   </replace>

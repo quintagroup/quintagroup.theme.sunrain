@@ -179,7 +179,7 @@ body.plone-toolbar-top-default {
   float: right;
   clear: none;
   background: #FF6046;
-  bottom: -24px;
+  bottom: -33px;
   position: absolute;
   right: 0;
   margin: 0;
@@ -786,5 +786,16 @@ body.plone-toolbar-left-default {
   margin: 15px auto;
   display: block;
   text-align: center;
+  }
+#portal-header #portal-languageselector {
+  float: none;
+  background: #FF6046;
+  bottom: 0;
+  position: relative;
+  right: 0;
+  margin: 0;
+  z-index: 999;
+  margin: 15px auto 0;
+  display: block;
   }
 }

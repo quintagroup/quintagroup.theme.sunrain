@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.1 June 25, 2015
+
+- Styled multilingual for theme [roman.ischiv]
+
 7.0 May 21, 2015
 
 - Initial release for Plone 5[roman.ischiv]
