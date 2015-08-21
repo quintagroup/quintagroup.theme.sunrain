@@ -15,6 +15,7 @@
             <xsl:apply-templates />
         </div>
     </xsl:template>
+
     <!-- Rules applying to a standard Plone web page -->
     <rules css:if-content="#visual-portal-wrapper">
         <!-- Add meta tags -->

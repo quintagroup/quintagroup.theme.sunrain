@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.7 August 21, 2015
+
+- Fixed diazo rules for script and for favicons [roman.ischiv]
+
 6.6 April 20, 2015
 
 - update styles for new version of quintagroup.slidertemplates and quintagroup.megamenu products[roman.ischiv]
