@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.8 August 27, 2015
+
+- Fixed diazo rules for script in footer [roman.ischiv]
+
 6.7 August 21, 2015
 
 - Fixed diazo rules for script and for favicons [roman.ischiv]
