@@ -36,11 +36,13 @@
     <drop css:content="head link[rel='apple-touch-icon']" />
     <drop css:content="head link[rel='shortcut icon']" />
     <!-- CSS -->
-    <after theme-children="/html/head" content="/html/head/link" />
-    <!-- Script -->
-    <after theme-children="/html/head" content="/html/head/script" />
     <drop css:theme="link[href$='rain.css']" if="$theme = 'sun'" />
     <drop css:theme="link[href$='sun.css']" if="$theme != 'sun'" />
+    <before css:theme="link[href$='sun.css']" content="/html/head/link" if="$theme = 'sun'"/>
+    <before css:theme="link[href$='rain.css']" content="/html/head/link" if="$theme != 'sun'"/>
+    <!-- Script -->
+    <after theme-children="/html/head" content="/html/head/script" />
+
   </rules>
 
   <!-- Copy over the id/class attributes on the body tag.
@@ -49,10 +51,6 @@
 
   <!-- move global nav -->
   <replace css:theme-children="#mainnavigation" css:content-children="#portal-mainnavigation" method="raw" />
-
-  <!-- hero unit on homepage only -->
-  <drop css:if-not-content="body.template-document_view.section-front-page"
-        css:theme="div.principal" />
 
   <!-- full-width breadcrumb -->
   <replace css:theme="#above-content" css:content="#viewlet-above-content"/>
@@ -116,7 +114,7 @@
   <replace css:theme="#portal-logo" css:content="#portal-logo" />
   <replace css:theme="#portal-searchbox" css:content="#portal-searchbox" />
   <replace css:theme="#portal-languageselector" css:content="#portal-languageselector" />
-<!--   <replace css:theme="#portal-anontools" css:content="#portal-anontools" /> -->
+  <replace css:theme="#portal-anontools" css:content="#portal-anontools" />
   <replace css:theme="#portal-slogan">
     <span id="portal-slogan"><xsl:value-of select="$slogan"/></span>
   </replace>

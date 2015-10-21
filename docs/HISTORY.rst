@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.2.1 October 21, 2015
+
+- Fixed footer and login button [roman.ischiv]
+
 7.2 June 25, 2015
 
 - Fixed doazo rules for multilingual [roman.ischiv]

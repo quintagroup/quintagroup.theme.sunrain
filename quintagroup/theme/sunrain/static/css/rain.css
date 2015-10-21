@@ -15,7 +15,15 @@ body {
   position: relative;
   }
 #portal-header {
+  position: relative;
+  float: left;
+  width: 100%;
+  min-height: 104px;
   margin-bottom: 0;
+  }
+#portal-header #portal-logo {
+  float: none;
+  display: inline-block;
   }
 .principal {
   display: none;
@@ -223,13 +231,13 @@ body.plone-toolbar-top-default {
   text-indent: -99999px;
   }
 .fa-search:before {
-  right: -12px;
   position: absolute;
   font-size: 18px;
+  right: 0;
   }
 .fa.fa-search {
   position: absolute;
-  right: 35px;
+  right: 10px;
   top: 8px;
   }
 .pat-livesearch {
@@ -387,8 +395,11 @@ table.ploneCalendar {
 /*---------- PORTAL PERSONAL TOOLS ----------*/
 
 #portal-header #portal-anontools {
-  margin-top: 65px;
   background: rgba(35, 40, 69, 0.67);
+  position: absolute;
+  z-index: 9;
+  bottom: 0;
+  right: 0;
   }
 #portal-anontools li {
   margin: 7px 10px;
@@ -692,6 +703,27 @@ button:hover, .standalone:focus, .context:focus,
 .portlet .portletContent {
   font-size: 12px;
   }
+#portal-footer-wrapper {
+  border-top: 30px solid #f0f2f2;
+  clear: both;
+  line-height: 1.2em;
+  margin: 0em 0 1em;
+  padding: 1.5em 0 0;
+  text-align: center;
+  background-color: transparent;
+  color: #332c34;
+  }
+#portal-footer-wrapper .portletWrapper:first-child {
+  border: 0;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  }
+#portal-colophon {
+  color: #666;
+  margin: 0 0 1em;
+  padding: 0 0 1em;
+  text-align: center;
+  }
 
 @media only screen and (max-width: 767px) {
 
@@ -710,21 +742,28 @@ button:hover, .standalone:focus, .context:focus,
   border: 0;
   border-radius: 0 0 4px 4px;  
   }
+#portal-header {
+  float: none;
+  margin: 0;
+  }
 #portal-header #portal-searchbox {
   position: relative;
-  width: 250px;
+  width: 190px;
   margin: 0 auto;
   clear: both;
   float: none;
+  margin-bottom: 10px;
+  }
+.pat-livesearch {
+  min-width: 190px;
   }
 #portal-header #portal-anontools {
   margin-top: 10px;
+  right: -15px;
   }
-#portal-header #portal-searchbox [type="text"] {
-  width: calc(250px);
-  }
+#portal-header #portal-searchbox [type="text"],
 body .pat-livesearch .livesearch-results {
-  width: 250px !important;
+  width: 190px !important;
   }
 #portal-header #portal-logo {
   float: left;
@@ -749,9 +788,6 @@ button:active,
   }
 body {
   padding: 0;
-  }
-.fa.fa-search {
-  right: 20px;
   }
 .plone-breadcrumb ol {
   padding: 8px 15px 8px 0;
@@ -786,6 +822,8 @@ body.plone-toolbar-left-default {
   margin: 15px auto;
   display: block;
   text-align: center;
+  padding: 0;
+  clear: both;
   }
 #portal-header #portal-languageselector {
   float: none;
