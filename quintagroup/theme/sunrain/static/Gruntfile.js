@@ -21,7 +21,7 @@ module.exports = function (grunt) {
                     }
                 },
                 files: {
-                    'css/sunrain-compiled.css': 'less/sunrain.plone.local.less',
+                    'css/sunrain-compiled.css': 'less/sunrain.plone.less',
                 }
             }
         },

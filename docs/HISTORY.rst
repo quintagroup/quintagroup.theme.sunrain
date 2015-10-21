@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.2.2 October 21, 2015
+
+- Fixed less map file [roman.ischiv]
+
 7.2.1 October 21, 2015
 
 - Fixed footer and login button [roman.ischiv]

@@ -5,7 +5,7 @@ This module contains the tool of quintagroup.theme.sunrain
 import os
 from setuptools import setup, find_packages
 
-version = '7.2.1'
+version = '7.2.2'
 
 setup(name='quintagroup.theme.sunrain',
       version=version,
