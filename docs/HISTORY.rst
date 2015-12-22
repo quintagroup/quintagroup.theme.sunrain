@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.8.1 December 22, 2015
+
+- Added styles for collective.lineage product [roman.ischiv]
+
 6.8 August 27, 2015
 
 - Fixed diazo rules for script in footer [roman.ischiv]
