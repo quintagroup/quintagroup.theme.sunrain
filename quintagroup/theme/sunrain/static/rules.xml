@@ -51,6 +51,8 @@
         <!-- Skip Links -->
         <before css:content="#portal-header > p.hiddenStructure:first-child" css:theme-children="#portal-header" />
 
+        <before css:theme-children="#portal-header" css:content="#lineageSelectionForm" />
+
         <!-- Logo -->
         <replace css:content="#portal-logo" css:theme="#portal-logo" />
 

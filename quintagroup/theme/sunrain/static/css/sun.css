@@ -498,6 +498,11 @@ input.inputLabelActive {
 .searchSection label:hover {
   color:#630;
   }
+#lineageSelectionForm {
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  }   
 
 /*---------- LIVESEARCH ----------*/
 .LSResult {
@@ -2706,6 +2711,11 @@ button.navbar-toggle {
   -moz-transform: rotate(-90deg);
   transform: rotate(-90deg);
   right: 34px;
+  }
+#lineageSelectionForm {
+  position: relative;
+  left: auto;
+  margin: 0 auto 5px; 
   }
 }
 

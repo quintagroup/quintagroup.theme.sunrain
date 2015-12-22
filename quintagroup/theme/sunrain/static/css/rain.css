@@ -336,7 +336,12 @@ li.formTab a:hover {
 .visualClear {
   clear:both;
   }
-  
+#lineageSelectionForm {
+  position: absolute;
+  left: 50%;
+  margin-left: -65px;
+  }   
+
 /* Image alignment classes */
 .image-left {
   clear:left;
@@ -2721,6 +2726,11 @@ button.navbar-toggle {
   -moz-transform: rotate(-90deg);
   transform: rotate(-90deg);
   right: 34px;
+  }
+#lineageSelectionForm {
+  position: relative;
+  left: auto;
+  margin: 0 auto 5px; 
   }
 }
 
