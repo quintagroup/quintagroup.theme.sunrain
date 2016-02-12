@@ -2,69 +2,53 @@ module.exports = function (grunt) {
     'use strict';
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
-        // we could just concatenate everything, really
-        // but we like to have it the complex way.
-        // also, in this way we do not have to worry
-        // about putting files in the correct order
-        // (the dependency tree is walked by r.js)
+
         less: {
             dist: {
                 options: {
-                    paths: [],
-                    strictMath: false,
-                    sourceMap: true,
-                    outputSourceFiles: true,
-                    sourceMapURL: '++theme++quintagroup.theme.plone5framework/css/sunrain-compiled.css.map',
-                    sourceMapFilename: 'css/sunrain-compiled.css.map',
-                    modifyVars: {
-                        "isPlone": "false"
-                    }
+                    paths: ["css"],
+                    // compress: true,
+                    // optimization: 2,
                 },
-                files: {
-                    'css/sunrain-compiled.css': 'less/sunrain.plone.less',
-                }
+                files: [{"css/sunrain-compiled.css": "less/sunrain.plone.less"}]
+            }
+        },
+
+        autoprefixer: {
+            options: {
+                browsers: [
+                    'Android 2.3',
+                    'Android >= 4',
+                    'Chrome >= 20',
+                    'Firefox >= 24',
+                    'Explorer >= 8',
+                    'iOS >= 6',
+                    'Opera >= 12',
+                    'Safari >= 6'
+                ]
+            },
+            diff: {
+                options: {
+                    diff: true
+                },
+                src: 'css/sunrain-compiled.css'
+            },
+            simplecss: {
+                src: 'css/sunrain-compiled.css'
             }
         },
 
         watch: {
             scripts: {
                 files: ['less/*.less'],
-                tasks: ['less']
-            }
-        },
-        browserSync: {
-            html: {
-                bsFiles: {
-                    src : ['less/*.less']
-                },
-                options: {
-                    watchTask: true,
-                    debugInfo: true,
-                    server: {
-                        baseDir: "."
-                    },
-                }
-            },
-            plone: {
-                bsFiles: {
-                    src : ['less/*.less']
-                },
-                options: {
-                    watchTask: true,
-                    debugInfo: true,
-                    proxy: "localhost:8080"
-                }
+                tasks: ['less','autoprefixer']
             }
         }
     });
 
     // grunt.loadTasks('tasks');
-    grunt.loadNpmTasks('grunt-browser-sync');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.loadNpmTasks('grunt-contrib-copy');
-    grunt.loadNpmTasks('grunt-sed');
+    grunt.loadNpmTasks('grunt-autoprefixer');
     grunt.registerTask('default', ['watch']);
-    grunt.registerTask('bsync', ["browserSync:html", "watch"]);
-    grunt.registerTask('plone-bsync', ["browserSync:plone", "watch"]);
 };

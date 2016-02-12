@@ -13,3 +13,596 @@
     font-family: "search";
     content: attr(data-icon);
 	}
+body {
+	color: #332c34;
+	font: 12px Tahoma,Geneva,sans-serif;
+	}
+.container {
+	max-width: 960px;
+	}
+p {
+	line-height: 1.5em;
+	margin: 0 0 10px;
+	}
+h2, h3, h4, h5, h6 {
+	font-weight: bold;
+	margin-bottom: 4px;
+	}
+h1 {
+	font-size: 22px;
+	line-height: 30px;
+	}
+h2 {
+	font-size: 14px;
+	line-height: 20px;  
+	}
+h3 {
+	font-size: 13px;
+	line-height: 18px;    
+	}
+h4 {
+	font-size: 12px;
+	line-height: 18px;    
+	}
+h5 {
+	font-size: 11px;
+	line-height: 17px;  
+	}
+h6 {
+	font-size: 10px;
+	line-height: 14px;
+	}
+ul, ol {
+	padding: 0;
+	}
+ol {
+	list-style-type: decimal;
+	margin: 0 0 18px 27px;
+	padding: 0;
+	}
+abbr[title], 
+abbr[data-original-title] {
+	border: 0;
+	}
+input[type="text"], 
+input[type="password"], 
+textarea, select {
+  	border-radius: 0;
+	height: 32px;
+	}	
+input[type="checkbox"],
+input[type="radio"] {
+	margin: 5px 5px 0 0;
+	}
+input[type="text"]:focus, 
+input[type="password"]:focus, 
+textarea:focus, select:focus {
+	box-shadow: none;
+	}
+img {
+	max-width: 100%;
+	width: auto;
+	}
+.documentByLine {
+	display: block;
+	margin: 5px 0;
+	}
+.summary {
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 14px;
+	font-weight: bold;
+	line-height: 20px;
+	}
+.image-product {
+	border-radius: 0;
+	box-shadow: none;
+	img {
+		height: auto;
+		max-width: 100%;
+		}
+	}
+.row {
+	margin-left: -13px;
+	margin-right: -13px;
+	}
+.col-xs-1, .col-sm-1, .col-md-1, .col-lg-1, .col-xs-2, 
+.col-sm-2, .col-md-2, .col-lg-2, .col-xs-3, .col-sm-3, 
+.col-md-3, .col-lg-3, .col-xs-4, .col-sm-4, .col-md-4, 
+.col-lg-4, .col-xs-5, .col-sm-5, .col-md-5, .col-lg-5, 
+.col-xs-6, .col-sm-6, .col-md-6, .col-lg-6, .col-xs-7, 
+.col-sm-7, .col-md-7, .col-lg-7, .col-xs-8, .col-sm-8, 
+.col-md-8, .col-lg-8, .col-xs-9, .col-sm-9, .col-md-9, 
+.col-lg-9, .col-xs-10, .col-sm-10, .col-md-10, .col-lg-10, 
+.col-xs-11, .col-sm-11, .col-md-11, .col-lg-11, .col-xs-12, 
+.col-sm-12, .col-md-12, .col-lg-12 {
+	padding-left: 13px;
+	padding-right: 13px;
+	}
+
+/*---------- header ----------*/ 
+
+#content-header {
+	background-size: cover;
+	min-height: 104px;
+	position: relative;
+	#portal-header {
+		position: relative;
+		float: left;
+		width: 100%;
+		min-height: 104px;
+		margin-bottom: 0;
+		#portal-logo {
+			display: inline-block;
+			margin: 0;
+			float: none;
+			text-decoration: none;
+			vertical-align: middle;
+			}
+		}
+	}
+
+/*---------- main navigation ----------*/ 
+
+.plone-navbar {
+    box-shadow: none;
+    padding: 0 0 11px 0;
+    margin: 0;
+    background-color: transparent;
+	}
+.plone-nav {
+	& > li {
+		margin: 0 0.5em 0 0;
+		& > a {
+			font-size: 12px;
+			padding:16px 16px 8px 16px;
+			position:relative;
+			-moz-border-radius:0 0 6px 6px;
+			-webkit-border-radius:0 0 6px 6px;
+			border-radius:0 0 6px 6px;
+			}
+		&.hasChildrens {
+			&:hover > a,
+			&:focus > a {
+				border-radius: 0;
+				}
+			}
+		ul.submenu {
+			-moz-border-radius: 0 6px 6px 6px;
+			-webkit-border-radius: 0 6px 6px 6px;
+			border-radius: 0 6px 6px 6px;
+			display: none;
+			left: 0;
+			padding: 5px 0 8px;
+			position: absolute;
+			top: 100%;
+			width: 174px;
+			z-index: 10;
+			li {
+				width: 100%;
+				}
+			}
+		}
+	ul .hasChildrens > a {
+		&:after {
+			content: "";
+			display: block;
+			position: absolute;
+		    right: 6px;
+		    top: 10px;
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 5px 0 5px 8px;
+			border-color: transparent transparent transparent #fff;
+			}
+		}
+	li a {
+		position: relative;
+		}
+	li ul.submenu ul.submenu {
+	    -moz-border-radius: 6px;
+	    -webkit-border-radius: 6px;
+	    border-radius: 6px;
+	    top: -5px;
+	    left: 175px;
+		}
+	li .submenu a {
+	    display: block;
+	    padding: 5px 16px;
+	    white-space: normal;
+		}	
+	.submenu_title {
+		display: block;
+	    font-weight: bold;
+		}	
+	}
+
+/*---------- breadcrumbs ----------*/
+
+.plone-breadcrumb {
+	clear: left;
+	background-color: transparent;
+	margin: 0;
+	ol {
+		padding: 8px 0 8px 16px;
+		& > li + li:before {
+			content: "»";
+			border-left: 0;
+			border-top: 0;
+			border-bottom: 0;
+			top: 0;
+			}  
+		& > li + li:after {
+			content: none;
+			} 
+		}
+  	}
+
+/*---------- content styles ----------*/
+
+#content {
+  clear: both;
+  line-height: 1.5em;
+  padding: 1em 1em 2em;
+  }
+
+/*---------- event page styles ----------*/
+
+#content #content-core ul.event.summary {
+	box-shadow: none;
+	list-style: none;
+	background: none;
+    width: 74.4%;
+    float: right;
+    margin: 0.433em 0 0.533em 1.467em;
+    color: #3a3a3a;
+    max-width: 74.4%;
+    padding: 0;
+	li {
+		display: table;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+	    border-width: 0px 1px 1px;
+	    border-style: solid;
+	    &:first-child {
+	    	border-width: 1px;
+	    	}	
+		&:before {
+			content: none;
+			}
+		strong {
+    		padding: 0 13px 5px 0;
+			width: 150px;
+			text-align: right;
+			display: table-cell;
+			}
+		& > a,
+		& > span {
+		    padding: 0.78em 2em 0em 1em;
+		    display: table-cell;
+			}
+		}
+	}
+#content #content-core .vevent.tileItem {
+	div.cal_date {
+		margin: 10px 13px 0 0;
+		box-shadow: none;
+		border-radius: 0;
+		}
+	div.cal_info {
+		margin-left: 114px;
+		}
+	h2.tileHeadline {
+		margin: 3px 0;
+		}
+	ul li {
+		padding: 0;
+		&:before {
+			content: none;
+			}
+		}
+	}		
+
+
+/*---------- general styles for portles ----------*/
+
+.portlet {
+	border-radius: 0;
+	box-shadow: none;
+	border: 0;
+	.portletHeader {
+		font-size: 18px;
+		font-weight: normal;
+		line-height: 29px;
+		padding: 3px 11px;
+		border-top: 1px solid #fff;
+		a {
+			text-decoration: none;
+			}
+		}
+	.portletFooter {
+		border-top: 0;
+		box-shadow: none;
+		text-align: right;
+		}
+	& > :first-child {
+		border-radius: 0;
+		}	
+	.portletContent {
+		& > ul {
+			time {
+				padding: 4px 0 10px 0;
+				text-align: end;
+				}
+			.portletItem {
+					padding: 5px 12px 0 12px;
+				}
+			li:hover {
+				background: none;
+				} 
+			& > li a {
+				padding: 0 0 30px 0;
+				}
+			& > li a:before {
+				content: none;
+				}
+		  	} 
+		}
+  	}
+.portletHorizontalTab, 
+.portletVerticalTabs, 
+.portletContentSlider, 
+.portletOWLCarousel, 
+.portletShelf {
+	.portletItem {
+		padding: 1em 0;
+		}
+	a {
+		text-decoration: none;
+		}
+	}
+.portletQgCarousel, 
+.portletOWLCarousel, 
+.portletShelf {
+	position: relative;
+	.portletFooter {
+		position: absolute;
+		right: 13px;
+		bottom: 49px;
+		padding: 0;
+		}
+	}
+.ng-collection-buttons button {
+	display: inline-block;
+    background-color: transparent;
+    overflow: hidden;
+    font-size: 1.5em;
+    color: #332c34;
+    font-family: Tahoma, Geneva, sans-serif;
+    font-weight: bold;
+    opacity: 0.5;
+    text-indent: -40px;
+    margin: 10px;
+    padding: 0.3em 0 0.4em;
+    &:hover {
+    	opacity: 1;
+    	background-color: transparent;
+    	}
+    &:focus,
+    &:active {
+    	outline: none;
+    	}
+    &.bx-prev,
+    &.qg-prev {
+    	&:after {
+			content: "«";
+    		}
+    	}
+    &.bx-next,
+    &.qg-next {
+    	&:after {
+    		content: "»";
+    		}
+    	}
+	}
+
+/*---------- content slider ----------*/
+
+.portletContentSlider {
+	.itemBody {
+		display: none;
+		}
+	.slider-wrapper .item, 
+	.slider-wrapper-outer {
+		margin-bottom: 12px;
+		}
+	.pager-item {
+	    margin-right: 12px;
+		}
+	}
+
+/*---------- owl carousel ----------*/
+
+.portlet.portletOWLCarousel {
+	.portletHeader {
+		display: none;
+		}
+	.portletContent > *,
+	.portletContent > div:not(.portalMessage) {
+		padding: 0;
+		}
+	.item {
+		padding: 0;
+		}
+	.itemTitle {
+		font: 18px/28px Tahoma,Geneva,sans-serif;
+		font-weight: normal !important;
+		}
+	.carouselContent {
+		padding: 0 13px;
+		float: left;
+		width: 100%;
+		box-sizing: border-box;
+		}
+	}
+
+/*---------- calendar portlet ----------*/
+
+.portlet.portletCalendar {
+	margin-bottom: 4px;
+	.portletHeader {
+		.calendarPrevious,
+		.calendarNext {
+		    width: 15px;
+		    position: relative;
+		    margin: 0;
+		    left: 0;
+		    top: 1px;
+		    padding: 0;
+		    border-radius: 0;
+		    line-height: 9px;
+		    height: 10px;
+		    &:hover {
+		    	background-color: transparent;
+		    	}
+			}
+		}
+	.portletContent {
+		border: 0;
+		table {
+			border: 0;
+			background-color: transparent;
+			padding: 0;
+			thead {
+				background: none;
+				th {
+					height: auto;
+					border-width: 1px 0;
+					border-style: solid;
+					}
+				}
+			tbody tr:first-child td > * {
+				margin: 0;
+				height: auto;
+				width: auto;
+				border-radius: 0;
+				}
+			tr {
+				line-height: 22px;
+				}
+			td.today {
+				border-collapse: collapse;
+				border: 2px solid #ffa500;
+			    background-color: transparent;
+				& > * {
+					background: none;
+					border-radius: 0;
+					width: auto;
+					height: auto;
+					box-shadow: none;
+					font-weight: bold;
+					}
+				}
+			.cal_has_events a {
+				color: ;
+				&:hover {
+					box-shadow: none;
+					background: none;
+					}
+				&:after {
+					content: none;
+					}
+				}
+			}
+		.event {
+			background-color: transparent;
+			}
+		}
+	.ploneCalendar .weekdays th {
+		padding: 0;
+		background-color: transparent;
+		}
+	}
+
+/*---------- navigation portlet ----------*/
+
+body.thumbs-off {
+	.image-icon {
+		display: none;
+		}
+	.portlet.portletNavigationTree .portletContent {
+		& > ul > li a.contenttype-image,
+		& > ul > li a.contenttype-news-item {
+			padding: 7px 13px;
+			}
+		.navTreeLevel1 > li > a.contenttype-image,
+		.navTreeLevel1 > li > a.contenttype-news-item {
+			padding: 7px 13px 7px 26px;
+			}
+		.navTreeLevel1 > li > ul a.contenttype-image,
+		.navTreeLevel1 > li > ul a.contenttype-news-item {
+			padding: 7px 13px 7px 39px;
+			}
+		}
+	}
+.portlet.portletNavigationTree {
+	.portletContent {
+		& > ul > li {
+			border-bottom: 1px solid transparent;
+			& > a:hover:after {
+				content: none;
+				}
+			a {
+	    		padding: 7px 13px;
+				}
+			a.contenttype-news-item,
+			a.contenttype-image {
+				padding: 7px 50px 7px 13px;
+				}
+			}
+		.navTreeLevel1 > li > a {
+			padding: 7px 13px 7px 26px;
+			&.contenttype-image,
+			&.contenttype-news-item {
+				padding: 7px 50px 7px 26px;
+				}
+			}
+		.navTreeLevel1 > li > ul a {
+			padding: 7px 13px 7px 39px;
+			&.contenttype-image,
+			&.contenttype-news-item {
+				padding: 7px 50px 7px 39px;
+				}
+			}
+		a {
+			position: relative;
+			background: transparent;
+		    display: block;
+		    font-size: 1.17em;
+		    line-height: 1.28em;
+		    text-decoration: none;
+	    	.image-icon {
+			    position: absolute;
+			    right: 13px;
+			    top: 4px;
+				}
+			}
+		}
+	.navTreeCurrentNode > a:after {
+		content: none;
+		}
+	}
+
+/*---------- news portlet ----------*/
+
+.portlet.portletNews {
+	.portletContent > ul > li a {
+		position: relative;
+		padding: 0 0 40px 0; 
+		}
+	.image-icon {
+	    position: absolute;
+	    bottom: 15px;
+		}
+	}
