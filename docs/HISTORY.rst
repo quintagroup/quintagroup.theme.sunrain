@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.2.3 june, 2016
+
+- update install instruction [roman.ischiv]
+
 7.2.2 October 21, 2015
 
 - Fixed less map file [roman.ischiv]
