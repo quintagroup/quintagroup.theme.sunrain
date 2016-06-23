@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+6.8.2 June 23, 2016
+
+- Update install instruction [roman.ischiv]
+
 6.8.1 December 22, 2015
 
 - Added styles for collective.lineage product [roman.ischiv]
