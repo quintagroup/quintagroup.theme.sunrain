@@ -1,54 +1,74 @@
-quintagroup.theme.sunrain Installation
-=======================
+Installation
+------------
 
-*  When you're reading this you have probably already run
-   ``easy_install quintagroup.theme.sunrain``. Find out how to install setuptools
-   (and EasyInstall) here:
-   http://peak.telecommunity.com/DevCenter/EasyInstall
+Here are detailed instructions on installation of the quintagroup.theme.sunrain package.
 
-* Get `pythonproducts`_ and install it via::
+Versions
+========
 
-       python setup.py install --home /path/to/instance
+Note that there are differences in installation of Sunrain responsive theme for Plone 4 and 5. You will need to use specific theme versions for different Plone releases: 
 
-  into your Zope instance.
+* 6.x - for Plone 4
+* 7.x - for Plone 5
 
-*  Create a file called ``quintagroup.theme.sunrain-configure.zcml`` in the
-   ``/path/to/instance/etc/package-includes`` directory.  The file
-   should only contain this::
+For 6.x version details see https://github.com/quintagroup/quintagroup.theme.sunrain/releases and *docs/HISTORY.txt*.
 
-       <include package="quintagroup.theme.sunrain" />
+Installation via buildout
+=========================
 
-.. _pythonproducts: http://plone.org/products/pythonproducts
-
-Alternatively, if you are using **zc.buildout** and the **plone.recipe.zope2instance**
-recipe to manage your project, you can do this:
+In the buildout.cfg file of your instance:
 
 * Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
 
     [buildout]
     ...
-    eggs =
+    eggs +=
        ...
        quintagroup.theme.sunrain
 
-* Tell the plone.recipe.zope2instance recipe to install a ZCML slug::
-
-    [instance]
-    recipe = plone.recipe.zope2instance
-    ...
-    zcml =
-       quintagroup.theme.sunrain
-
-* The newest releases are suitable for **Plone 5**. If you want to use it with **Plone 4**, please pin theme’s version - **6.x** (according to the latest release before 7.0 - e.g. 6.6)::
+* The newest releases are suitable for **Plone 5**. If you want to use Sunrain theme with **Plone 4**, please pin theme’s version - **6.x** (according to the latest release before 7.0 - e.g. 6.8.2)::
 
     [versions]
-    quintagroup.theme.sunrain = 6.6
-
-For 6.x version details see https://github.com/quintagroup/quintagroup.theme.sunrain/releases.
-
-* Re-run buildout, e.g. with::
+    quintagroup.theme.sunrain = 6.8.2
+       
+* Re-run buildout::
 
     $ ./bin/buildout
 
-You can skip the ZCML slug if you are going to explicitly include the package
-from another package's configure.zcml file.
+* Restart the Zope server::
+
+    $ ./bin/instance restart
+
+Then activate 'Sunrain Theme' in Plone (Site Setup -> Add-ons).      
+       
+
+Installation: development mode
+==============================
+
+If you want to customize Sunrain theme please use the following installation instructions: 
+
+* download ``quintagroup.theme.sunrain-version.zip`` archive from http://pypi.python.org/pypi/quintagroup.theme.sunrain
+* extract theme archive to get ``quintagroup.theme.sunrain-version`` folder. Remove version from 
+  folder name to have ``quintagroup.theme.sunrain`` folder
+* put ``quintagroup.theme.sunrain`` folder into ``src`` directory of your buildout
+* in buildout.cfg file of your buildout add ``quintagroup.theme.sunrain`` to the list of eggs you are developing and  to the list of eggs to install::
+
+       [buildout]
+       ...
+       develop = src/quintagroup.theme.sunrain
+       ...
+       eggs +=
+           ...
+           quintagroup.theme.sunrain
+   
+* Re-run buildout::
+
+    $ ./bin/buildout
+
+* Start instance in development mode::
+
+    $ ./bin/instance fg
+
+* Install ``Sunrain Theme`` in Plone (Site Setup -> Add-ons).
+
+Now you can customize Sunrain Theme by modifying ``quintagroup.theme.sunrain`` package in ``src`` directory of your buildout.
