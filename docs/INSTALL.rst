@@ -1,27 +1,36 @@
 Installation
 ------------
 
-quintagroup.theme.sunrain can be installed in any of the following ways. 
+Here are detailed instructions on installation of the quintagroup.theme.sunrain package.
 
-Installation via diazo panel
-============================
+Versions
+========
 
-* Download zip file at http://plone.org/products/sunrain-plone-theme/releases/6.2/sunrain.zip
-* Import the theme at the 'Diazo theme' control panel
+Note that there are differences in installation of SunRain responsive theme for Plone 4 and 5. You will need to use specific theme versions for different Plone releases: 
+
+* 6.x - for Plone 4
+* 7.x - for Plone 5
+
+For 6.x version details see https://github.com/quintagroup/quintagroup.theme.sunrain/releases and *docs/HISTORY.txt*.
 
 Installation via buildout
 =========================
 
 In the buildout.cfg file of your instance:
 
-* Add ``quintagroup.theme.sunrain`` to the list of eggs to install::
+* Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
 
     [buildout]
     ...
-    eggs =
-        ...
-        quintagroup.theme.sunrain
+    eggs +=
+       ...
+       quintagroup.theme.sunrain
 
+* The newest releases are suitable for **Plone 5**. If you want to use SunRain theme with **Plone 4**, please pin theme’s version - **6.x** (according to the latest release before 7.0 - e.g. 6.8.2)::
+
+    [versions]
+    quintagroup.theme.sunrain = 6.8.2
+       
 * Re-run buildout::
 
     $ ./bin/buildout
@@ -30,8 +39,8 @@ In the buildout.cfg file of your instance:
 
     $ ./bin/instance restart
 
-Then activate 'Sun and Rain Theme' in Plone (Site Setup -> Add-ons).
-
+Then activate 'SunRain Theme' in Plone (Site Setup -> Add-ons).      
+       
 
 Installation: development mode
 ==============================
@@ -48,7 +57,7 @@ If you want to customize SunRain theme please use the following installation ins
        ...
        develop = src/quintagroup.theme.sunrain
        ...
-       eggs =
+       eggs +=
            ...
            quintagroup.theme.sunrain
    
@@ -60,7 +69,6 @@ If you want to customize SunRain theme please use the following installation ins
 
     $ ./bin/instance fg
 
-* Install ``Sun and Rain Theme`` in Plone (Site Setup -> Add-ons).
+* Install ``SunRain Theme`` in Plone (Site Setup -> Add-ons).
 
-Now you can customize SunRain Theme by modifying ``quintagroup.theme.sunrain`` package in ``src`` directory 
-of your buildout.
+Now you can customize SunRain Theme by modifying ``quintagroup.theme.sunrain`` package in ``src`` directory of your buildout.
