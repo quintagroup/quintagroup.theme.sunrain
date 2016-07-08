@@ -1,4 +1,4 @@
-SunRain free responsive diazo theme for Plone 5.
+SunRain free responsive diazo theme for Plone.
 
 Screenshot
 ------------
@@ -10,12 +10,43 @@ Screenshot
 Installation
 ------------
 
-Starting from the 7.0 release this theme is adopted for **Plone 5**. If you want to use it with **Plone 4**, please pin theme’s version - **6.x** (according to the latest release before 7.0 - e.g. 6.6)::
+Versions
+========
 
-  [versions]
-  quintagroup.theme.sunrain = 6.6
-  
-For 6.x version details see https://github.com/quintagroup/quintagroup.theme.sunrain/releases.
+Note that there are differences in installation of Sunrain responsive theme for Plone 4 and 5. You will need to use specific theme versions for different Plone releases: 
+
+* 6.x - for Plone 4
+* 7.x - for Plone 5
+
+For 6.x version details see https://github.com/quintagroup/quintagroup.theme.sunrain/releases and *docs/HISTORY.txt*.
+
+Installation via buildout
+=========================
+
+In the buildout.cfg file of your instance:
+
+* Add ``quintagroup.theme.sunrain`` to the list of eggs to install, e.g.::
+
+    [buildout]
+    ...
+    eggs +=
+       ...
+       quintagroup.theme.sunrain
+
+* The newest releases are suitable for **Plone 5**. If you want to use Sunrain theme with **Plone 4**, please pin theme’s version - **6.x** (according to the latest release before 7.0 - e.g. 6.8.2)::
+
+    [versions]
+    quintagroup.theme.sunrain = 6.8.2
+       
+* Re-run buildout::
+
+    $ ./bin/buildout
+
+* Restart the Zope server::
+
+    $ ./bin/instance restart
+
+Then activate 'Sunrain Theme' in Plone (Site Setup -> Add-ons).      
 
 Features
 --------
@@ -100,4 +131,4 @@ Authors
 * Borys Olekhnovych
 * Yuriy Hvozdovych
 
-Quintagroup: http://quintagroup.com, 2015.
+Quintagroup: http://quintagroup.com, 2016.
