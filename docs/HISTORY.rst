@@ -1,6 +1,10 @@
 Changelog
 ---------
 
+7.2.3 November, 2016
+
+- Add rule for google analytics scripts [oles.slipchuk]
+
 7.2.2 October 21, 2015
 
 - Fixed less map file [roman.ischiv]

@@ -120,6 +120,7 @@
   </replace>
 
   <replace css:theme-children="#portal-footer" css:content-children="#portal-footer-wrapper" />
+  <after css:theme-children="#portal-footer-wrapper" content="//footer[@id='portal-footer-wrapper']/script" />
 
   <!-- toolbar -->
   <replace css:theme="#portal-toolbar" css:content-children="#edit-bar" css:if-not-content=".ajax_load" css:if-content=".userrole-authenticated"/>
