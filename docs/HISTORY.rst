@@ -1,5 +1,8 @@
 Changelog
 ---------
+7.2.5 January 26, 2016
+
+- Fix dropdownmenu [oles.slipchuk]
 
 7.2.3 November, 2016
 
